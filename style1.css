@@ -40,13 +40,14 @@
 .intro-text {
   max-width: 500px;
   text-align: left;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Orbitron', sans-serif;
   color: #222;
 }
 
 .intro-text h1 {
   font-size: 2rem;
   margin-bottom: 1rem;
+  font-family: 'Open Sans', sans-serif;
   color: #111;
 }
 
@@ -54,7 +55,11 @@
   font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 1rem;
+  font-family: 'Open Sans', sans-serif;
+
+
 }
+
 
 
 
