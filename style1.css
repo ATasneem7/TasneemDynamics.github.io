@@ -34,16 +34,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .intro-text {
   opacity: 0;
   transform: translateY(20px);
   transition: all 1s ease;
-  max-width: 500px;
+  max-width: 700px;
   text-align: left;
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: #222;
  
 }
@@ -54,7 +54,7 @@
 }
 
 .intro-text h1 {
-  font-size: 2rem;
+  font-size: clamp(2rem, 4vw, 3rem);
   margin-bottom: 1rem;
   font-family: 'Open Sans', sans-serif;
   color: #111;
@@ -65,6 +65,7 @@
   line-height: 1.6;
   margin-bottom: 1rem;
   font-family: 'Open Sans', sans-serif;
+
 
 
 
