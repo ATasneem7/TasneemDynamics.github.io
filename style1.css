@@ -21,7 +21,7 @@
   align-items: center;
 }
 
-.logo1 {
+.logo {
   max-width: 70%;
   height: auto;
 }
@@ -54,5 +54,6 @@
   line-height: 1.6;
   margin-bottom: 1rem;
 }
+
 
 
