@@ -15,7 +15,7 @@
 /* Left Panel */
 .left-panel {
   flex: 1;
-  background-color: #2b2b2b; /* Dark gray */
+  background-color: #44444E; /* Dark gray */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,3 +54,4 @@
   line-height: 1.6;
   margin-bottom: 1rem;
 }
+
