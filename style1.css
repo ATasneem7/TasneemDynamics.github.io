@@ -56,13 +56,13 @@
 .intro-text h1 {
   font-size: clamp(2rem, 4vw, 3rem);
   margin-bottom: 1rem;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: #111;
 }
 
 .subheading {
   font-size: 1.75rem;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: #444;
   line-height: 1.6;
 }
@@ -71,7 +71,8 @@
   font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 1rem;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
+
 
 
 
