@@ -15,7 +15,8 @@
 
 /* Left Panel */
 .left-panel {
-  flex: 0.3; /* 30% width */
+  flex-grow: 0;
+  flex-basis: 30%;
   background-color: #44444E;
   display: flex;
   justify-content: center;
@@ -27,13 +28,14 @@
 
 .logo {
   width: 80%;
-  max-width: 200px;
+  max-width: 160px;
   height: auto;
 }
 
 /* Right Panel */
 .right-panel {
-  flex: 0.7; /* 70% width */
+  flex-grow: 0;
+  flex-basis: 70%;
   background-color: #ffffff;
   display: flex;
   justify-content: center;
@@ -76,6 +78,7 @@
   line-height: 1.6;
   margin-bottom: 1rem;
   font-family: 'Roboto', sans-serif;
+
 
 
 
