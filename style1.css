@@ -16,7 +16,7 @@
 /* Left Panel */
 .left-panel {
   flex-grow: 0;
-  flex-basis: 30%;
+  flex-basis: 40%;
   background-color: #44444E;
   display: flex;
   justify-content: center;
@@ -27,20 +27,20 @@
 
 
 .logo {
-  width: 80%;
-  max-width: 160px;
+  width: 90%;
+  max-width: 200px;
   height: auto;
 }
 
 /* Right Panel */
 .right-panel {
   flex-grow: 0;
-  flex-basis: 70%;
+  flex-basis: 60%;
   background-color: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .intro-text {
@@ -78,6 +78,7 @@
   line-height: 1.6;
   margin-bottom: 1rem;
   font-family: 'Roboto', sans-serif;
+
 
 
 
