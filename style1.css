@@ -46,7 +46,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #222;
+  background-color: #f0c000;
   padding: 1rem 2rem;
   z-index: 1000;
   animation: slideDown 1s ease forwards;
@@ -55,7 +55,7 @@
 /* Navigation Links */
 .nav-links {
   display: flex;
-  justify-content: center;
+  justify-content: right;
   gap: 2rem;
   list-style: none;
 }
@@ -64,6 +64,7 @@
   color: #f0f0f0;
   text-decoration: none;
   font-family: 'Poppins', sans-serif;
+  font-style: bold;
   font-size: 1rem;
   position: relative;
   transition: color 0.3s ease;
@@ -138,6 +139,7 @@
   line-height: 1.6;
   margin-bottom: 1rem;
   font-family: 'Roboto', sans-serif;
+
 
 
 
