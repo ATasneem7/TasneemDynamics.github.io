@@ -15,26 +15,30 @@
 
 /* Left Panel */
 .left-panel {
-  flex: 1;
-  background-color: #44444E; /* Dark gray */
+  flex: 0.3; /* 30% width */
+  background-color: #44444E;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 1rem;
 }
 
+
+
 .logo {
-  max-width: 100%;
+  width: 80%;
+  max-width: 200px;
   height: auto;
 }
 
 /* Right Panel */
 .right-panel {
-  flex: 1;
-  background-color: #ffffff; /* White */
+  flex: 0.7; /* 70% width */
+  background-color: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
+  padding: 2rem;
 }
 
 .intro-text {
@@ -53,7 +57,7 @@
   transform: translateY(0);
 }
 
-.intro-text h2 {
+.intro-text h1 {
   font-size: clamp(2rem, 4vw, 3rem);
   margin-bottom: 1rem;
   font-family: 'Montserrat', sans-serif;
@@ -72,6 +76,7 @@
   line-height: 1.6;
   margin-bottom: 1rem;
   font-family: 'Roboto', sans-serif;
+
 
 
 
