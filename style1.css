@@ -48,7 +48,7 @@
   transform: translateY(20px);
   transition: all 1s ease;
   max-width: none;
-  text-align: left;
+  text-align: center;
   font-family: 'Montserrat', sans-serif;
   color: #222;
  
@@ -79,6 +79,7 @@
   line-height: 1.6;
   margin-bottom: 1rem;
   font-family: 'Roboto', sans-serif;
+
 
 
 
