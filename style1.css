@@ -24,8 +24,6 @@
   padding: 1rem;
 }
 
-
-
 .logo {
   width: 420%;
   max-width: 600px;
@@ -41,6 +39,38 @@
   justify-content: center; /* Align content to the left */
   align-items: center;
   padding: 2rem 1rem; /* Optional: adjust horizontal padding */
+}
+
+/* Navbar Fixed at Top */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff; /* White background */
+  border-bottom: 1px solid #ddd;
+  padding: 0.8rem 2rem;
+  z-index: 1000; /* Keeps it above other elements */
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li a {
+  text-decoration: none;
+  color: #444;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.navbar li a:hover {
+  color: #d4a017; /* Golden hover effect */
 }
 
 .intro-text {
@@ -79,6 +109,7 @@
   line-height: 1.6;
   margin-bottom: 1rem;
   font-family: 'Roboto', sans-serif;
+
 
 
 
