@@ -40,7 +40,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
+  padding: 1rem 1.5rem; /* Top/Bottom: 1rem, Left/Right: 1.5rem */
 }
 
 .intro-text {
@@ -78,6 +78,7 @@
   line-height: 1.6;
   margin-bottom: 1rem;
   font-family: 'Roboto', sans-serif;
+
 
 
 
