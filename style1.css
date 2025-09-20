@@ -47,7 +47,7 @@
   opacity: 0;
   transform: translateY(20px);
   transition: all 1s ease;
-  max-width: 700px;
+  max-width: none;
   text-align: left;
   font-family: 'Montserrat', sans-serif;
   color: #222;
@@ -62,6 +62,7 @@
 .intro-text h1 {
   font-size: clamp(1rem, 3vw, 2rem);
   margin-bottom: 1rem;
+  white-space: nowrap;
   font-family: 'Montserrat', sans-serif;
   color: #111;
 }
@@ -78,6 +79,7 @@
   line-height: 1.6;
   margin-bottom: 1rem;
   font-family: 'Roboto', sans-serif;
+
 
 
 
