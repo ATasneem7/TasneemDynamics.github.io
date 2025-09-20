@@ -41,37 +41,66 @@
   padding: 2rem 1rem; /* Optional: adjust horizontal padding */
 }
 
-/* Navbar Fixed at Top */
+/* Navbar Container */
 .navbar {
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
-  background-color: #ffffff; /* White background */
-  border-bottom: 1px solid #ddd;
-  padding: 0.8rem 2rem;
-  z-index: 1000; /* Keeps it above other elements */
+  background-color: #222;
+  padding: 1rem 2rem;
+  z-index: 1000;
+  animation: slideDown 1s ease forwards;
 }
 
-.navbar ul {
-  list-style: none;
+/* Navigation Links */
+.nav-links {
   display: flex;
   justify-content: center;
   gap: 2rem;
-  margin: 0;
-  padding: 0;
+  list-style: none;
 }
 
-.navbar li a {
+.nav-links li a {
+  color: #f0f0f0;
   text-decoration: none;
-  color: #444;
-  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  position: relative;
   transition: color 0.3s ease;
 }
 
-.navbar li a:hover {
-  color: #d4a017; /* Golden hover effect */
+/* Hover Effect */
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #f0c000;
+  transition: width 0.3s ease;
 }
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+.nav-links li a: hover {
+  color: #f0c000;
+}
+
+/* Entrance Animation */
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 
 .intro-text {
   opacity: 0;
@@ -109,6 +138,7 @@
   line-height: 1.6;
   margin-bottom: 1rem;
   font-family: 'Roboto', sans-serif;
+
 
 
 
