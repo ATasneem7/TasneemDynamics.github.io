@@ -38,9 +38,9 @@
   flex-basis: 60%;
   background-color: #ffffff;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start; /* Align content to the left */
   align-items: center;
-  padding: 1rem 0.5rem; /* Top/Bottom: 1rem, Left/Right: 1.5rem */
+  padding: 2rem 3rem; /* Optional: adjust horizontal padding */
 }
 
 .intro-text {
@@ -78,6 +78,7 @@
   line-height: 1.6;
   margin-bottom: 1rem;
   font-family: 'Roboto', sans-serif;
+
 
 
 
