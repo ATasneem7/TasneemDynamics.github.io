@@ -41,60 +41,66 @@
   padding: 2rem 1rem; /* Optional: adjust horizontal padding */
 }
 
-
-.local-navbar {
+/* Navigation Bar */
+.navbar {
+  position: sticky;
+  top: 0;
   width: 100%;
-  margin-bottom: 2rem;
-  animation: fadeIn 1s ease forwards;
+  background-color: #F5C45E; /* Golden background */
+  padding: 1rem 2rem;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  animation: slideDown 1s ease;
 }
 
-.nav-links {
-  display: flex;
-  justify-content: right;
-  flex-wrap: wrap;
-  gap: 1.5rem;
+.navbar ul {
   list-style: none;
-  padding: 3rem;
+  display: flex;
+  justify-content: flex-end; /* Right-aligned links */
+  gap: 2rem;
+  margin: 0;
+  padding: 2rem;
 }
 
-.nav-links li a {
-  color: #000000;
+.navbar li a {
   text-decoration: none;
+  color: #000000; /* Dark black text */
   font-family: 'Poppins', sans-serif;
-  font-style: bold;
-  font-size: 3rem;
+  font-weight: bold;
+  font-size: 2rem;
   position: relative;
   transition: color 0.3s ease;
 }
 
-.nav-links li a::after {
+/* Hover effect with animated underline */
+.navbar li a::after {
   content: '';
   position: absolute;
   width: 0%;
   height: 2px;
   bottom: -4px;
   left: 0;
-  background-color: #F5C45E;
+  background-color: #FF9B45;
   transition: width 0.3s ease;
 }
 
-.nav-links li a:hover::after {
-  width: 100%;
+.navbar li a:hover {
+  color: #FF9B45; /* Hover text color */
 }
 
-.nav-links li a: hover {
-  color: #FF9B45;
+.navbar li a:hover::after {
+  width: 100%; /* Expanding underline animation */
 }
 
-/* Entrance Animation */
-@keyframes fadeIn {
+/* Navbar slide-down animation */
+@keyframes slideDown {
   from {
+    transform: translateY(-100%);
     opacity: 0;
-    transform: translateY(-10px);
   }
   to {
-    opacity: 1;
     transform: translateY(0);
+    opacity: 1;
   }
 }
 
@@ -123,6 +129,7 @@
   line-height: 1.6;
   margin-bottom: 1rem;
   font-family: 'Roboto', sans-serif;
+
 
 
 
