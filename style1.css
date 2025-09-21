@@ -41,30 +41,29 @@
   padding: 2rem 1rem; /* Optional: adjust horizontal padding */
 }
 
-/* Navbar Container */
-.navbar {
-  position: fixed;
-  top: 0;
+
+/* Wrapper to keep navbar compact and top-aligned */
+.nav-wrapper {
   width: 100%;
-  background-color: #f0c000;
-  padding: 1rem 5rem;
-  z-index: 1000;
-  animation: slideDown 1s ease forwards;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
 }
 
+/* Navbar itself */
 .local-navbar {
-  width: 100%;
-  margin-bottom: 2rem;
+  background-color: transparent;
+  padding: 0.5rem 1rem;
   animation: fadeIn 1s ease forwards;
 }
 
+/* Navigation links */
 .nav-links {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
   gap: 1.5rem;
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .nav-links li a {
@@ -91,11 +90,11 @@
   width: 100%;
 }
 
-.nav-links li a: hover {
+.nav-links li a:hover {
   color: #f0c000;
 }
 
-/* Entrance Animation */
+/* Entrance animation */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -143,6 +142,7 @@
   line-height: 1.6;
   margin-bottom: 1rem;
   font-family: 'Roboto', sans-serif;
+
 
 
 
