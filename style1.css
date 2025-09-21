@@ -41,72 +41,6 @@
   padding: 2rem 1rem; /* Optional: adjust horizontal padding */
 }
 
-/* Navigation Bar */
-/* Navbar Container */
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: #222;
-  padding: 1rem 2rem;
-  z-index: 1000;
-  animation: slideDown 1s ease forwards;
-}
-
-/* Navigation Links */
-.nav-links {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  list-style: none;
-}
-
-.nav-links li a {
-  color: #000000;
-  text-decoration: none;
-  font-family: 'Poppins', sans-serif;
-  font-size: 2rem;
-  font-style: bold;
-  position: relative;
-  transition: color 0.3s ease;
-}
-
-/* Hover Effect */
-.nav-links li a::after {
-  content: '';
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  bottom: -4px;
-  left: 0;
-  background-color: #FF9B45;
-  transition: width 0.3s ease;
-}
-
-.nav-links li a:hover::after {
-  width: 100%;
-}
-
-.nav-links li a: hover {
-  color: #FFD93D;
-}
-
-/* Entrance Animation */
-@keyframes slideDown {
-  from {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-.intro-text.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 .intro-text h1 {
   font-size: clamp(1rem, 3vw, 2rem);
   margin-bottom: 0.5rem;
@@ -127,6 +61,7 @@
   line-height: 1.6;
   margin-bottom: 1rem;
   font-family: 'Roboto', sans-serif;
+
 
 
 
