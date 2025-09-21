@@ -52,25 +52,30 @@
   animation: slideDown 1s ease forwards;
 }
 
-/* Navigation Links */
+.local-navbar {
+  width: 100%;
+  margin-bottom: 2rem;
+  animation: fadeIn 1s ease forwards;
+}
+
 .nav-links {
   display: flex;
-  justify-content: right;
-  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
   list-style: none;
+  padding: 0;
 }
 
 .nav-links li a {
-  color: #f0f0f0;
+  color: #222;
   text-decoration: none;
   font-family: 'Poppins', sans-serif;
-  font-style: bold;
-  font-size: 3rem;
-  position: right;
+  font-size: 1rem;
+  position: relative;
   transition: color 0.3s ease;
 }
 
-/* Hover Effect */
 .nav-links li a::after {
   content: '';
   position: absolute;
@@ -91,17 +96,16 @@
 }
 
 /* Entrance Animation */
-@keyframes slideDown {
+@keyframes fadeIn {
   from {
-    transform: translateY(-100%);
     opacity: 0;
+    transform: translateY(-10px);
   }
   to {
-    transform: translateY(0);
     opacity: 1;
+    transform: translateY(0);
   }
 }
-
 
 .intro-text {
   opacity: 0;
@@ -139,6 +143,7 @@
   line-height: 1.6;
   margin-bottom: 1rem;
   font-family: 'Roboto', sans-serif;
+
 
 
 
