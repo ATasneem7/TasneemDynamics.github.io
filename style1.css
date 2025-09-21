@@ -42,35 +42,29 @@
 }
 
 
-/* Wrapper to keep navbar compact and top-aligned */
-.nav-wrapper {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 2rem;
-}
-
-/* Navbar itself */
 .local-navbar {
-  background-color: transparent;
-  padding: 0.5rem 1rem;
+  flex-grow: 0;
+  flex-basis: 60%;
+  width: 100%;
+  margin-bottom: 2rem;
   animation: fadeIn 1s ease forwards;
 }
 
-/* Navigation links */
 .nav-links {
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 1.5rem;
   list-style: none;
-  padding: 0;
-  margin: 0;
+  padding: 3rem;
 }
 
 .nav-links li a {
   color: #222;
   text-decoration: none;
   font-family: 'Poppins', sans-serif;
-  font-size: 1rem;
+  font-style: bold;
+  font-size: 3rem;
   position: relative;
   transition: color 0.3s ease;
 }
@@ -90,11 +84,11 @@
   width: 100%;
 }
 
-.nav-links li a:hover {
+.nav-links li a: hover {
   color: #f0c000;
 }
 
-/* Entrance animation */
+/* Entrance Animation */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -104,17 +98,6 @@
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-.intro-text {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 1s ease;
-  max-width: none;
-  text-align: center;
-  font-family: 'Montserrat', sans-serif;
-  color: #222;
- 
 }
 
 .intro-text.visible {
@@ -142,6 +125,7 @@
   line-height: 1.6;
   margin-bottom: 1rem;
   font-family: 'Roboto', sans-serif;
+
 
 
 
