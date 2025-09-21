@@ -43,8 +43,6 @@
 
 
 .local-navbar {
-  flex-grow: 0;
-  flex-basis: 60%;
   width: 100%;
   margin-bottom: 2rem;
   animation: fadeIn 1s ease forwards;
@@ -52,7 +50,7 @@
 
 .nav-links {
   display: flex;
-  justify-content: center;
+  justify-content: right;
   flex-wrap: wrap;
   gap: 1.5rem;
   list-style: none;
@@ -60,7 +58,7 @@
 }
 
 .nav-links li a {
-  color: #222;
+  color: #000000;
   text-decoration: none;
   font-family: 'Poppins', sans-serif;
   font-style: bold;
@@ -76,7 +74,7 @@
   height: 2px;
   bottom: -4px;
   left: 0;
-  background-color: #f0c000;
+  background-color: #F5C45E;
   transition: width 0.3s ease;
 }
 
@@ -85,7 +83,7 @@
 }
 
 .nav-links li a: hover {
-  color: #f0c000;
+  color: #FF9B45;
 }
 
 /* Entrance Animation */
@@ -125,6 +123,7 @@
   line-height: 1.6;
   margin-bottom: 1rem;
   font-family: 'Roboto', sans-serif;
+
 
 
 
