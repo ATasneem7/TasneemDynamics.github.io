@@ -41,6 +41,65 @@
   padding: 2rem 1rem; /* Optional: adjust horizontal padding */
 }
 
+/* === Navigation Bar Styling === */
+.nav-bar {
+  width: 100%;
+  background-color: #FFD700; /* Yellow background */
+  padding: 0.5rem 1rem;
+  margin-bottom: 2rem;
+  animation: fadeInNav 0.8s ease forwards;
+}
+
+.nav-tabs {
+  display: flex;
+  flex-direction: row; /* Ensures horizontal layout */
+  justify-content: flex-end; /* Right-aligns the tabs */
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: nowrap; /* Prevents wrapping to next line */
+}
+
+.nav-tabs li a {
+  font-weight: bold;
+  color: #000000; /* Black text */
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Hover underline effect */
+.nav-tabs li a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #000000;
+  transition: width 0.3s ease;
+}
+.nav-tabs li a:hover::after {
+  width: 100%;
+}
+.nav-tabs li a:hover {
+  color: #333333;
+}
+/* Entrance animation */
+@keyframes fadeInNav {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .intro-text h1 {
   font-size: clamp(1rem, 3vw, 2rem);
   margin-bottom: 0.5rem;
@@ -61,6 +120,7 @@
   line-height: 1.6;
   margin-bottom: 1rem;
   font-family: 'Roboto', sans-serif;
+
 
 
 
