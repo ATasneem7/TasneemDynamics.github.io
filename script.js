@@ -1,7 +1,7 @@
 // Optional JS for smooth intro animation
 
 window.addEventListener("load", () => {
-  document.querySelector(".intro-text").classList.add("visible");
+  const intro = document.querySelector(".intro-text");
+  intro.classList.add("visible");
 });
-
 
