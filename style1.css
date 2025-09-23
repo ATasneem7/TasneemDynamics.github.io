@@ -121,6 +121,16 @@
   margin-bottom: 1rem;
   font-family: 'Roboto', sans-serif;
 
+.intro-text {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s ease;
+}
+
+.intro-text.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 
 
