@@ -41,24 +41,21 @@
   padding: 2rem 1rem; /* Optional: adjust horizontal padding */
 }
 
-/* === Navigation Bar Styling === */
-.nav-bar {
+/* === Navigation Ribbon Styling === */
+.nav-ribbon {
   width: 100%;
   background-color: #FFD700; /* Yellow background */
-  padding: 0.5rem 1rem;
-  margin-bottom: 2rem;
-  animation: fadeInNav 0.8s ease forwards;
+  padding: 0.75rem 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .nav-tabs {
   display: flex;
-  flex-direction: row; /* Ensures horizontal layout */
-  justify-content: flex-end; /* Right-aligns the tabs */
-  gap: 1.5rem;
+  justify-content: flex-end; /* Align tabs to the right */
+  gap: 2rem;
   list-style: none;
   margin: 0;
   padding: 0;
-  flex-wrap: nowrap; /* Prevents wrapping to next line */
 }
 
 .nav-tabs li a {
@@ -82,22 +79,25 @@
   background-color: #000000;
   transition: width 0.3s ease;
 }
+
 .nav-tabs li a:hover::after {
   width: 100%;
 }
-.nav-tabs li a:hover {
+
+.nav-tabs li a: hover {
   color: #333333;
 }
-/* Entrance animation */
-@keyframes fadeInNav {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+
+
+.intro-text {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s ease;
+}
+
+.intro-text.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .intro-text h1 {
@@ -121,16 +121,7 @@
   margin-bottom: 1rem;
   font-family: 'Roboto', sans-serif;
 
-.intro-text {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 1s ease;
-}
 
-.intro-text.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
 
 
 
