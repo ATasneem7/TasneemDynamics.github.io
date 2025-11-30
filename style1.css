@@ -84,7 +84,7 @@
     top: 0;
     left: 0;
     width: 100%;                     /* <-- will now follow right-panel width */
-    background-color: F5C45E;
+    background-color: #F5C45E;
     padding-left: 1.2rem !important;  /* Adjust to align first tab perfectly */
     padding: 1rem 2rem;
     z-index: 10;
@@ -141,11 +141,12 @@
 /* ░░░ END OF NAVBAR STYLES ░░░ */
 
 
-/* ░░░ IMPORTANT: Give space so intro text does NOT slide under navbar ░░░ */
-.right-panel { /* MODIFY THIS */
-    padding-top: 100px; /* ADD THIS LINE ONLY */
-}
+/* ░░░ IMPORTANT: Give space so intro text does NOT slide under navbar ░░░
+.right-panel { /* MODIFY THIS 
+    padding-top: 100px; /* ADD THIS LINE ONLY 
+}*/
 /* END */
+
 
 
 
