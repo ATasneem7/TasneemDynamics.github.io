@@ -30,16 +30,18 @@
   height: auto;
 }
 
-/* Right Panel */ 
+/* Right Panel */
 .right-panel {
-  flex-grow: 0;
-  flex-basis: 60%;
-  background-color: #ffffff;
-  display: flex;
-  justify-content: center; /* Align content to the left */ 
-  align-items: center;
-  padding: 2rem 1rem; /* Optional: adjust horizontal padding */
-} 
+    flex-grow: 0;
+    flex-basis: 60%;
+    background-color: #ffffff;
+    position: relative;      /* REQUIRED for navbar containment */
+    padding: 100px 2rem 2rem 2rem;  
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
 
 .intro-text {
   opacity: 0;
@@ -76,25 +78,29 @@
 
 /* ░░░ NAVBAR STYLES — ADD ALL OF THIS ░░░ */
 
-.navbar { /* ADD THIS */
-    position: absolute; /* ADD THIS */
-    top: 0; /* ADD THIS */
-    left: 0; /* ADD THIS */
-    width: 100%; /* ADD THIS */
-    background-color: #F5C45E; /* ADD THIS — Yellow background */
-    padding: 1rem 1.5rem; /* ADD THIS */
-    z-index: 10; /* ADD THIS */
-    box-shadow: 0 2px 6px rgba(0,0,0,0.15); /* ADD THIS */
+/* NAVBAR FIXED TO TOP OF RIGHT PANEL */
+.navbar {
+    position: absolute;              /* keeps it inside the right panel */
+    top: 0;
+    left: 0;
+    width: 100%;                     /* <-- will now follow right-panel width */
+    background-color: F5C45E;
+    padding-left: 1.2rem !important;  /* Adjust to align first tab perfectly */
+    padding: 1rem 2rem;
+    z-index: 10;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
     animation: slideDown 0.6s ease; /* ADD THIS */
+  
 }
 
-.navbar ul { /* ADD THIS */
-    list-style: none; /* ADD THIS */
-    display: flex; /* ADD THIS */
-    justify-content: space-between; /* ADD THIS — evenly spans across right panel */
-    width: 100%; /* ADD THIS */
-    padding: 0; /* ADD THIS */
-    margin: 0; /* ADD THIS */
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;   /* <-- forces tabs to span the right panel */
+    align-items: center;
+    width: 100%;                      /* <-- critical */
+    margin: 0;
+    padding: 0;
 }
 
 .navbar li a { /* ADD THIS */
@@ -140,6 +146,7 @@
     padding-top: 100px; /* ADD THIS LINE ONLY */
 }
 /* END */
+
 
 
 
