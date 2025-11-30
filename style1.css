@@ -39,7 +39,7 @@
   padding: 6rem 2rem 2rem 2rem; /* Top padding = navbar height + logo alignment */
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: flex-start;
 }
 
@@ -149,6 +149,7 @@
     padding-top: 100px; /* ADD THIS LINE ONLY 
 }*/
 /* END */
+
 
 
 
