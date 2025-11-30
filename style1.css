@@ -46,44 +46,35 @@
 }
 
 
-.intro-text {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 1s ease;
-  max-width: none;        /* ⬅️ Use full width of right panel */
-  width: 100%;            /* ⬅️ Prevent narrow layout */
-  text-align: left;       /* ⬅️ Keep left-aligned */
-  margin-top: 0;
-}
-.intro-text.visible {
-  opacity: 1;
-  transform: translateY(0);
+.intro-text { 
+ opacity: 0; transform: translateY(20px); 
+ transition: all 1s ease; 
+} 
+
+.intro-text.visible { 
+ opacity: 1; transform: translateY(0); 
+} 
+
+.intro-text h1 { 
+ font-size: clamp(1rem, 3vw, 2rem);
+ margin-bottom: 0.5rem;  
+ white-space: nowrap;
+ font-family: 'Montserrat', sans-serif; 
+ color: #111; 
+} 
+
+.subheading { 
+ font-size: 1.5rem; 
+ font-family: 'Roboto', sans-serif; 
+ color: #444; line-height: 1; 
 }
 
-.intro-text h1 {
-  font-size: clamp(1rem, 3vw, 2rem);
-  margin-bottom: 0.5rem;
-  white-space: normal;
-  font-family: 'Montserrat', sans-serif;
-  color: #111;
+.intro-text p { 
+ font-size: 1.1rem; 
+ line-height: 1.6; 
+ margin-bottom: 1rem; 
+ font-family: 'Roboto', sans-serif;
 }
-
-.subheading {
-  font-size: 1.5rem;
-  white-space: nowrap;
-  font-family: 'Roboto', sans-serif;
-  color: #444;
-  line-height: 1;
-}
-
-.intro-text p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  margin-bottom: 1rem;
-  font-family: 'Roboto', sans-serif;
-}
-
-/* ░░░ NAVBAR STYLES — ADD ALL OF THIS ░░░ */
 
 /* NAVBAR FIXED TO TOP OF RIGHT PANEL */
 .navbar {
@@ -153,6 +144,7 @@
     padding-top: 100px; /* ADD THIS LINE ONLY 
 }*/
 /* END */
+
 
 
 
