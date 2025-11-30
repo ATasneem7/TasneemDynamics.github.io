@@ -30,62 +30,90 @@
   height: auto;
 }
 
-/* Right Panel */
+/* Right Panel 
 .right-panel {
   flex-grow: 0;
   flex-basis: 60%;
   background-color: #ffffff;
   display: flex;
-  justify-content: center; /* Align content to the left */
+  justify-content: center; /* Align content to the left 
   align-items: center;
-  padding: 2rem 1rem; /* Optional: adjust horizontal padding */
+  padding: 2rem 1rem; /* Optional: adjust horizontal padding 
+} */
+
+/* Right Panel is 60% of the page */
+.right-panel {
+  flex: 0 0 60%;
+  background-color: white;
+  position: relative;
+  padding-top: 70px; /* Makes space for nav bar */
 }
 
-/* ✨✨ ADDED NAVIGATION BAR STYLES ✨✨ */
-
-/* Navigation bar container */
-.nav-bar {
-  width: 100%;
-  background-color: #FFD93D; /* Yellow background */
-  padding: 0.8rem 1.2rem;
-  position: absolute;
+/* NAVBAR FIXED TO TOP OF RIGHT PANEL */
+.navbar {
+  position: absolute;         /* Important: stays INSIDE right panel */
   top: 0;
-  left: 40%; /* aligns to right panel (40% = left panel width) */
+  left: 0;
+  width: 100%;
+  background-color: #F5C45E;
+  padding: 1rem 2rem;
   z-index: 10;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  animation: slideDown 0.7s ease;
 }
 
-/* Navigation list styling */
-.nav-bar ul {
+/* NAVBAR LIST */
+.navbar ul {
   list-style: none;
   display: flex;
+  justify-content: flex-start;  /* FIRST TAB STARTS AT LEFT CORNER */
   gap: 2rem;
-  justify-content: flex-start; /* left aligned */
-  align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
-/* Navigation items */
-.nav-bar ul li a {
-  color: #000000; /* Black text */
-  font-weight: 700; /* Bold */
+/* NAVBAR LINKS */
+.navbar li a {
   text-decoration: none;
-  font-family: 'Montserrat', sans-serif;
+  color: #000000;       /* Dark black */
+  font-weight: bold;
   font-size: 1rem;
-  transition: 0.3s ease;
-  padding-bottom: 5px;
-  border-bottom: 2px solid transparent;
-}
-
-/* Hover effect */
-.nav-bar ul li a:hover {
-  border-bottom: 2px solid #000;
-  transform: translateY(-2px);
-}
-
-/* Make sure right-panel content shifts down below navbar */
-.right-panel {
   position: relative;
-  padding-top: 4.5rem !important; /* Extra space for navbar */
+  transition: color 0.3s ease;
 }
+
+/* Hover underline */
+.navbar li a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #FF9B45;
+  transition: width 0.3s ease;
+}
+
+.navbar li a:hover {
+  color: #FF9B45;
+}
+
+.navbar li a:hover::after {
+  width: 100%;
+}
+
+/* Slide-down animation */
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 
 
 .intro-text {
@@ -119,6 +147,7 @@
   line-height: 1.6;
   margin-bottom: 1rem;
   font-family: 'Roboto', sans-serif;
+
 
 
 
