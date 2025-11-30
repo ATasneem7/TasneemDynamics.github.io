@@ -30,24 +30,17 @@
   height: auto;
 }
 
-/* Right Panel 
+/* Right Panel */ 
 .right-panel {
   flex-grow: 0;
   flex-basis: 60%;
   background-color: #ffffff;
   display: flex;
-  justify-content: center; /* Align content to the left 
+  justify-content: center; /* Align content to the left */ 
   align-items: center;
-  padding: 2rem 1rem; /* Optional: adjust horizontal padding 
-} */
+  padding: 2rem 1rem; /* Optional: adjust horizontal padding */
+} 
 
-/* Right Panel is 60% of the page */
-.right-panel {
-  flex: 0 0 60%;
-  background-color: white;
-  position: relative;
-  padding-top: 70px; /* Makes space for nav bar */
-}
 
 /* NAVBAR FIXED TO TOP OF RIGHT PANEL */
 .navbar {
@@ -147,6 +140,7 @@
   line-height: 1.6;
   margin-bottom: 1rem;
   font-family: 'Roboto', sans-serif;
+
 
 
 
