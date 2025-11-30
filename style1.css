@@ -36,7 +36,7 @@
     flex-basis: 60%;
     background-color: #ffffff;
     position: relative;      /* REQUIRED for navbar containment */
-    padding: 100px 2rem 2rem 2rem;  
+    padding: 6rem 2rem 2rem 2rem;  
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -47,6 +47,9 @@
   opacity: 0;
   transform: translateY(20px);
   transition: all 1s ease;
+  max-width: 700px;
+  text-align: center;
+  margin-top: 1rem; /* Optional: adds breathing room below navbar */
 }
 
 .intro-text.visible {
@@ -84,8 +87,8 @@
     top: 0;
     left: 0;
     width: 100%;                     /* <-- will now follow right-panel width */
-    background-color: #F5C45E;
-    padding-left: 1.2rem !important;  /* Adjust to align first tab perfectly */
+    background-color: #FFD700;
+    padding-left: 1.2rem;  /* Adjust to align first tab perfectly */
     padding: 1rem 2rem;
     z-index: 10;
     box-shadow: 0 2px 6px rgba(0,0,0,0.15);
@@ -146,6 +149,7 @@
     padding-top: 100px; /* ADD THIS LINE ONLY 
 }*/
 /* END */
+
 
 
 
