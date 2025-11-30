@@ -81,7 +81,6 @@
   line-height: 1.6;
   margin-bottom: 1rem;
   font-family: 'Roboto', sans-serif;
-  white-space: nowrap;
 }
 
 /* ░░░ NAVBAR STYLES — ADD ALL OF THIS ░░░ */
@@ -154,6 +153,7 @@
     padding-top: 100px; /* ADD THIS LINE ONLY 
 }*/
 /* END */
+
 
 
 
