@@ -41,47 +41,6 @@
   padding: 2rem 1rem; /* Optional: adjust horizontal padding */
 } 
 
-/* ✅ Navigation Bar Container */
-.top-nav {
-  width: 100%;
-  background-color: #FFD93D; /* Yellow */
-  padding: 0.75rem 1.5rem;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-/* ✅ Horizontal Menu */
-.nav-menu {
-  display: flex;
-  flex-wrap: wrap;         /* Prevents overflow */
-  gap: 1.2rem;             /* Spacing between tabs */
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-/* ✅ Navigation Links */
-.nav-menu a {
-  font-size: 1rem;
-  font-weight: 700;
-  color: #000;             /* Black text */
-  text-decoration: none;
-  transition: 0.3s ease;
-}
-
-/* ✅ Hover Animation */
-.nav-menu a:hover {
-  color: #44444E;          /* Dark gray */
-  transform: translateY(-2px);
-}
-
-/* Ensure right-panel accounts for nav height */
-.right-panel {
-  position: relative;
-  padding-top: 4.5rem !important; 
-}
-
 .intro-text {
   opacity: 0;
   transform: translateY(20px);
@@ -113,6 +72,76 @@
   line-height: 1.6;
   margin-bottom: 1rem;
   font-family: 'Roboto', sans-serif;
+}
+
+/* ░░░ NAVBAR STYLES — ADD ALL OF THIS ░░░ */
+
+.navbar { /* ADD THIS */
+    position: absolute; /* ADD THIS */
+    top: 0; /* ADD THIS */
+    left: 0; /* ADD THIS */
+    width: 100%; /* ADD THIS */
+    background-color: #F5C45E; /* ADD THIS — Yellow background */
+    padding: 1rem 1.5rem; /* ADD THIS */
+    z-index: 10; /* ADD THIS */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15); /* ADD THIS */
+    animation: slideDown 0.6s ease; /* ADD THIS */
+}
+
+.navbar ul { /* ADD THIS */
+    list-style: none; /* ADD THIS */
+    display: flex; /* ADD THIS */
+    justify-content: space-between; /* ADD THIS — evenly spans across right panel */
+    width: 100%; /* ADD THIS */
+    padding: 0; /* ADD THIS */
+    margin: 0; /* ADD THIS */
+}
+
+.navbar li a { /* ADD THIS */
+    text-decoration: none; /* ADD THIS */
+    color: #000; /* ADD THIS — bold black text */
+    font-weight: 700; /* ADD THIS */
+    font-family: 'Roboto', sans-serif; /* ADD THIS */
+    font-size: 1rem; /* ADD THIS */
+    position: relative; /* ADD THIS */
+    transition: color 0.3s ease; /* ADD THIS */
+}
+
+/* Hover underline animation */
+.navbar li a::after { /* ADD THIS */
+    content: ''; /* ADD THIS */
+    position: absolute; /* ADD THIS */
+    left: 0; /* ADD THIS */
+    bottom: -4px; /* ADD THIS */
+    width: 0%; /* ADD THIS */
+    height: 2px; /* ADD THIS */
+    background-color: #FF9B45; /* ADD THIS — orange hover highlight */
+    transition: width 0.3s ease; /* ADD THIS */
+}
+
+.navbar li a:hover { /* ADD THIS */
+    color: #FF9B45; /* ADD THIS */
+}
+
+.navbar li a:hover::after { /* ADD THIS */
+    width: 100%; /* ADD THIS */
+}
+
+/* Slide-down animation */
+@keyframes slideDown { /* ADD THIS */
+    from { transform: translateY(-100%); opacity: 0; } /* ADD THIS */
+    to { transform: translateY(0); opacity: 1; } /* ADD THIS */
+}
+/* ░░░ END OF NAVBAR STYLES ░░░ */
+
+
+/* ░░░ IMPORTANT: Give space so intro text does NOT slide under navbar ░░░ */
+.right-panel { /* MODIFY THIS */
+    padding-top: 100px; /* ADD THIS LINE ONLY */
+}
+/* END */
+
+
 
 
 
