@@ -51,11 +51,11 @@
   opacity: 0;
   transform: translateY(20px);
   transition: all 1s ease;
-  max-width: 700px;
-  text-align: left; /* ⬅️ Left-align text content */
+  max-width: 100%;        /* ⬅️ Use full width of right panel */
+  width: 100%;            /* ⬅️ Prevent narrow layout */
+  text-align: left;       /* ⬅️ Keep left-aligned */
   margin-top: 0;
 }
-
 .intro-text.visible {
   opacity: 1;
   transform: translateY(0);
@@ -153,6 +153,7 @@
     padding-top: 100px; /* ADD THIS LINE ONLY 
 }*/
 /* END */
+
 
 
 
