@@ -42,8 +42,10 @@
   padding-bottom: 2rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: flex-start; /* ⬅️ Left-align content horizontally */
 }
+
 
 .intro-text {
   opacity: 0;
@@ -151,6 +153,7 @@
     padding-top: 100px; /* ADD THIS LINE ONLY 
 }*/
 /* END */
+
 
 
 
