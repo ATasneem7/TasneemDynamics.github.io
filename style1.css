@@ -39,7 +39,7 @@
     padding: 6rem 2rem 2rem 2rem;  
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
 }
 
 
@@ -48,8 +48,7 @@
   transform: translateY(20px);
   transition: all 1s ease;
   max-width: 700px;
-  text-align: center;
-  margin-top: 1rem; /* Optional: adds breathing room below navbar */
+  margin-top: 10rem; /* Optional: adds breathing room below navbar */
 }
 
 .intro-text.visible {
@@ -149,6 +148,7 @@
     padding-top: 100px; /* ADD THIS LINE ONLY 
 }*/
 /* END */
+
 
 
 
