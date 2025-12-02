@@ -36,14 +36,22 @@
   flex-basis: 60%;
   background-color: #ffffff;
   position: relative;
-  padding-top: calc(1rem + 15rem); /* Adjust to align intro with logo top */
-  padding-right: 2rem;
-  padding-left: 2rem;
-  padding-bottom: 2rem;
+
+  /* NEW: push text down to align with the logo top */
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* ⬅️ Left-align content horizontally */
+  justify-content: flex-start;
+
+  padding-top: var(--right-panel-top-offset, 0rem);
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 2rem;
 }
+
+:root {
+  --right-panel-top-offset: 7.5rem; /* adjust until alignment matches */
+}
+
 
 .intro-text { 
  opacity: 0; transform: translateY(20px); 
@@ -144,6 +152,7 @@
     padding-top: 100px; /* ADD THIS LINE ONLY 
 }*/
 /* END */
+
 
 
 
