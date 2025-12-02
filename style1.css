@@ -36,7 +36,7 @@
   flex-basis: 60%;
   background-color: #ffffff;
   position: relative;
-  padding-top: calc(1rem + 9rem); /* Adjust to align intro with logo top */
+  padding-top: calc(1rem + 15rem); /* Adjust to align intro with logo top */
   padding-right: 2rem;
   padding-left: 2rem;
   padding-bottom: 2rem;
@@ -144,6 +144,7 @@
     padding-top: 100px; /* ADD THIS LINE ONLY 
 }*/
 /* END */
+
 
 
 
