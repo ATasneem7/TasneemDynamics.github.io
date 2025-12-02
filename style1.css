@@ -126,12 +126,12 @@
     bottom: -4px; /* ADD THIS */
     width: 0%; /* ADD THIS */
     height: 2px; /* ADD THIS */
-    background-color: #FF9B45; /* ADD THIS — orange hover highlight */
+    background-color: #fcbf49; /* #FF9B45 */
     transition: width 0.3s ease; /* ADD THIS */
 }
 
 .navbar li a:hover { /* ADD THIS */
-    color: #FF9B45; /* ADD THIS */
+    color: #9e2a2b; /* ADD THIS */
 }
 
 .navbar li a:hover::after { /* ADD THIS */
@@ -151,6 +151,7 @@
     padding-top: 100px; /* ADD THIS LINE ONLY 
 }*/
 /* END */
+
 
 
 
