@@ -49,7 +49,7 @@
 }
 
 :root {
-  --right-panel-top-offset: 7.5rem; /* adjust until alignment matches */
+  --right-panel-top-offset: 8.5rem; /* adjust until alignment matches */
 }
 
 
@@ -152,6 +152,7 @@
     padding-top: 100px; /* ADD THIS LINE ONLY 
 }*/
 /* END */
+
 
 
 
