@@ -6,40 +6,54 @@
 }
 
 /* Homepage Layout */
-.homepage-grid {
-  display: grid;
-  grid-template-columns: 40% 60%;
-  height: 100vh;
-  width: 100vw;
+.homepage { 
+  display: flex; 
+  flex-direction: row; 
+  height: 100vh; 
+  width: 100vw; 
 }
 
-.left-panel {
-  background-color: #44444E;
-  display: flex;
+/* Left Panel */ 
+.left-panel { 
+  flex-grow: 0; 
+  flex-basis: 40%; 
+  background-color: #44444E; 
+  display: flex; 
   justify-content: center;
-  align-items: flex-start;
-  padding-top: 2rem;
+  align-items: center; 
+  padding: 1rem; 
 }
 
-.logo {
-  max-width: 100%;
-  height: auto;
+.logo { 
+  width: 420%;
+  max-width: 600px; 
+  height: auto; 
 }
 
+/* Right Panel */ 
 .right-panel {
+  flex-grow: 0;
+  flex-basis: 60%;
   background-color: #ffffff;
   position: relative;
+
+  /* NEW: push text down to align with the logo top */
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   justify-content: flex-start;
-  padding: 2rem;
+
+  padding-top: var(--right-panel-top-offset, 0rem);
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 2rem;
+}
+:root {
+  --right-panel-top-offset: 7.5rem; /* adjust until alignment matches */
 }
 
 .intro-text { 
  opacity: 0; transform: translateY(20px); 
  transition: all 1s ease; 
- margin-top: 2rem;
 } 
 
 .intro-text.visible { 
@@ -137,6 +151,7 @@
     padding-top: 100px; /* ADD THIS LINE ONLY 
 }*/
 /* END */
+
 
 
 
