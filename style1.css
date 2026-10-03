@@ -149,8 +149,8 @@ body{
 
 .hero-content h1{
     font-family:'Montserrat', sans-serif;
-    font-size:2rem;
-    font-weight:900;
+    font-size:1rem;
+    font-weight:600;
     line-height:1.05;
     letter-spacing:-1px;
     text-transform:uppercase;
@@ -164,7 +164,7 @@ body{
 
 .hero-content .subheading{
     color:#F5F5F5;
-    font-size:1.5rem;
+    font-size:1rem;
     font-style:italic;
     font-weight:700;
     line-height:1.4;
