@@ -110,7 +110,7 @@ body{
 .hero-banner{
     position:relative;
     width:100%;
-    height:550px;
+    height:600px;
     flex:none;
     overflow:hidden;
 }
@@ -121,7 +121,7 @@ body{
     width:100%;
     height:100%;
     object-fit:cover;
-   object-position:center 40%;
+    display:block;
 }
 
 /* Dark overlay */
@@ -145,7 +145,7 @@ body{
 .hero-content{
     position:absolute;
     top:95px;
-    left:35px;
+    left:55px;
     max-width:700px;
     z-index:10;
 }
@@ -180,7 +180,6 @@ body{
     height:5px;
     background:#FFD700;
     margin-bottom:18px;
-    margin-left:0;
 }
 
 .bottom-line {
@@ -201,6 +200,47 @@ body{
         opacity:1;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
