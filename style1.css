@@ -110,8 +110,8 @@ body{
 .hero-banner{
     position:relative;
     width:100%;
-    height:520px;     /* banner height */
-    flex:none;        /* prevents stretching */
+    height:640px;
+    flex:none;
     overflow:hidden;
 }
 
@@ -144,19 +144,18 @@ body{
 
 .hero-content{
     position:absolute;
-    top:18px;
-    left:48px;
-    max-width:700px;
-    z-index:2;
-    color:white;
+    top:85px;
+    left:55px;
+    max-width:650px;
+    z-index:10;
 }
 
 .hero-content h1{
     font-family:'Arial Black', 'Montserrat', sans-serif;
-    font-size:3.55rem;
+    font-size:2.8rem;
     font-weight:900;
-    line-height:0.95;
-    letter-spacing:-2px;
+    line-height:1.0;
+    letter-spacing:-1px;
     text-transform:uppercase;
     color:#F2F2F2;
     margin-bottom:14px;
