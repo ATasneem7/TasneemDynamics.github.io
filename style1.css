@@ -28,10 +28,9 @@ body{
     flex:0 0 22%;
     background: linear-gradient(
     135deg,
-    #4A4B56 0%,
-    #3B3D49 35%,
-    #2C313C 70%,
-    #21262E 100%
+    #21262E 0%,
+    #363845 50%,
+    #4A4B56 100%
 );
     display:flex;
     flex-direction:column;
