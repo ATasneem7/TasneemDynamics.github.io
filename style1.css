@@ -62,7 +62,7 @@
   flex-direction: column;
   justify-content: flex-start;
 
-  padding-top: var(--right-panel-top-offset, 0rem);
+  padding-top: 80px;
   padding-left: 2rem;
   padding-right: 2rem;
   padding-bottom: 2rem;
