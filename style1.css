@@ -108,20 +108,17 @@ body{
 /* HERO BANNER*/
 
 .hero-banner{
-    position:relative;
-    width:100%;
-    height:640px;
-    flex:none;
+    margin-top:68px;
+    height:500px;
     overflow:hidden;
+    position:relative;
 }
-
-/* Image */
 
 .hero-image{
     width:100%;
     height:100%;
     object-fit:cover;
-    display:block;
+    object-position:center 25%;
 }
 
 /* Dark overlay */
