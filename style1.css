@@ -144,7 +144,7 @@ body{
 
 .hero-content{
     position:absolute;
-    top:35px;
+    top:45px;
     left:50px;
     max-width:600px;
     z-index:2;
@@ -153,11 +153,12 @@ body{
 
 .hero-content h1{
     font-family:'Montserrat',sans-serif;
-    font-size:clamp(2.8rem,4vw,3.8rem);
+    font-size: 3rem;
     font-weight:800;
     line-height:1.05;
     margin-bottom:20px;
     text-transform:uppercase;
+    color:#fff;
 }
 
 .hero-content h1 span{
