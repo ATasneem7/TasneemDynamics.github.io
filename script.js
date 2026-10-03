@@ -1,10 +1,8 @@
 // Optional JS for smooth intro animation
 
 window.addEventListener("load", () => {
-
-    const intro = document.querySelector(".intro-text");
-    intro.classList.add("visible");
-
+    const hero = document.querySelector(".hero-banner");
+    hero.classList.add("visible");
     const nav = document.querySelector(".navbar");
 
     nav.style.opacity = "0";
@@ -14,6 +12,7 @@ window.addEventListener("load", () => {
         nav.style.transition = "all 0.8s ease";
         nav.style.opacity = "1";
         nav.style.transform = "translateY(0)";
+
     }, 200);
 
 });
