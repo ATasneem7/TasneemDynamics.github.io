@@ -172,10 +172,18 @@ body{
     line-height:1.35;
     margin-bottom:0;
 }
+.yellow-line {
+    width: 80px;
+    height: 6px;
+    background: #FFD700;
+    margin-bottom: 25px;
+}
 
-/* =========================
-   ANIMATION
-========================= */
+.bottom-line {
+    margin-top: 25px;
+}
+
+/* ANIMATION*/
 
 @keyframes slideDown{
 
