@@ -45,20 +45,20 @@
 }*/
 .logo {
   width: 300%;
-  max-width: 450px;
+  max-width: 300px;
   height: auto;
   display: block;
 }
 
 /* Right Panel */ 
-.right-panel {
+/*.right-panel {
   flex-grow: 1;
   flex-basis: 78%;
   background-color: #ffffff;
   position: relative;
 
   /* NEW: push text down to align with the logo top */
-  display: flex;
+  /*display: flex;
   flex-direction: column;
   justify-content: flex-start;
 
@@ -66,12 +66,24 @@
   padding-left: 2rem;
   padding-right: 2rem;
   padding-bottom: 2rem;
+}*/
+.right-panel {
+  flex-grow: 1;
+  flex-basis: 78%;
+  background-color: #ffffff;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  padding-top: var(--right-panel-top-offset, 0rem);
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 2rem;
 }
 /*:root {
   --right-panel-top-offset: 16.5rem; /* adjust until alignment matches */
-:root {
-  --right-panel-top-offset: 11rem;
-}
 
 .intro-text { 
  opacity: 0; transform: translateY(20px); 
@@ -165,11 +177,9 @@
 .hero-banner {
     position: relative;
     width: 100%;
-    height: 520px;
+    height: 650px;
+    margin: 0;
     overflow: hidden;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 1s ease;
 }
 
 .hero-banner.visible {
@@ -190,12 +200,11 @@
 
 .hero-content {
     position: absolute;
-    top: 50%;
-    left: 60px;
-    transform: translateY(-50%);
-    max-width: 650px;
+    top: 70px;
+    left: 50px;
+    width: 45%;
+    z-index: 10;
     color: white;
-    z-index: 2;
 }
 
 /* Optional dark overlay */
@@ -206,31 +215,34 @@
     inset: 0;
     background:
     linear-gradient(
-        to right,
-        rgba(0,0,0,0.55),
-        rgba(0,0,0,0.15)
+        90deg,
+        rgba(0,0,0,0.55) 0%,
+        rgba(0,0,0,0.25) 40%,
+        rgba(0,0,0,0.05) 100%
     );
 
     z-index: 1;
 }
 
 .hero-content h1 {
-    font-size: clamp(2rem,4vw,4rem);
-    line-height: 1.05;
-    margin-bottom: 1rem;
     font-family: 'Montserrat', sans-serif;
+    font-size: 4rem;
+    line-height: 1.05;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: white;
 }
 
 .hero-content h1 span {
-    display: block;
     color: #FFD700;
 }
 
 .hero-content .subheading {
     color: white;
     font-size: 1.5rem;
+    font-style: italic;
+    margin-bottom: 30px;
     line-height: 1.4;
-    margin-bottom: 1.5rem;
 }
 
 .hero-content p {
