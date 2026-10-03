@@ -32,31 +32,47 @@ body{
     #363845 50%,
     #4A4B56 100%
 );
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:flex-start;
-    padding-top:70px;
     position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
 }
 
 .logo{
     width:150%;
     max-width:430px;
     height:auto;
-    display:block;
+    margin-top: 130px;
 }
 
 .sidebar-tagline{
     position: absolute;
-    bottom: 90px;
-    left: 40px;
-
-    color: rgba(255,255,255,0.75);
+    left: 65px;
+    bottom: 120px;
+    color: rgba(255,255,255,0.72);
     font-family: 'Montserrat', sans-serif;
+
+    font-size: 1.15rem;
+    font-weight: 300;
+
     letter-spacing: 4px;
-    line-height: 1.8;
+    line-height: 1.75;
+    text-transform: uppercase;
 }
+
+.sidebar-tagline p{
+    margin: 0;
+}
+
+.sidebar-line{
+    width: 65px;
+    height: 5px;
+    background: #FFD700;
+    margin-top: 22px;
+}
+
 /*RIGHT PANEL*/
 
 .right-panel{
