@@ -110,7 +110,7 @@ body{
 .hero-banner{
     position:relative;
     width:100%;
-    height:640px;     /* banner height */
+    height:520px;     /* banner height */
     flex:none;        /* prevents stretching */
     overflow:hidden;
 }
@@ -144,21 +144,22 @@ body{
 
 .hero-content{
     position:absolute;
-    top:55px;
-    left:50px;
-    max-width:600px;
+    top:18px;
+    left:48px;
+    max-width:700px;
     z-index:2;
     color:white;
 }
 
 .hero-content h1{
-    font-family:'Montserrat',sans-serif;
-    font-size: 2.8rem;
-    font-weight:800;
-    line-height:1.05;
-    margin-bottom:20px;
+    font-family:'Arial Black', 'Montserrat', sans-serif;
+    font-size:3.55rem;
+    font-weight:900;
+    line-height:0.95;
+    letter-spacing:-2px;
     text-transform:uppercase;
-    color:#fff;
+    color:#F2F2F2;
+    margin-bottom:14px;
 }
 
 .hero-content h1 span{
@@ -166,22 +167,24 @@ body{
 }
 
 .hero-content .subheading{
-    color:#fff;
-    font-size:1rem;
+    color:#F5F5F5;
+    font-size:1.05rem;
     font-style:italic;
-    font-weight:500;
-    line-height:1.45;
-    max-width:550px;
+    font-weight:600;
+    line-height:1.35;
+    letter-spacing:0.2px;
+    max-width:700px;
 }
-.yellow-line {
-    width: 80px;
-    height: 6px;
-    background: #FFD700;
-    margin-bottom: 25px;
+
+.yellow-line{
+    width:70px;
+    height:5px;
+    background:#FFD700;
+    margin-bottom:18px;
 }
 
 .bottom-line {
-    margin-top: 25px;
+    margin-top: 18px;
 }
 
 /* ANIMATION*/
