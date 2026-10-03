@@ -1,315 +1,194 @@
-/* General Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* GENERAL RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-/* Homepage Layout */
-.homepage { 
-  display: flex; 
-  flex-direction: row; 
-  height: 100vh; 
-  width: 100vw; 
+html,
+body{
+    width:100%;
+    height:100%;
+    overflow-x:hidden;
+    font-family:'Roboto',sans-serif;
 }
 
-/* Left Panel  
-.left-panel { 
-  flex-grow: 0; 
-  flex-basis: 40%; 
-  background-color: #44444E; 
-  display: flex; 
-  justify-content: center;
-  align-items: center; 
-  padding: 1rem; 
-} */
-.left-panel {
-  flex-grow: 0;
-  flex-basis: 22%;
-  background-color: #44444E;
+/*PAGE LAYOUT*/
 
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: column;
-
-  padding-top: 4rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+.homepage{
+    display:flex;
+    width:100vw;
+    height:100vh;
 }
 
-/*.logo { 
-  width: 420%;
-  max-width: 600px; 
-  height: auto; 
-}*/
-.logo {
-  width: 300%;
-  max-width: 300px;
-  height: auto;
-  display: block;
+/* LEFT PANEL*/
+
+.left-panel{
+    flex:0 0 22%;
+    background:#44444E;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-start;
+    padding-top:70px;
 }
 
-/* Right Panel */ 
-/*.right-panel {
-  flex-grow: 1;
-  flex-basis: 78%;
-  background-color: #ffffff;
-  position: relative;
-
-  /* NEW: push text down to align with the logo top */
-  /*display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-
-  padding-top: 80px;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  padding-bottom: 2rem;
-}*/
-.right-panel {
-  flex-grow: 1;
-  flex-basis: 78%;
-  background-color: #ffffff;
-  position: relative;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-
-  padding-top: var(--right-panel-top-offset, 0rem);
-  padding-left: 2rem;
-  padding-right: 2rem;
-  padding-bottom: 2rem;
-}
-/*:root {
-  --right-panel-top-offset: 16.5rem; /* adjust until alignment matches */
-
-.intro-text { 
- opacity: 0; transform: translateY(20px); 
- transition: all 1s ease; 
-} 
-
-.intro-text.visible { 
- opacity: 1; transform: translateY(0); 
-} 
-
-.intro-text h1 { 
- font-size: clamp(1rem, 3vw, 2rem);
-  margin-top: 0rem;
- margin-bottom: 0.5rem;  
- white-space: nowrap;
- font-family: 'Montserrat', sans-serif; 
- color: #111; 
-} 
-
-.subheading { 
- font-size: 1.5rem; 
- font-family: 'Roboto', sans-serif; 
- color: #444; 
- line-height: 1; 
+.logo{
+    width:100%;
+    max-width:300px;
+    height:auto;
+    display:block;
 }
 
-.intro-text p { 
- font-size: 1.1rem; 
- line-height: 1.6; 
- margin-bottom: 1rem; 
- font-family: 'Roboto', sans-serif;
+/*RIGHT PANEL*/
+
+.right-panel{
+    flex:1;
+    position:relative;
+    background:#ffffff;
+    display:flex;
+    flex-direction:column;
+    padding:0;
+    margin:0;
 }
 
-/* NAVBAR FIXED TO TOP OF RIGHT PANEL */
-.navbar {
-    position: absolute;              /* keeps it inside the right panel */
-    top: 0;
-    left: 0;
-    width: 100%;                     /* <-- will now follow right-panel width */
-    background-color: #FFD700;
-    padding-left: 1.2rem;  /* Adjust to align first tab perfectly */
-    padding: 1rem 2rem;
-    z-index: 10;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-    animation: slideDown 0.6s ease; /* ADD THIS */
-  
+/*NAVBAR */
+
+.navbar{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:68px;
+    background:#FFD700;
+    z-index:100;
+    box-shadow:0 2px 8px rgba(0,0,0,0.15);
+    animation:slideDown 0.6s ease;
 }
 
-.navbar ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-between;   /* <-- forces tabs to span the right panel */
-    align-items: center;
-    width: 100%;                      /* <-- critical */
-    margin: 0;
-    padding: 0;
+.navbar ul{
+    height:100%;
+
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    list-style:none;
 }
 
-.navbar li a { /* ADD THIS */
-    text-decoration: none; /* ADD THIS */
-    color: #000; /* ADD THIS — bold black text */
-    font-weight: 700; /* ADD THIS */
-    font-family: 'Roboto', sans-serif; /* ADD THIS */
-    font-size: 1rem; /* ADD THIS */
-    position: relative; /* ADD THIS */
-    transition: color 0.3s ease; /* ADD THIS */
+.navbar li a{
+    text-decoration:none;
+    color:#000;
+    font-weight:700;
+    font-size:1rem;
+    position:relative;
+    transition:0.3s ease;
 }
 
-/* Hover underline animation */
-.navbar li a::after { /* ADD THIS */
-    content: ''; /* ADD THIS */
-    position: absolute; /* ADD THIS */
-    left: 0; /* ADD THIS */
-    bottom: -4px; /* ADD THIS */
-    width: 0%; /* ADD THIS */
-    height: 2px; /* ADD THIS */
-    background-color: #fcbf49; /* #FF9B45 */
-    transition: width 0.3s ease; /* ADD THIS */
+.navbar li a:hover{
+    color:#9e2a2b;
 }
 
-.navbar li a:hover { /* ADD THIS */
-    color: #9e2a2b; /* ADD THIS */
+.navbar li a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-4px;
+    width:0;
+    height:2px;
+    background:#fcbf49;
+    transition:0.3s ease;
 }
 
-.navbar li a:hover::after { /* ADD THIS */
-    width: 100%; /* ADD THIS */
+.navbar li a:hover::after{
+    width:100%;
 }
 
-/* HERO BANNER */
+/* HERO BANNER*/
 
-.hero-banner {
-    position: relative;
-    width: 100%;
-    height: 650px;
-    margin: 0;
-    overflow: hidden;
+.hero-banner{
+    margin-top:68px;
+    position:relative;
+    width:100%;
+    height:640px;
+    overflow:hidden;
 }
 
-.hero-banner.visible {
-    opacity: 1;
-    transform: translateY(0);
+/* Image */
+
+.hero-image{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
 }
 
-/* Banner image */
+/* Dark overlay */
 
-.hero-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-/* Text overlay */
-
-.hero-content {
-    position: absolute;
-    top: 70px;
-    left: 50px;
-    width: 45%;
-    z-index: 10;
-    color: white;
-}
-
-/* Optional dark overlay */
-
-.hero-banner::after {
-    content: "";
-    position: absolute;
-    inset: 0;
+.hero-banner::before{
+    content:"";
+    position:absolute;
+    inset:0;
     background:
     linear-gradient(
         90deg,
         rgba(0,0,0,0.55) 0%,
-        rgba(0,0,0,0.25) 40%,
-        rgba(0,0,0,0.05) 100%
+        rgba(0,0,0,0.30) 35%,
+        rgba(0,0,0,0.08) 100%
     );
-
-    z-index: 1;
+    z-index:1;
 }
 
-.hero-content h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 4rem;
-    line-height: 1.05;
-    font-weight: 800;
-    margin-bottom: 20px;
-    color: white;
+/* HERO TEXT */
+
+.hero-content{
+    position:absolute;
+    top:55px;
+    left:50px;
+    max-width:650px;
+    z-index:2;
+    color:#fff;
 }
 
-.hero-content h1 span {
-    color: #FFD700;
+.hero-content h1{
+    font-family:'Montserrat',sans-serif;
+    font-size:4.5rem;
+    font-weight:800;
+    line-height:1.05;
+    margin-bottom:25px;
+    text-transform:uppercase;
+    color:#fff;
 }
 
-.hero-content .subheading {
-    color: white;
-    font-size: 1.5rem;
-    font-style: italic;
-    margin-bottom: 30px;
-    line-height: 1.4;
+.hero-content h1 span{
+    color:#FFD700;
 }
 
-.hero-content p {
-    color: white;
-    font-size: 1.15rem;
-    line-height: 1.8;
+.hero-content .subheading{
+    color:#fff;
+    font-size:1.8rem;
+    font-style:italic;
+    font-weight:600;
+    line-height:1.35;
+    margin-bottom:0;
 }
 
-/* Slide-down animation */
-@keyframes slideDown { /* ADD THIS */
-    from { transform: translateY(-100%); opacity: 0; } /* ADD THIS */
-    to { transform: translateY(0); opacity: 1; } /* ADD THIS */
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes slideDown{
+
+    from{
+        transform:translateY(-100%);
+        opacity:0;
+    }
+
+    to{
+        transform:translateY(0);
+        opacity:1;
+    }
 }
-/* ░░░ END OF NAVBAR STYLES ░░░ */
-
-
-/* ░░░ IMPORTANT: Give space so intro text does NOT slide under navbar ░░░
-.right-panel { /* MODIFY THIS 
-    padding-top: 100px; /* ADD THIS LINE ONLY 
-}*/
-/* END */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
