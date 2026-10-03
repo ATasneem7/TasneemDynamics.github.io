@@ -35,8 +35,8 @@ body{
 }
 
 .logo{
-    width:100%;
-    max-width:300px;
+    width:140%;
+    max-width:420px;
     height:auto;
     display:block;
 }
@@ -51,6 +51,7 @@ body{
     flex-direction:column;
     padding:0;
     margin:0;
+    overflow-y:auto;
 }
 
 /*NAVBAR */
@@ -107,10 +108,10 @@ body{
 /* HERO BANNER*/
 
 .hero-banner{
-    margin-top:68px;
     position:relative;
     width:100%;
-    height:640px;
+    height:640px;     /* banner height */
+    flex:none;        /* prevents stretching */
     overflow:hidden;
 }
 
@@ -143,21 +144,20 @@ body{
 
 .hero-content{
     position:absolute;
-    top:55px;
+    top:35px;
     left:50px;
-    max-width:650px;
+    max-width:600px;
     z-index:2;
-    color:#fff;
+    color:white;
 }
 
 .hero-content h1{
     font-family:'Montserrat',sans-serif;
-    font-size:4.5rem;
+    font-size:clamp(2.8rem,4vw,3.8rem);
     font-weight:800;
     line-height:1.05;
-    margin-bottom:25px;
+    margin-bottom:20px;
     text-transform:uppercase;
-    color:#fff;
 }
 
 .hero-content h1 span{
@@ -166,11 +166,11 @@ body{
 
 .hero-content .subheading{
     color:#fff;
-    font-size:1.8rem;
+    font-size:1rem;
     font-style:italic;
-    font-weight:600;
-    line-height:1.35;
-    margin-bottom:0;
+    font-weight:500;
+    line-height:1.45;
+    max-width:550px;
 }
 .yellow-line {
     width: 80px;
