@@ -37,6 +37,7 @@ body{
     align-items:center;
     justify-content:flex-start;
     padding-top:70px;
+    position: relative;
 }
 
 .logo{
@@ -46,6 +47,16 @@ body{
     display:block;
 }
 
+.sidebar-tagline{
+    position: absolute;
+    bottom: 90px;
+    left: 40px;
+
+    color: rgba(255,255,255,0.75);
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 4px;
+    line-height: 1.8;
+}
 /*RIGHT PANEL*/
 
 .right-panel{
