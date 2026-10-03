@@ -26,7 +26,13 @@ body{
 
 .left-panel{
     flex:0 0 22%;
-    background:#44444E;
+    background: linear-gradient(
+    135deg,
+    #4A4B56 0%,
+    #3B3D49 35%,
+    #2C313C 70%,
+    #21262E 100%
+);
     display:flex;
     flex-direction:column;
     align-items:center;
