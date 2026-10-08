@@ -192,14 +192,14 @@ body{
 /* INTRO SECTION */
 
 .intro-section{
-    padding:45px 55px;
-    background:#ffffff;
+    margin-top:-10px;
+    padding:20px 55px 45px;
 }
 
 .intro-left{
     display:flex;
-    align-items:center;
-    gap:30px;
+    align-items:flex-start;
+    gap:40px;
 }
 
 .profile-image{
@@ -226,8 +226,15 @@ body{
     font-size:1rem;
     color:#555;
     line-height:1.5;
-    margin-bottom:18px;
+    margin-bottom:8px;
     font-weight:600;
+}
+
+.intro-divider{
+    width:85px;
+    height:5px;
+    background:#E5B800;
+    margin:10px 0 22px;
 }
 
 .intro-text p{
@@ -240,7 +247,7 @@ body{
 .section-line{
     width:70px;
     height:4px;
-    background:#FFD700;
+    background:#E5B800;
     margin:18px 0 24px 0;
 }
 
@@ -285,10 +292,17 @@ body{
 }
 
 .section-header{
-    display:flex;
+    display:block;
     justify-content:space-between;
     align-items:center;
-    margin-bottom:40px;
+    margin-bottom:30px;
+}
+
+.section-divider{
+    width:90px;
+    height:5px;
+    background:#E5B800;
+    margin-top:10px;
 }
 
 .section-header h2{
