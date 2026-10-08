@@ -189,9 +189,7 @@ body{
     margin-top: 18px;
 }
 
-/* ======================================
-   INTRO SECTION
-====================================== */
+/* INTRO SECTION */
 
 .intro-section{
     padding:45px 55px;
@@ -204,12 +202,14 @@ body{
     gap:30px;
 }
 
-.profile-photo{
-    width:140px;
-    height:140px;
+.profile-image{
+    width:220px;
+    height:220px;
     object-fit:cover;
-    border-radius:50%;
-    border:4px solid #FFD700;
+    border-radius:0;
+    border:none;
+    box-shadow:
+    0 4px 12px rgba(0,0,0,0.15);
 }
 
 .intro-text{
@@ -235,6 +235,13 @@ body{
     color:#444;
     line-height:1.7;
     margin-bottom:22px;
+}
+
+.section-line{
+    width:70px;
+    height:4px;
+    background:#FFD700;
+    margin:18px 0 24px 0;
 }
 
 .button-row{
@@ -270,9 +277,7 @@ body{
     background:#f5f5f5;
 }
 
-/* ======================================
-   RESEARCH INTERESTS
-====================================== */
+/* RESEARCH INTERESTS*/
 
 .research-section{
     padding:10px 55px 60px;
@@ -283,7 +288,7 @@ body{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    margin-bottom:25px;
+    margin-bottom:40px;
 }
 
 .section-header h2{
