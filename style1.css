@@ -202,7 +202,7 @@ body{
     gap:40px;
 }
 
-.profile-image{
+.profile-photo{
     width:180px;
     height:210px;
     object-fit:cover;
@@ -294,7 +294,7 @@ body{
 .section-divider{
     width:90px;
     height:5px;
-    background:#C89B00        /*#E5B800;*/
+    background:#C89B00;        /*#E5B800;*/
     margin-top:5px;
     margin-bottom:20px;
 }
@@ -304,6 +304,11 @@ body{
     font-size:1.8rem;
 }
 
+.research-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:24px;
+}
 
 .research-card{
     background:#ffffff;
@@ -346,7 +351,6 @@ body{
 }
 
 .card-arrow{
-
     width:34px;
     height:34px;
     border-radius:50%;
@@ -362,6 +366,10 @@ body{
     transition:0.3s ease;
 }
 
+.card-arrow:visited{
+    color:#1F2A44;
+    text-decoration:none;
+}
 .card-arrow:hover{
     background:#E5B800;
     transform:scale(1.08);
