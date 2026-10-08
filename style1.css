@@ -312,12 +312,12 @@ body{
     background:#ffffff;
     border:1px solid #E8E8E8;
     border-radius:14px;
-    padding:14px 12px;
-    text-align:center;
     display:flex;
     flex-direction:column;
-    transition:0.3s ease;
+    align-items:center;
+    padding:18px 14px 20px;
     box-shadow:0 2px 8px rgba(0,0,0,0.04);
+    transition:0.3s ease;
 }
 
 .research-card:hover{
@@ -327,9 +327,11 @@ body{
 }
 
 .research-card img{
-    width:145px;
-    height:145px;
+    display:block;
+    width:140px;
+    height:140px;
     object-fit:contain;
+    margin:0 auto;      /* centers image horizontally */
 }
 
 .research-card h3{
