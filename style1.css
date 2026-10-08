@@ -244,13 +244,6 @@ body{
     margin-bottom:22px;
 }
 
-.section-line{
-    width:70px;
-    height:4px;
-    background:#E5B800;
-    margin:18px 0 24px 0;
-}
-
 .button-row{
     display:flex;
     gap:12px;
