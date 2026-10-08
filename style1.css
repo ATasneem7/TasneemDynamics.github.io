@@ -315,6 +315,7 @@ body{
     display:flex;
     flex-direction:column;
     align-items:center;
+    text-align: center;
     height:390px;
     padding:18px 14px 20px;
     box-shadow:0 2px 8px rgba(0,0,0,0.04);
@@ -339,16 +340,18 @@ body{
     color:#1F2A44;
     font-size:1.05rem;
     font-weight:700;
+    width:100%;
     margin-top:12px;
     margin-bottom:10px;
     line-height:1.35;
 }
 
 .research-card p{
-    font-size:0.82rem;
+    font-size:0.9rem;
     color:#6b7280;
     line-height:1.5;
-    min-height:80px;      /* same height for every card */
+    width:100%;
+    min-height:75px;      /* same height for every card */
     display:flex;
     align-items:center;
     justify-content:center;
