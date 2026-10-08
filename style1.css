@@ -203,13 +203,10 @@ body{
 }
 
 .profile-photo{
-    width:250px;
-    height:250px;
+    width:300px;
+    height:300px;
     object-fit:cover;
-    border-radius:0;
-    border:none;
-    box-shadow:
-    0 4px 12px rgba(0,0,0,0.15);
+    box-shadow:0 4px 12px rgba(0,0,0,0.15);
 }
 
 .intro-text{
@@ -315,13 +312,14 @@ body{
     background:#ffffff;
     border:1px solid #E8E8E8;
     border-radius:14px;
-    padding:18px 14px 20px;
+    padding:14px 12px;
     text-align:center;
+    display:flex;
+    flex-direction:column;
     transition:0.3s ease;
-    box-shadow:
-    0 2px 8px rgba(0,0,0,0.04);
-    position:relative;
+    box-shadow:0 2px 8px rgba(0,0,0,0.04);
 }
+
 .research-card:hover{
     transform:translateY(-5px);
     box-shadow:
@@ -329,8 +327,8 @@ body{
 }
 
 .research-card img{
-    width:120px;
-    height:120px;
+    width:145px;
+    height:145px;
     object-fit:contain;
 }
 
@@ -347,8 +345,9 @@ body{
     font-size:0.82rem;
     color:#6b7280;
     line-height:1.5;
-    min-height:75px;
-    margin-bottom:18px;
+    min-height:50px;
+    margin-bottom:12px;
+    flex-grow: 1;
 }
 
 .card-arrow{
@@ -359,7 +358,9 @@ body{
     display:flex;
     justify-content:center;
     align-items:center;
-    margin:auto;
+    margin-top:auto;
+    margin-left:auto;
+    margin-right:auto;
     text-decoration:none;
     color:#1F2A44;
     font-size:1rem;
