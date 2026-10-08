@@ -203,8 +203,8 @@ body{
 }
 
 .profile-photo{
-    width:180px;
-    height:210px;
+    width:220px;
+    height:250px;
     object-fit:cover;
     border-radius:0;
     border:none;
@@ -294,7 +294,7 @@ body{
 .section-divider{
     width:90px;
     height:5px;
-    background:#C89B00;        /*#E5B800;*/
+    background:#E5B800;
     margin-top:5px;
     margin-bottom:20px;
 }
