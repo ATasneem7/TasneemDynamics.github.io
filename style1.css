@@ -59,7 +59,7 @@ body{
 /* BACKGROUND IMAGE AREA */
 .sidebar-visual {
     position: absolute;
-    inset: 190px 0 0;
+    inset: 0;                 /* Start at the very top */
     z-index: -1;
     overflow: hidden;
 }
@@ -74,16 +74,15 @@ body{
 }
 
 /* DARK OVERLAY FOR READABILITY */
-
 .sidebar-visual::after {
     content: "";
     position: absolute;
     inset: 0;
     background: linear-gradient(
         to bottom,
-        #252B35 0%,
-        rgba(37, 43, 53, 0.20) 35%,
-        rgba(13, 25, 38, 0.35) 65%,
+        rgba(37, 43, 53, 0.20) 0%,
+        rgba(25, 35, 48, 0.15) 35%,
+        rgba(13, 25, 38, 0.45) 70%,
         #101D2A 100%
     );
 }
