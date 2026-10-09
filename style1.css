@@ -1,5 +1,4 @@
-/* GENERAL RESET */
-
+/*GENERAL RESET */
 *{
     margin:0;
     padding:0;
@@ -15,14 +14,132 @@ body{
 }
 
 /*PAGE LAYOUT*/
-
 .homepage{
     display:flex;
     width:100vw;
 }
 
-/* LEFT PANEL*/
+/* LEFT SIDEBAR */
+.left-panel {
+    flex: 0 0 22%;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    align-self: flex-start;
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    overflow: hidden;
+    isolation: isolate;
+
+    background: linear-gradient(
+        145deg,
+        #252B35 0%,
+        #303745 55%,
+        #182633 100%
+    );
+}
+
+/* LOGO */
+.logo {
+    position: relative;
+    z-index: 2;
+
+    display: block;
+    width: 150%;
+    max-width: 430px;
+    height: auto;
+
+    margin-top: 150px;
+    flex-shrink: 0;
+}
+
+/* BACKGROUND IMAGE AREA */
+.sidebar-visual {
+    position: absolute;
+    inset: 190px 0 0;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.sidebar-bg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0.65;
+}
+
+/* DARK OVERLAY FOR READABILITY */
+
+.sidebar-visual::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        #252B35 0%,
+        rgba(37, 43, 53, 0.20) 35%,
+        rgba(13, 25, 38, 0.35) 65%,
+        #101D2A 100%
+    );
+}
+
+/* RESEARCH TAGS */
+.sidebar-tags {
+    position: absolute;
+    z-index: 2;
+    left: 10%;
+    bottom: 7%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    color: #D5DCE6;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    line-height: 1.3;
+}
+
+/* YELLOW ACCENT LINE */
+.sidebar-accent {
+    width: 55px;
+    height: 4px;
+    margin-top: 7px;
+    background: #E5B800;
+}
+
+/* RESPONSIVE ADJUSTMENTS */
+@media (max-width: 900px) {
+    .left-panel {
+        flex-basis: 25%;
+    }
+
+    .logo {
+        width: 150%;
+        margin-top:150px;
+    }
+
+    .sidebar-tags {
+        left: 8%;
+        font-size: 0.68rem;
+        letter-spacing: 1.5px;
+        gap: 8px;
+    }
+}
+
+@media (max-width: 600px) {
+    .left-panel {
+        display: none;
+    }
+}
+
+/* LEFT PANEL
 .left-panel{
     flex:0 0 22%;
     background: linear-gradient(
@@ -44,7 +161,7 @@ body{
     max-width:430px;
     height:auto;
     margin-top: 130px;
-}
+} */
 
 /*RIGHT PANEL*/
 .right-panel{
