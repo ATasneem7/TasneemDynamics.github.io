@@ -576,9 +576,9 @@ body{
 /* VERTICAL ACCENT DIVIDERS */
 
 .footer-divider {
-    width: 3px;
-    height: 46px;
-    flex: 0 0 3px;
+    width: 2px;
+    height: 40px;
+    flex: 0 0 2px;
     opacity: 1;
     background: #FFFFFF;
 }
