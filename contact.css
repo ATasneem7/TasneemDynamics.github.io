@@ -239,31 +239,7 @@
     line-height: 1;
 }
 
-/* Arrow shaft */
-.contact-cta-arrow::before {
-    content: "";
-    position: absolute;
-    left: 1px;
-    top: 9px;
-    width: 22px;
-    height: 3.5px;
-    background: #071D32;
-    border-radius: 3px;
-}
 
-/* Arrowhead */
-.contact-cta-arrow::after {
-    content: "";
-    position: absolute;
-    right: 3px;
-    top: 4px;
-    width: 11px;
-    height: 11px;
-    border-top: 3.5px solid #071D32;
-    border-right: 3.5px solid #071D32;
-    border-radius: 1px;
-    transform: rotate(45deg);
-}
 
 .contact-cta:hover {
     background: #F5C400;
@@ -875,6 +851,36 @@
     }
 }
 
-   
+ 
+/* Reuse the research-card arrow style in the email button */
+
+.contact-email-arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: auto;
+    height: auto;
+    margin-left: 6px;
+    padding: 0;
+
+    background: transparent;
+    border: none;
+    border-radius: 0;
+
+    color: #071D32;
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 1;
+
+    -webkit-text-stroke: 0.8px #071D32;
+
+    transition: transform 0.2s ease;
+}
+
+.contact-cta:hover .contact-email-arrow {
+    transform: translateX(3px);
+}
+  
 
  
