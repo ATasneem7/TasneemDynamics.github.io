@@ -576,7 +576,7 @@ body{
 /* VERTICAL ACCENT DIVIDERS */
 
 .footer-divider {
-    width: 1px;
+    width: 2.5px;
     height: 42px;
     flex: 0 0 1px;
 
@@ -593,7 +593,7 @@ body{
 
     color: #E5EAF0;
     font-family: Georgia, "Times New Roman", serif;
-    font-size: 13.5px;
+    font-size: 15px;
     font-style: italic;
     font-weight: 500;
     line-height: 1.6;
