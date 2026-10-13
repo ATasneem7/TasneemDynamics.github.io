@@ -151,7 +151,6 @@ body{
 }
 
 /*NAVBAR */
-
 .navbar{
     position:absolute;
     top:0;
@@ -166,7 +165,6 @@ body{
 
 .navbar ul{
     height:100%;
-
     display:flex;
     justify-content:space-around;
     align-items:center;
@@ -201,8 +199,31 @@ body{
     width:100%;
 }
 
-/* TASNEEM DYNAMICS FOOTER */
+/* CURRENT PAGE INDICATOR */
+.navbar li a.active,
+.navbar li a[aria-current="page"] {
+    color: #000000;
+    font-weight: 700; /* Keep the original font weight */
+    background: transparent;
+    border-radius: 0;
+}
 
+/* Active underline uses the existing hover accent color */
+.navbar li a.active::after,
+.navbar li a[aria-current="page"]::after {
+    width: 100%;
+    height: 3px;
+    background: #800000;
+}
+
+/* Give links some breathing room for the highlight */
+.navbar li a {
+    display: inline-block;
+    padding: 8px 10px;
+}
+
+
+/* TASNEEM DYNAMICS FOOTER */
 .site-footer {
     width: 100%;
     min-height: 90px;
