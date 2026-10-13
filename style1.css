@@ -215,7 +215,7 @@ body{
 .navbar li a[aria-current="page"]::after {
     width: 100%;
     height: 3px;
-    background: #fcbf49;
+    background: #800000;
 }
 
 
