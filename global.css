@@ -1,0 +1,494 @@
+/*GENERAL RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+    width:100%;
+    height:100%;
+    overflow-x:hidden;
+    font-family:'Roboto',sans-serif;
+}
+
+/*PAGE LAYOUT*/
+.homepage{
+    display:flex;
+    width:100vw;
+}
+
+/* LEFT SIDEBAR */
+.left-panel {
+    flex: 0 0 22%;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    align-self: flex-start;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    overflow: hidden;
+    isolation: isolate;
+
+    background: linear-gradient(
+        145deg,
+        #252B35 0%,
+        #303745 55%,
+        #182633 100%
+    );
+}
+
+/* LOGO */
+.logo {
+    position: relative;
+    z-index: 2;
+
+    display: block;
+    width: 130%;
+    max-width: 430px;
+    height: auto;
+
+    margin-top: 5px;
+    flex-shrink: 0;
+}
+
+/* BACKGROUND IMAGE AREA */
+.sidebar-visual {
+    position: absolute;
+    inset: 0;                 /* Start at the very top */
+    z-index: -1;
+    overflow: hidden;
+}
+
+.sidebar-bg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0.65;
+}
+
+/* DARK OVERLAY FOR READABILITY */
+.sidebar-visual::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(37, 43, 53, 0.20) 0%,
+        rgba(25, 35, 48, 0.15) 35%,
+        rgba(13, 25, 38, 0.45) 70%,
+        #101D2A 100%
+    );
+}
+
+/* RESEARCH TAGS */
+.sidebar-tags {
+    position: absolute;
+    z-index: 2;
+    left: 10%;
+    bottom: 7%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    color: #D5DCE6;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    line-height: 1.3;
+}
+
+/* YELLOW ACCENT LINE */
+.sidebar-accent {
+    width: 55px;
+    height: 4px;
+    margin-top: 7px;
+    background: #E5B800;
+}
+
+/* RESPONSIVE ADJUSTMENTS */
+@media (max-width: 900px) {
+    .left-panel {
+        flex-basis: 25%;
+    }
+
+    .logo {
+        width: 90%;
+        margin-top:45px;
+    }
+
+    .sidebar-tags {
+        left: 8%;
+        font-size: 0.68rem;
+        letter-spacing: 1.5px;
+        gap: 8px;
+    }
+}
+
+@media (max-width: 600px) {
+    .left-panel {
+        display: none;
+    }
+}
+
+/*RIGHT PANEL*/
+.right-panel{
+    flex:1;
+    position:relative;
+    background:#ffffff;
+    display:flex;
+    flex-direction:column;
+    padding:0;
+    margin:0;
+    overflow-y:auto;
+}
+
+/*NAVBAR */
+
+.navbar{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:68px;
+    background:#FFD700;
+    z-index:100;
+    box-shadow:0 2px 8px rgba(0,0,0,0.15);
+    animation:slideDown 0.6s ease;
+}
+
+.navbar ul{
+    height:100%;
+
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    list-style:none;
+}
+
+.navbar li a{
+    text-decoration:none;
+    color:#000;
+    font-weight:700;
+    font-size:1rem;
+    position:relative;
+    transition:0.3s ease;
+}
+
+.navbar li a:hover{
+    color:#9e2a2b;
+}
+
+.navbar li a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-4px;
+    width:0;
+    height:2px;
+    background:#fcbf49;
+    transition:0.3s ease;
+}
+
+.navbar li a:hover::after{
+    width:100%;
+}
+
+/* TASNEEM DYNAMICS FOOTER */
+
+.site-footer {
+    width: 100%;
+    min-height: 90px;
+    padding: 12px 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 22px;
+
+    flex-shrink: 0;
+
+    background: linear-gradient(
+        105deg,
+        #001725 0%,
+        #062337 55%,
+        #001725 100%
+    );
+
+    color: #ffffff;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* COMPLETE BRAND LOGO */
+
+.footer-brand {
+    flex: 0 0 155px;
+    min-width: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.footer-logo {
+    display: block;
+    width: 155px;
+    max-width: 100%;
+    height: auto;
+    max-height: 62px;
+    object-fit: contain;
+    object-position: left center;
+}
+
+/* VERTICAL ACCENT DIVIDERS */
+
+.footer-divider {
+    width: 2px;
+    height: 40px;
+    flex: 0 0 2px;
+    opacity: 1;
+    background: #FFFFFF;
+}
+
+/* TAGLINE */
+
+.footer-tagline {
+    flex: 1 1 auto;
+    min-width: 0;
+    margin: 0;
+    padding: 0 8px;
+
+    color: #E5EAF0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* SOCIAL ICON GROUP */
+
+.footer-socials {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 17px;
+    flex: 0 0 auto;
+}
+
+/* CIRCULAR SOCIAL ICONS */
+
+.footer-social-link {
+    width: 36px;
+    height: 36px;
+    flex: 0 0 36px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background: #F4F6FA;
+    color: #10263B;
+
+    font-size: 18px;
+    text-decoration: none;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.footer-social-link:hover {
+    background: #FFD000;
+    color: #10263B;
+    transform: translateY(-2px);
+}
+
+/* TABLET */
+
+@media (max-width: 1050px) {
+    .site-footer {
+        padding: 14px 18px;
+        gap: 14px;
+    }
+
+    .footer-brand {
+        flex-basis: 125px;
+    }
+
+    .footer-logo {
+        width: 125px;
+    }
+
+    .footer-tagline {
+        font-size: 12px;
+        padding: 0 4px;
+    }
+
+    .footer-socials {
+        gap: 10px;
+    }
+
+    .footer-social-link {
+        width: 33px;
+        height: 33px;
+        flex-basis: 33px;
+        font-size: 16px;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+    .site-footer {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 20px 18px;
+        gap: 14px;
+    }
+
+    .footer-brand {
+        flex: 0 1 155px;
+        justify-content: center;
+    }
+
+    .footer-logo {
+        width: 155px;
+    }
+
+    .footer-divider {
+        display: none;
+    }
+
+    .footer-tagline {
+        flex: 0 0 100%;
+        order: 2;
+        text-align: center;
+        font-size: 12px;
+    }
+
+    .footer-socials {
+        flex: 0 0 100%;
+        order: 3;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .footer-social-link {
+        width: 35px;
+        height: 35px;
+        flex-basis: 35px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
