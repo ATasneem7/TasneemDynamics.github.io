@@ -183,7 +183,7 @@ body{
 }
 
 .navbar li a:hover{
-    color:#9e2a2b;
+    color:#800000;
 }
 
 .navbar li a::after{
@@ -193,7 +193,7 @@ body{
     bottom:-4px;
     width:0;
     height:2px;
-    background:#fcbf49;
+    background:#800000;
     transition:0.3s ease;
 }
 
