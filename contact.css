@@ -1,16 +1,14 @@
-
 /* CONTACT PAGE */
 .contact-page {
     width: 100%;
     flex: 0 0 auto;
     padding-top: 68px;
     overflow: hidden;
-    background: #fff;
+    background: #FFFFFF;
     color: #10264B;
 }
 
-/* HERO BANNER */
-
+/*  HERO BANNER*/
 .contact-hero {
     position: relative;
     isolation: isolate;
@@ -22,7 +20,7 @@
     background: #FFF7E8;
 }
 
-
+/* Banner artwork */
 .contact-hero-image {
     position: absolute;
     z-index: -2;
@@ -32,68 +30,65 @@
     height: 100%;
     display: block;
     object-fit: cover;
-    object-position: center 58%;
+    object-position: 45% 58%;
     -webkit-mask-image: linear-gradient(
         to right,
         transparent 0%,
         rgba(0, 0, 0, 0.35) 5%,
-        #000 15%,
-        #000 85%,
+        #000000 15%,
+        #000000 85%,
         rgba(0, 0, 0, 0.35) 95%,
         transparent 100%
     );
-
     mask-image: linear-gradient(
         to right,
         transparent 0%,
         rgba(0, 0, 0, 0.35) 5%,
-        #000 15%,
-        #000 85%,
+        #000000 15%,
+        #000000 85%,
         rgba(0, 0, 0, 0.35) 95%,
         transparent 100%
     );
 }
 
+/* Blend the banner's left side with the text background */
 .contact-hero::after {
     content: "";
     position: absolute;
     inset: 0;
     z-index: -1;
     pointer-events: none;
-
     background: linear-gradient(
         90deg,
-        rgba(255, 250, 237, 0.90) 0%,
-        rgba(255, 250, 237, 0.68) 35%,
-        rgba(255, 250, 237, 0.12) 63%,
+        rgba(255, 250, 237, 0.94) 0%,
+        rgba(255, 250, 237, 0.78) 32%,
+        rgba(255, 250, 237, 0.24) 57%,
         rgba(255, 250, 237, 0.00) 100%
     );
 }
 
+/* Hero text container */
 .contact-hero-content {
     position: relative;
     z-index: 1;
-    width: 100%;
-    max-width: 1000px;
+    width: 90%;
+    max-width: 850px;
     margin-left: 7%;
     padding: 23px 20px 25px 0;
 }
 
-/* Keep the accent, but increase its separation from
-   the heading below it. */
-
+/* Yellow accent */
 .contact-accent {
     width: 48px;
     height: 4px;
     flex: 0 0 auto;
-
-    margin-bottom: 16px;
+    margin-bottom: 20px;
     background: #FFD000;
 }
 
+/* Hero heading */
 .contact-hero-content h1 {
-    margin: 0 0 8px;
-
+    margin: 0 0 12px;
     color: #10264B;
     font-family: Georgia, "Times New Roman", serif;
     font-size: clamp(3rem, 4.2vw, 4.35rem);
@@ -106,100 +101,76 @@
     color: #F5BD00;
 }
 
-/* Keep the intro as a readable text block spanning
-   horizontally across the banner. */
-
+/* Narrower paragraph keeps text clear of the drone */
 .contact-hero-description {
     width: 100%;
-    max-width: 850px;
+    max-width: 540px;
     margin: 0;
-
     color: #142D55;
     font-family: "Roboto", Arial, sans-serif;
     font-size: clamp(0.94rem, 1.12vw, 1.1rem);
-    line-height: 1.55;
+    line-height: 1.65;
+    overflow-wrap: normal;
+    text-wrap: pretty;
 }
 
 
-/* =========================================================
-   DIRECT CONTACT CARD
-   No visible outer border; generous internal spacing
-   ========================================================= */
+/* DIRECT CONTACT / REACH OUT CARD */
 
 .contact-direct {
     width: 88%;
     max-width: 1280px;
     min-height: 128px;
-
-    margin: 24px auto 36px;
-    padding: 20px 22px 20px 30px;
-
+    margin: 24px auto 42px;
+    padding: 20px 28px 20px 30px;
     display: flex;
     align-items: center;
     gap: 26px;
-
-    background: linear-gradient(
-        105deg,
-        #FFF9EB 0%,
-        #FFFCF5 100%
-    );
-
+    background: #FFF3C9;
     border: none;
     border-radius: 10px;
     box-shadow: none;
 }
 
-/* Direct-contact envelope image */
-
+/* Envelope icon circle */
 .contact-mail-icon {
     width: 88px;
     height: 88px;
     flex: 0 0 88px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
-    background: #FFF0C8;
+    background: #FFE16A;
     border-radius: 50%;
 }
 
+/* Uploaded envelope image */
 .contact-mail-icon img {
     display: block;
-    width: 54px;
-    height: 54px;
-
+    width: 64px;
+    height: 64px;
     object-fit: contain;
-
-    /* Helps remove white backgrounds from the icon image.
-       Transparent PNGs are preferable when available. */
     mix-blend-mode: multiply;
 }
 
-/* Divider */
-
+/* Vertical divider */
 .contact-direct-divider {
     width: 1px;
     height: 80px;
     flex: 0 0 1px;
-
-    background: #F0C65B;
+    background: #EABF39;
 }
 
-/* Direct-contact text */
-
+/* Text area */
 .contact-direct-text {
     flex: 1 1 auto;
     min-width: 0;
 }
-
 .contact-direct-text .contact-accent {
-    margin-bottom: 16px;
+    margin-bottom: 20px;
 }
-
 .contact-direct-text h2 {
     margin: 0 0 6px;
-
     color: #10264B;
     font-family: Georgia, "Times New Roman", serif;
     font-size: clamp(1.5rem, 1.9vw, 1.9rem);
@@ -210,67 +181,88 @@
 .contact-direct-text p {
     max-width: 620px;
     margin: 0;
-
     color: #29476D;
     font-family: "Roboto", Arial, sans-serif;
     font-size: 0.96rem;
-    line-height: 1.5;
+    line-height: 1.55;
 }
 
 
-/* =========================================================
-   EMAIL BUTTON
-   Font Awesome envelope and thicker arrow
-   ========================================================= */
+/* SEND A MESSAGE BUTTON
+   Envelope icon + thick arrow without a surrounding circle*/
 
 .contact-cta {
     min-height: 62px;
     min-width: 250px;
     flex: 0 0 auto;
-
-    padding: 12px 25px;
-
+    padding: 12px 24px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 13px;
-
     background: #FFD000;
     border: 1px solid #F2C300;
     border-radius: 999px;
-
     color: #071D32;
     font-family: "Roboto", Arial, sans-serif;
     font-size: 0.98rem;
     font-weight: 700;
     text-decoration: none;
     white-space: nowrap;
-
     transition:
         background 0.2s ease,
         box-shadow 0.2s ease,
         transform 0.2s ease;
 }
 
+/* Original envelope icon */
 .contact-cta-icon {
     display: inline-block;
     flex: 0 0 auto;
-
     color: #071D32;
     font-size: 23px;
 }
 
+/* Arrow: thick horizontal shaft */
 .contact-cta-arrow {
+    position: relative;
     display: inline-block;
+    width: 31px;
+    height: 22px;
+    flex: 0 0 31px;
     margin-left: 3px;
-
+    background: transparent;
+    border: none;
+    border-radius: 0;
     color: #071D32;
-    font-family: Arial, sans-serif;
-    font-size: 1.8rem;
-    font-weight: 900;
+    font-size: 0;
     line-height: 1;
+}
 
-    -webkit-text-stroke: 0.7px #071D32;
+/* Arrow shaft */
+.contact-cta-arrow::before {
+    content: "";
+    position: absolute;
+    left: 1px;
+    top: 9px;
+    width: 22px;
+    height: 3.5px;
+    background: #071D32;
+    border-radius: 3px;
+}
+
+/* Arrowhead */
+.contact-cta-arrow::after {
+    content: "";
+    position: absolute;
+    right: 3px;
+    top: 4px;
+    width: 11px;
+    height: 11px;
+    border-top: 3.5px solid #071D32;
+    border-right: 3.5px solid #071D32;
+    border-radius: 1px;
+    transform: rotate(45deg);
 }
 
 .contact-cta:hover {
@@ -279,35 +271,38 @@
     transform: translateY(-2px);
 }
 
+.contact-cta:hover .contact-cta-arrow {
+    transform: translateX(2px);
+}
+
+.contact-cta-arrow {
+    transition: transform 0.2s ease;
+}
+
 .contact-cta:focus-visible {
     outline: 3px solid #10264B;
     outline-offset: 4px;
 }
 
 
-/* =========================================================
-   CONTACT TOPICS
-   Larger image icons and card styling matching reference
-   ========================================================= */
+/* CONTACT TOPICS SECTION*/
 
 .contact-topics {
     width: 88%;
     max-width: 1280px;
-
-    margin: 0 auto 38px;
+    margin: 0 auto 46px;
 }
 
+/* Section heading */
 .contact-section-heading {
-    margin: 0 0 15px;
+    margin: 0 0 18px;
 }
-
 .contact-section-heading .contact-accent {
-    margin-bottom: 16px;
+    margin-bottom: 20px;
 }
 
 .contact-section-heading h2 {
     margin: 0;
-
     color: #10264B;
     font-family: Georgia, "Times New Roman", serif;
     font-size: clamp(1.6rem, 2vw, 2rem);
@@ -315,25 +310,25 @@
     line-height: 1.25;
 }
 
-/* Two-column layout */
+/* Two-column card layout */
 
 .contact-topic-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 10px 10px;
+    gap: 12px;
 }
 
-/* Individual topic cards */
+/* Individual topic card */
 
 .contact-topic-card {
     min-width: 0;
-    min-height: 112px;
+    min-height: 120px;
 
-    padding: 16px 22px;
+    padding: 18px 24px;
 
     display: flex;
     align-items: center;
-    gap: 22px;
+    gap: 24px;
 
     background: linear-gradient(
         110deg,
@@ -342,7 +337,7 @@
     );
 
     border: 1px solid #DCE4EE;
-    border-radius: 12px;
+    border-radius: 14px;
 
     box-shadow: 0 1px 3px rgba(16, 38, 75, 0.025);
 
@@ -358,29 +353,31 @@
     transform: translateY(-2px);
 }
 
-/* Larger pale-yellow icon circles */
-
+/* Bright yellow icon circles */
 .contact-topic-icon {
-    width: 76px;
-    height: 76px;
-    flex: 0 0 76px;
-
+    width: 82px;
+    height: 82px;
+    flex: 0 0 82px;
     display: flex;
     align-items: center;
     justify-content: center;
-
-    background: #FFF2D0;
+    background: #FFE16A;
     border-radius: 50%;
 }
 
+/* Uploaded icon images */
+
 .contact-topic-icon img {
     display: block;
-    width: 46px;
-    height: 46px;
+
+    width: 56px;
+    height: 56px;
 
     object-fit: contain;
     mix-blend-mode: multiply;
 }
+
+/* Topic text */
 
 .contact-topic-text {
     flex: 1 1 auto;
@@ -388,21 +385,23 @@
 }
 
 .contact-topic-text h3 {
-    margin: 0 0 5px;
+    margin: 0 0 6px;
 
     color: #10264B;
+
     font-family: "Roboto", Arial, sans-serif;
     font-size: 1rem;
     font-weight: 700;
-    line-height: 1.35;
+    line-height: 1.4;
 }
 
 .contact-topic-text p {
     margin: 0;
 
     color: #365477;
+
     font-family: "Roboto", Arial, sans-serif;
-    font-size: 0.92rem;
+    font-size: 0.94rem;
     font-weight: 400;
     line-height: 1.5;
 }
@@ -410,7 +409,7 @@
 
 /* =========================================================
    CLOSING BANNER
-   Taller section, text contained on left, Earth on right
+   Text stays on the left; Earth and plane remain visible right
    ========================================================= */
 
 .contact-closing {
@@ -419,7 +418,7 @@
     overflow: hidden;
 
     width: 100%;
-    min-height: 170px;
+    min-height: 220px;
 
     display: flex;
     align-items: center;
@@ -427,8 +426,7 @@
     background: #FFF8E9;
 }
 
-/* Increase image height and anchor the Earth toward the
-   right. The image is clipped inside this section only. */
+/* Background image */
 
 .contact-closing-image {
     position: absolute;
@@ -441,49 +439,56 @@
     height: 100%;
 
     display: block;
+
     object-fit: cover;
-    object-position: right 48%;
+    object-position: right bottom;
 }
 
-/* Warm text-side gradient keeps the writing readable and
-   reduces the chance of text overlapping the Earth. */
+/* Fade behind the text only; retain the artwork on the right */
 
 .contact-closing::after {
     content: "";
+
     position: absolute;
     inset: 0;
     z-index: -1;
+
     pointer-events: none;
 
     background: linear-gradient(
         90deg,
-        rgba(255, 249, 235, 0.98) 0%,
-        rgba(255, 249, 235, 0.94) 38%,
-        rgba(255, 249, 235, 0.72) 56%,
-        rgba(255, 249, 235, 0.08) 76%,
-        rgba(255, 249, 235, 0.00) 100%
+        rgba(255, 249, 235, 0.99) 0%,
+        rgba(255, 249, 235, 0.96) 35%,
+        rgba(255, 249, 235, 0.82) 49%,
+        rgba(255, 249, 235, 0.30) 67%,
+        rgba(255, 249, 235, 0.00) 82%
     );
 }
+
+/* Compact text block */
 
 .contact-closing-content {
     position: relative;
     z-index: 1;
 
-    width: 68%;
-    max-width: 900px;
+    width: 58%;
+    max-width: 690px;
 
     margin-left: 7%;
-    padding: 22px 0 24px;
+    padding: 28px 0;
+
+    overflow-wrap: normal;
 }
 
 .contact-closing-content .contact-accent {
-    margin-bottom: 16px;
+    margin-bottom: 20px;
 }
 
 .contact-closing-content h2 {
-    margin: 0 0 6px;
+    margin: 0 0 8px;
 
     color: #10264B;
+
     font-family: Georgia, "Times New Roman", serif;
     font-size: clamp(1.7rem, 2.2vw, 2.2rem);
     font-weight: 700;
@@ -491,26 +496,40 @@
 }
 
 .contact-closing-content p {
-    max-width: 780px;
+    width: 100%;
+    max-width: 560px;
+
     margin: 0;
 
     color: #29476D;
+
     font-family: "Roboto", Arial, sans-serif;
     font-size: 0.95rem;
-    line-height: 1.55;
+    line-height: 1.6;
+
+    text-wrap: pretty;
 }
 
 
 /* =========================================================
-   RESPONSIVE LAYOUT
+   TABLET LAYOUT
    ========================================================= */
 
 @media (max-width: 1100px) {
 
+    /* Hero */
+
     .contact-hero-content {
-        max-width: 85%;
+        width: 88%;
+        max-width: 760px;
         margin-left: 5%;
     }
+
+    .contact-hero-description {
+        max-width: 480px;
+    }
+
+    /* Direct contact */
 
     .contact-direct {
         width: 92%;
@@ -524,24 +543,26 @@
         gap: 10px;
     }
 
+    /* Topic cards */
+
     .contact-topics {
         width: 92%;
     }
 
     .contact-topic-card {
-        padding: 15px;
-        gap: 15px;
+        padding: 16px;
+        gap: 16px;
     }
 
     .contact-topic-icon {
-        width: 68px;
-        height: 68px;
-        flex-basis: 68px;
+        width: 74px;
+        height: 74px;
+        flex-basis: 74px;
     }
 
     .contact-topic-icon img {
-        width: 42px;
-        height: 42px;
+        width: 51px;
+        height: 51px;
     }
 
     .contact-topic-text h3 {
@@ -552,14 +573,27 @@
         font-size: 0.88rem;
     }
 
+    /* Closing banner */
+
     .contact-closing-content {
-        width: 72%;
+        width: 62%;
+        max-width: 620px;
         margin-left: 5%;
+    }
+
+    .contact-closing-content p {
+        max-width: 480px;
     }
 }
 
 
+/* =========================================================
+   SMALL TABLET LAYOUT
+   ========================================================= */
+
 @media (max-width: 800px) {
+
+    /* Hero */
 
     .contact-hero {
         min-height: 280px;
@@ -570,19 +604,28 @@
     }
 
     .contact-hero-content {
-        max-width: 88%;
+        width: 88%;
+        max-width: 620px;
         margin-left: 5%;
+        padding-right: 10px;
     }
 
     .contact-hero-content h1 {
         font-size: clamp(2.6rem, 6vw, 3.5rem);
     }
 
+    .contact-hero-description {
+        max-width: 460px;
+    }
+
+    /* Direct contact */
+
     .contact-direct {
         flex-wrap: wrap;
         gap: 16px;
+
         margin-top: 22px;
-        margin-bottom: 32px;
+        margin-bottom: 36px;
     }
 
     .contact-direct-text {
@@ -592,6 +635,8 @@
     .contact-cta {
         margin-left: auto;
     }
+
+    /* Topic cards */
 
     .contact-topic-grid {
         grid-template-columns: 1fr;
@@ -611,39 +656,57 @@
     }
 
     .contact-topic-icon img {
-        width: 46px;
-        height: 46px;
+        width: 52px;
+        height: 52px;
     }
 
     .contact-topics {
-        margin-bottom: 34px;
+        margin-bottom: 38px;
     }
 
+    /* Closing banner */
+
     .contact-closing {
-        min-height: 180px;
+        min-height: 220px;
+    }
+
+    .contact-closing-image {
+        object-position: 75% center;
     }
 
     .contact-closing-content {
-        width: 83%;
-        max-width: 680px;
+        width: 76%;
+        max-width: 560px;
+        margin-left: 5%;
+    }
+
+    .contact-closing-content p {
+        max-width: 440px;
     }
 
     .contact-closing::after {
         background: linear-gradient(
             90deg,
-            rgba(255, 249, 235, 0.98) 0%,
-            rgba(255, 249, 235, 0.90) 55%,
-            rgba(255, 249, 235, 0.30) 100%
+            rgba(255, 249, 235, 0.99) 0%,
+            rgba(255, 249, 235, 0.93) 48%,
+            rgba(255, 249, 235, 0.65) 68%,
+            rgba(255, 249, 235, 0.15) 100%
         );
     }
 }
 
+
+/* =========================================================
+   MOBILE LAYOUT
+   ========================================================= */
 
 @media (max-width: 600px) {
 
     .contact-page {
         padding-top: 68px;
     }
+
+    /* Hero */
 
     .contact-hero {
         min-height: 290px;
@@ -654,7 +717,9 @@
     }
 
     .contact-hero-content {
-        max-width: 90%;
+        width: 90%;
+        max-width: 440px;
+
         margin-left: 5%;
         padding: 25px 0;
     }
@@ -665,28 +730,32 @@
     }
 
     .contact-hero-description {
-        max-width: 100%;
+        max-width: 340px;
         font-size: 0.9rem;
-        line-height: 1.55;
+        line-height: 1.6;
     }
+
+    /* Direct contact */
 
     .contact-direct {
         width: 92%;
+
         margin-top: 20px;
-        margin-bottom: 30px;
+        margin-bottom: 32px;
+
         padding: 20px 16px;
         gap: 14px;
     }
 
     .contact-mail-icon {
-        width: 62px;
-        height: 62px;
-        flex-basis: 62px;
+        width: 64px;
+        height: 64px;
+        flex-basis: 64px;
     }
 
     .contact-mail-icon img {
-        width: 40px;
-        height: 40px;
+        width: 48px;
+        height: 48px;
     }
 
     .contact-direct-divider {
@@ -695,6 +764,10 @@
 
     .contact-direct-text {
         flex: 1 1 calc(100% - 90px);
+    }
+
+    .contact-direct-text .contact-accent {
+        margin-bottom: 16px;
     }
 
     .contact-direct-text h2 {
@@ -709,16 +782,24 @@
         width: 100%;
         min-width: 0;
         min-height: 56px;
+
         margin: 5px 0 0;
+        padding: 10px 16px;
     }
+
+    /* Contact topic cards */
 
     .contact-topics {
         width: 92%;
-        margin-bottom: 30px;
+        margin-bottom: 32px;
     }
 
     .contact-section-heading {
-        margin-bottom: 15px;
+        margin-bottom: 16px;
+    }
+
+    .contact-section-heading .contact-accent {
+        margin-bottom: 16px;
     }
 
     .contact-section-heading h2 {
@@ -732,14 +813,14 @@
     }
 
     .contact-topic-icon {
-        width: 62px;
-        height: 62px;
-        flex-basis: 62px;
+        width: 64px;
+        height: 64px;
+        flex-basis: 64px;
     }
 
     .contact-topic-icon img {
-        width: 38px;
-        height: 38px;
+        width: 45px;
+        height: 45px;
     }
 
     .contact-topic-text h3 {
@@ -751,304 +832,7 @@
         line-height: 1.5;
     }
 
-    .contact-closing {
-        min-height: 200px;
-    }
-
-    .contact-closing-image {
-        object-position: 72% center;
-    }
-
-    .contact-closing-content {
-        width: 90%;
-        margin-left: 5%;
-        padding: 25px 0;
-    }
-
-    .contact-closing-content h2 {
-        font-size: 1.55rem;
-    }
-
-    .contact-closing-content p {
-        font-size: 0.86rem;
-        line-height: 1.55;
-    }
-
-    .contact-closing::after {
-        background: linear-gradient(
-            90deg,
-            rgba(255, 249, 235, 0.98) 0%,
-            rgba(255, 249, 235, 0.91) 68%,
-            rgba(255, 249, 235, 0.45) 100%
-        );
-    }
-}
-
-
-/* =========================================================
-   FIX 1: HERO TEXT — KEEP IT CLEAR OF THE DRONE
-   ========================================================= */
-
-.contact-hero-content {
-    width: 90%;
-    max-width: 850px;
-    margin-left: 7%;
-    padding-right: 20px;
-}
-
-.contact-hero-description {
-    width: 100%;
-    max-width: 650px;
-    margin: 0;
-
-    line-height: 1.6;
-    overflow-wrap: normal;
-    text-wrap: pretty;
-}
-
-
-/* =========================================================
-   FIX 2: LARGER ICON ARTWORK INSIDE THE CIRCLES
-   ========================================================= */
-
-/* Direct-contact envelope */
-
-.contact-mail-icon {
-    width: 88px;
-    height: 88px;
-    flex: 0 0 88px;
-}
-
-.contact-mail-icon img {
-    width: 64px;
-    height: 64px;
-    object-fit: contain;
-    mix-blend-mode: multiply;
-}
-
-/* Four topic icons */
-
-.contact-topic-icon {
-    width: 82px;
-    height: 82px;
-    flex: 0 0 82px;
-}
-
-.contact-topic-icon img {
-    width: 56px;
-    height: 56px;
-    object-fit: contain;
-    mix-blend-mode: multiply;
-}
-
-
-/* =========================================================
-   FIX 3: THICK EMAIL BUTTON ARROW
-   Draw the shaft and arrowhead separately.
-   ========================================================= */
-
-.contact-cta-arrow {
-    position: relative;
-    display: inline-block;
-
-    width: 27px;
-    height: 20px;
-    flex: 0 0 27px;
-
-    margin-left: 2px;
-    color: #071D32;
-    font-size: 0;
-    line-height: 1;
-}
-
-.contact-cta-arrow::before {
-    content: "";
-    position: absolute;
-
-    width: 19px;
-    height: 3px;
-
-    left: 1px;
-    top: 9px;
-
-    background: #071D32;
-    border-radius: 2px;
-}
-
-.contact-cta-arrow::after {
-    content: "";
-    position: absolute;
-
-    width: 9px;
-    height: 9px;
-
-    right: 2px;
-    top: 5px;
-
-    border-top: 3px solid #071D32;
-    border-right: 3px solid #071D32;
-    border-radius: 1px;
-
-    transform: rotate(45deg);
-}
-
-
-/* =========================================================
-   FIX 4: CLOSING TEXT — KEEP IT LEFT OF THE EARTH
-   ========================================================= */
-
-.contact-closing {
-    min-height: 220px;
-    position: relative;
-    isolation: isolate;
-    overflow: hidden;
-}
-
-.contact-closing-image {
-    position: absolute;
-    inset: 0;
-
-    width: 100%;
-    height: 100%;
-
-    display: block;
-    object-fit: cover;
-
-    /* Anchor the right-hand artwork so the plane stays visible. */
-    object-position: right bottom;
-}
-
-/* Constrain the writing to a compact, readable block. */
-
-.contact-closing-content {
-    position: relative;
-    z-index: 1;
-
-    width: 58%;
-    max-width: 690px;
-    margin-left: 7%;
-
-    padding: 25px 0 28px;
-}
-
-.contact-closing-content p {
-    width: 100%;
-    max-width: 650px;
-    margin: 0;
-
-    line-height: 1.6;
-    overflow-wrap: normal;
-    text-wrap: pretty;
-}
-
-/* Stronger fade on the text side; keep the Earth and plane visible
-   toward the right. */
-
-.contact-closing::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    pointer-events: none;
-
-    background: linear-gradient(
-        90deg,
-        rgba(255, 249, 235, 0.99) 0%,
-        rgba(255, 249, 235, 0.96) 35%,
-        rgba(255, 249, 235, 0.82) 49%,
-        rgba(255, 249, 235, 0.30) 67%,
-        rgba(255, 249, 235, 0.00) 82%
-    );
-}
-
-
-/* =========================================================
-   RESPONSIVE ADJUSTMENTS
-   ========================================================= */
-
-@media (max-width: 1100px) {
-    .contact-hero-description {
-        max-width: 590px;
-    }
-
-    .contact-closing-content {
-        width: 62%;
-        max-width: 620px;
-    }
-
-    .contact-topic-icon {
-        width: 74px;
-        height: 74px;
-        flex-basis: 74px;
-    }
-
-    .contact-topic-icon img {
-        width: 51px;
-        height: 51px;
-    }
-}
-
-@media (max-width: 800px) {
-    .contact-hero-content {
-        width: 88%;
-        max-width: 620px;
-        margin-left: 5%;
-        padding-right: 10px;
-    }
-
-    .contact-hero-description {
-        max-width: 520px;
-    }
-
-    .contact-closing {
-        min-height: 220px;
-    }
-
-    .contact-closing-content {
-        width: 76%;
-        max-width: 560px;
-        margin-left: 5%;
-    }
-
-    .contact-closing-content p {
-        max-width: 500px;
-    }
-}
-
-@media (max-width: 600px) {
-    .contact-hero-content {
-        width: 90%;
-        max-width: 440px;
-        margin-left: 5%;
-        padding-right: 0;
-    }
-
-    .contact-hero-description {
-        max-width: 390px;
-        font-size: 0.9rem;
-    }
-
-    .contact-mail-icon {
-        width: 64px;
-        height: 64px;
-        flex-basis: 64px;
-    }
-
-    .contact-mail-icon img {
-        width: 48px;
-        height: 48px;
-    }
-
-    .contact-topic-icon {
-        width: 66px;
-        height: 66px;
-        flex-basis: 66px;
-    }
-
-    .contact-topic-icon img {
-        width: 47px;
-        height: 47px;
-    }
+    /* Closing banner */
 
     .contact-closing {
         min-height: 245px;
@@ -1061,13 +845,23 @@
     .contact-closing-content {
         width: 88%;
         max-width: 420px;
+
         margin-left: 5%;
         padding: 25px 0;
     }
 
+    .contact-closing-content .contact-accent {
+        margin-bottom: 16px;
+    }
+
+    .contact-closing-content h2 {
+        font-size: 1.55rem;
+    }
+
     .contact-closing-content p {
-        max-width: 370px;
+        max-width: 340px;
         font-size: 0.86rem;
+        line-height: 1.55;
     }
 
     .contact-closing::after {
@@ -1075,8 +869,12 @@
             90deg,
             rgba(255, 249, 235, 0.99) 0%,
             rgba(255, 249, 235, 0.95) 55%,
-            rgba(255, 249, 235, 0.70) 76%,
-            rgba(255, 249, 235, 0.22) 100%
+            rgba(255, 249, 235, 0.78) 76%,
+            rgba(255, 249, 235, 0.30) 100%
         );
     }
 }
+
+   
+
+ 
