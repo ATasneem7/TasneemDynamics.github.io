@@ -1,0 +1,621 @@
+/* CONTACT PAGE-specific styles only. */
+
+/* PAGE CONTENT */
+.contact-page {
+    width: 100%;
+    flex: 0 0 auto;
+    padding-top: 68px;
+    background: #FFFFFF;
+    color: #10264B;
+    overflow: hidden;
+}
+
+/* HERO BANNER */
+.contact-hero {
+    position: relative;
+    width: 100%;
+    min-height: 228px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    isolation: isolate;
+    background: #FFF9EE;
+}
+
+.contact-hero-image {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.contact-hero-content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 850px;
+    padding: 20px 0 22px;
+    margin-left: 7%;
+}
+
+.contact-accent {
+    width: 48px;
+    height: 4px;
+    flex: 0 0 auto;
+    background: #FFD000;
+    margin-bottom: 12px;
+}
+
+.contact-hero-content h1 {
+    margin: 0 0 7px;
+    color: #10264B;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2.8rem, 4.2vw, 4.5rem);
+    font-weight: 700;
+    line-height: 1.08;
+    letter-spacing: -1.5px;
+}
+
+.contact-hero-content h1 span {
+    color: #F5BD00;
+}
+
+.contact-hero-description {
+    max-width: 740px;
+    margin: 0;
+    color: #142D55;
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: clamp(0.9rem, 1.1vw, 1.12rem);
+    font-weight: 400;
+    line-height: 1.55;
+}
+
+
+/* DIRECT CONTACT CARD*/
+
+.contact-direct {
+    width: 88%;
+    max-width: 1280px;
+    min-height: 120px;
+    margin: 18px auto 28px;
+    padding: 17px 20px 17px 28px;
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    background: linear-gradient(
+        105deg,
+        #FFF9EB 0%,
+        #FFFCF5 100%
+    );
+    border: 1px solid #F5DF9E;
+    border-radius: 10px;
+}
+
+
+/* Envelope icon circle */
+
+.contact-mail-icon {
+    width: 82px;
+    height: 82px;
+    flex: 0 0 82px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.contact-mail-icon img {
+    display: block;
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+/* Vertical divider */
+.contact-direct-divider {
+    width: 1px;
+    height: 76px;
+    flex: 0 0 1px;
+    background: #F0C65B;
+}
+
+/* Direct-contact text */
+.contact-direct-text {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.contact-direct-text .contact-accent {
+    margin-bottom: 10px;
+}
+
+.contact-direct-text h2 {
+    margin: 0 0 5px;
+    color: #10264B;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.45rem, 1.9vw, 1.9rem);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.contact-direct-text p {
+    max-width: 610px;
+    margin: 0;
+    color: #29476D;
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: 0.96rem;
+    line-height: 1.5;
+}
+
+
+/* Yellow email button */
+
+.contact-cta {
+    min-height: 60px;
+    min-width: 230px;
+    flex: 0 0 auto;
+    padding: 12px 23px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: #FFD000;
+    border: 1px solid #F2C300;
+    border-radius: 999px;
+    color: #071D32;
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: 0.98rem;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+    box-shadow: 0 2px 5px rgba(90, 65, 0, 0.05);
+    transition:
+        background 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+.contact-cta-icon {
+    display: block;
+    width: 25px;
+    height: 25px;
+    flex: 0 0 25px;
+    object-fit: contain;
+}
+
+.contact-cta-arrow {
+    display: inline-block;
+    margin-left: 3px;
+    font-family: Arial, sans-serif;
+    font-size: 1.65rem;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.contact-cta:hover {
+    background: #F5C400;
+    box-shadow: 0 5px 12px rgba(90, 65, 0, 0.14);
+    transform: translateY(-2px);
+}
+
+.contact-cta:focus-visible {
+    outline: 3px solid #10264B;
+    outline-offset: 4px;
+}
+
+
+/* CONTACT TOPICS*/
+
+.contact-topics {
+    width: 88%;
+    max-width: 1280px;
+    margin: 0 auto 28px;
+}
+
+
+/* Accent line and section heading */
+.contact-section-heading {
+    margin: 0 0 10px;
+}
+
+.contact-section-heading .contact-accent {
+    margin-bottom: 10px;
+}
+
+.contact-section-heading h2 {
+    margin: 0;
+    color: #10264B;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.55rem, 2vw, 2rem);
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+
+/* Two-column card grid */
+.contact-topic-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 9px 10px;
+}
+
+
+/* Individual cards */
+.contact-topic-card {
+    min-width: 0;
+    min-height: 96px;
+    padding: 13px 22px;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    background: linear-gradient(
+        110deg,
+        #FFFFFF 0%,
+        #FCFCFD 100%
+    );
+
+    border: 1px solid #DCE4EE;
+    border-radius: 11px;
+    box-shadow: 0 1px 3px rgba(16, 38, 75, 0.025);
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+.contact-topic-card:hover {
+    border-color: #E5C65F;
+    box-shadow: 0 4px 12px rgba(16, 38, 75, 0.07);
+    transform: translateY(-2px);
+}
+
+/* Circular image-icon backgrounds */
+.contact-topic-icon {
+    width: 68px;
+    height: 68px;
+    flex: 0 0 68px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.contact-topic-icon img {
+    display: block;
+    width: 39px;
+    height: 39px;
+    object-fit: contain;
+}
+
+/* Card headings and descriptions */
+.contact-topic-text {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.contact-topic-text h3 {
+    margin: 0 0 4px;
+    color: #10264B;
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: 0.98rem;
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+.contact-topic-text p {
+    margin: 0;
+    color: #365477;
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: 0.91rem;
+    font-weight: 400;
+    line-height: 1.45;
+}
+
+/* CLOSING BANNER */
+.contact-closing {
+    position: relative;
+    width: 100%;
+    min-height: 126px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    isolation: isolate;
+    background: #FFF9EC;
+}
+
+.contact-closing-image {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.contact-closing-content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 900px;
+    padding: 17px 0 19px;
+    margin-left: 7%;
+}
+
+.contact-closing-content .contact-accent {
+    margin-bottom: 10px;
+}
+
+.contact-closing-content h2 {
+    margin: 0 0 4px;
+    color: #10264B;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.6rem, 2.2vw, 2.15rem);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.contact-closing-content p {
+    max-width: 790px;
+    margin: 0;
+    color: #29476D;
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: 0.94rem;
+    line-height: 1.5;
+}
+
+
+/* RESPONSIVE ADJUSTMENTS*/
+/* Medium screens */
+
+@media (max-width: 1100px) {
+    .contact-hero-content {
+        margin-left: 5%;
+        max-width: 78%;
+    }
+    .contact-direct {
+        width: 92%;
+        gap: 18px;
+        padding: 17px 18px;
+    }
+    .contact-cta {
+        min-width: 195px;
+        padding: 12px 17px;
+        gap: 9px;
+        font-size: 0.9rem;
+    }
+    .contact-topics {
+        width: 92%;
+    }
+    .contact-topic-card {
+        padding: 12px 15px;
+        gap: 15px;
+    }
+    .contact-topic-icon {
+        width: 60px;
+        height: 60px;
+        flex-basis: 60px;
+    }
+    .contact-topic-icon img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .contact-topic-text h3 {
+        font-size: 0.92rem;
+    }
+    .contact-topic-text p {
+        font-size: 0.85rem;
+    }
+    .contact-closing-content {
+        margin-left: 5%;
+        max-width: 76%;
+    }
+}
+
+/* Tablets and narrower layouts */
+@media (max-width: 800px) {
+    .contact-hero {
+        min-height: 240px;
+    }
+    .contact-hero-content {
+        max-width: 86%;
+        margin-left: 5%;
+        padding: 24px 0;
+    }
+    .contact-hero-content h1 {
+        font-size: clamp(2.5rem, 6vw, 3.5rem);
+    }
+    .contact-hero-description {
+        max-width: 570px;
+        font-size: 0.92rem;
+    }
+    .contact-direct {
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 16px;
+        padding: 20px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+    .contact-mail-icon {
+        width: 68px;
+        height: 68px;
+        flex-basis: 68px;
+    }
+
+    .contact-mail-icon img {
+        width: 40px;
+        height: 40px;
+    }
+    .contact-direct-divider {
+        height: 65px;
+    }
+    .contact-direct-text {
+        flex: 1 1 60%;
+    }
+    .contact-cta {
+        margin-left: auto;
+    }
+    .contact-topic-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    .contact-topic-card {
+        min-height: 100px;
+        padding: 15px 20px;
+        gap: 20px;
+    }
+    .contact-topic-icon {
+        width: 68px;
+        height: 68px;
+        flex-basis: 68px;
+    }
+    .contact-topic-icon img {
+        width: 39px;
+        height: 39px;
+    }
+    .contact-topic-text h3 {
+        font-size: 0.98rem;
+    }
+    .contact-topic-text p {
+        font-size: 0.91rem;
+    }
+    .contact-topics {
+        margin-bottom: 30px;
+    }
+    .contact-closing {
+        min-height: 145px;
+    }
+    .contact-closing-content {
+        max-width: 85%;
+        padding: 22px 0;
+    }
+}
+
+/* Mobile screens */
+@media (max-width: 600px) {
+
+    .contact-page {
+        padding-top: 68px;
+    }
+    .contact-hero {
+        min-height: 265px;
+    }
+    .contact-hero-image {
+        object-position: 62% center;
+    }
+    .contact-hero-content {
+        max-width: 90%;
+        margin-left: 5%;
+        padding: 25px 0;
+    }
+    .contact-hero-content h1 {
+        font-size: clamp(2.35rem, 9vw, 3.1rem);
+        letter-spacing: -0.8px;
+    }
+    .contact-hero-description {
+        max-width: 100%;
+        font-size: 0.87rem;
+        line-height: 1.55;
+    }
+    .contact-direct {
+        width: 92%;
+        margin-top: 18px;
+        margin-bottom: 30px;
+
+        padding: 20px 17px;
+        gap: 14px;
+    }
+    .contact-mail-icon {
+        width: 58px;
+        height: 58px;
+        flex-basis: 58px;
+    }
+    .contact-mail-icon img {
+        width: 34px;
+        height: 34px;
+    }
+    .contact-direct-divider {
+        height: 58px;
+    }
+    .contact-direct-text {
+        flex: 1 1 calc(100% - 90px);
+    }
+    .contact-direct-text h2 {
+        font-size: 1.4rem;
+    }
+    .contact-direct-text p {
+        font-size: 0.86rem;
+    }
+    .contact-cta {
+        width: 100%;
+        min-width: 0;
+        min-height: 54px;
+        margin: 5px 0 0;
+        padding: 12px 18px;
+    }
+
+    .contact-topics {
+        width: 92%;
+        margin-bottom: 28px;
+    }
+    .contact-section-heading {
+        margin-bottom: 14px;
+    }
+
+    .contact-section-heading h2 {
+        font-size: 1.55rem;
+    }
+    .contact-topic-card {
+        min-height: 100px;
+        padding: 14px;
+        gap: 14px;
+    }
+    .contact-topic-icon {
+        width: 57px;
+        height: 57px;
+        flex-basis: 57px;
+    }
+    .contact-topic-icon img {
+        width: 33px;
+        height: 33px;
+    }
+
+    .contact-topic-text h3 {
+        font-size: 0.91rem;
+    }
+
+    .contact-topic-text p {
+        font-size: 0.83rem;
+        line-height: 1.45;
+    }
+
+    .contact-closing {
+        min-height: 175px;
+    }
+
+    .contact-closing-image {
+        object-position: 60% center;
+    }
+
+    .contact-closing-content {
+        max-width: 90%;
+        margin-left: 5%;
+        padding: 22px 0;
+    }
+
+    .contact-closing-content h2 {
+        font-size: 1.55rem;
+    }
+
+    .contact-closing-content p {
+        font-size: 0.86rem;
+        line-height: 1.5;
+    }
+}
