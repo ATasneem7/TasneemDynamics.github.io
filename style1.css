@@ -576,10 +576,10 @@ body{
 /* VERTICAL ACCENT DIVIDERS */
 
 .footer-divider {
-    width: 2.5px;
+    width: 3px;
     height: 42px;
-    flex: 0 0 1px;
-
+    flex: 0 0 2px;
+    opacity: 0.9;
     background: rgba(255, 255, 255, 0.55);
 }
 
