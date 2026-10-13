@@ -515,11 +515,9 @@ body{
 }
 
 @media(max-width:600px){
-
     .research-grid{
         grid-template-columns:1fr;
     }
-
     .intro-section,
     .research-section{
         padding-left:25px;
