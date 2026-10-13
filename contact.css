@@ -82,7 +82,7 @@
     width: 48px;
     height: 4px;
     flex: 0 0 auto;
-    margin-bottom: 14px;
+    margin-bottom: 12px;
     background: #FFD000;
 }
 
@@ -167,7 +167,7 @@
     min-width: 0;
 }
 .contact-direct-text .contact-accent {
-    margin-bottom: 14px;
+    margin-bottom: 12px;
 }
 .contact-direct-text h2 {
     margin: 0 0 6px;
@@ -274,7 +274,7 @@
     margin: 0 0 18px;
 }
 .contact-section-heading .contact-accent {
-    margin-bottom: 14px;
+    margin-bottom: 12px;
 }
 
 .contact-section-heading h2 {
@@ -457,7 +457,7 @@
 }
 
 .contact-closing-content .contact-accent {
-    margin-bottom: 14px;
+    margin-bottom: 12px;
 }
 
 .contact-closing-content h2 {
