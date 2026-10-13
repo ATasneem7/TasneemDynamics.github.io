@@ -50,16 +50,19 @@
 .publication-hero-image {
     position: absolute;
     top: 0;
-    left: 3%;
+    left: 0;
     right: auto;
     z-index: -2;
 
     display: block;
-    width: 100%;
+    width: 110%;
     height: 100%;
+    max-width: none;
 
     object-fit: cover;
     object-position: center 43%;
+
+    transform: translateX(7%);
 }
 
 .publication-hero-overlay {
