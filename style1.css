@@ -578,7 +578,7 @@ body{
 .footer-divider {
     width: 20px;
     height: 42px;
-    flex: 0 0 2px;
+    flex: 0 0 1px;
     opacity: 0.9;
     background: rgba(255, 255, 255, 0.55);
 }
@@ -593,7 +593,7 @@ body{
 
     color: #E5EAF0;
     font-family: Georgia, "Times New Roman", serif;
-    font-size: 25px;
+    font-size: 15px;
     font-style: italic;
     font-weight: 700;
     line-height: 1.6;
