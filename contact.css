@@ -256,7 +256,7 @@
 .contact-cta-arrow {
     position: relative;
     display: inline-block;
-    width: 31px;
+    width: 25px;
     height: 22px;
     flex: 0 0 31px;
     margin-left: 3px;
@@ -297,7 +297,7 @@
     border-radius: 0;
     color: #071D32;
     font-size: 30px;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 1;
     -webkit-text-stroke: 0.8px #071D32;
     transition: transform 0.2s ease;
