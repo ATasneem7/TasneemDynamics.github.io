@@ -297,7 +297,7 @@
     border-radius: 0;
     color: #071D32;
     font-size: 30px;
-    font-weight: 900;
+    font-weight: 700;
     line-height: 1;
     -webkit-text-stroke: 0.8px #071D32;
     transition: transform 0.2s ease;
@@ -333,7 +333,7 @@
 }
 
 .contact-section-heading > .contact-accent {
-    margin: 12px 0 0;
+    margin: 14px 0 0;
 }
 
 .contact-topic-grid {
