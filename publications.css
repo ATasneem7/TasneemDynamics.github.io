@@ -1050,3 +1050,14 @@
         margin: 4px 0 0;
     }
 }
+
+
+/* FORCE the intended Publications banner colors */
+.publications-page .publication-hero-content h1 {
+    color: #FFD000 !important;
+}
+
+.publications-page .publication-hero-content h1 span {
+    color: #FFFFFF !important;
+}
+
