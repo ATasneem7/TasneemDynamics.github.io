@@ -1,4 +1,8 @@
-/* PUBLICATIONS PAGE*/
+
+/* =========================================================
+   PUBLICATIONS PAGE — TASNEEM DYNAMICS
+   ========================================================= */
+
 .publications-page {
     --publication-navy: #030164;
     --publication-yellow: #FFD000;
@@ -42,11 +46,6 @@
     background: #06121D;
 }
 
-/*
-   CONTAIN prevents the banner aircraft from being cropped.
-   The image stays entirely visible inside the banner.
-*/
-
 .publication-hero-image {
     position: absolute;
     top: 0;
@@ -61,7 +60,6 @@
 
     object-fit: cover;
     object-position: center 43%;
-
     transform: translateX(7%);
 }
 
@@ -69,7 +67,6 @@
     position: absolute;
     inset: 0;
     z-index: -1;
-
     pointer-events: none;
 
     background: linear-gradient(
@@ -87,26 +84,32 @@
 
     width: 49%;
     max-width: 570px;
-
     margin-left: 4.2%;
     padding: 30px 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 
     color: #FFFFFF;
 }
 
-.publication-accent {
+/* Accent appears BELOW the banner heading. */
+.publication-hero-content > .publication-accent {
+    order: 2;
     width: 49px;
     height: 4px;
-
-    margin: 0 0 15px;
-
+    flex: 0 0 4px;
+    margin: 13px 0 16px;
     background: var(--publication-yellow);
 }
 
 .publication-hero-content h1 {
-    margin: 0 0 17px;
+    order: 1;
+    margin: 0;
 
-    color: #FFFFFF;
+    /* "Publications &" is yellow. */
+    color: var(--publication-yellow);
 
     font-family: Georgia, "Times New Roman", serif;
     font-size: clamp(2.4rem, 3.2vw, 3.5rem);
@@ -115,17 +118,18 @@
     letter-spacing: -0.6px;
 }
 
+/* "Presentations" is white. */
 .publication-hero-content h1 span {
     display: block;
-    color: var(--publication-yellow);
+    color: #FFFFFF;
 }
 
 .publication-hero-intro {
+    order: 3;
     max-width: 440px;
     margin: 0;
 
     color: #FFFFFF !important;
-
     font-size: 0.98rem;
     line-height: 1.75;
 }
@@ -140,7 +144,6 @@
 .publication-project-cta {
     width: 92%;
     max-width: 1320px;
-
     margin-right: auto;
     margin-left: auto;
 }
@@ -165,12 +168,8 @@
 
     border: 1px solid #E7E7E7;
     border-radius: 13px;
-
     box-shadow: 0 2px 8px rgba(12, 28, 48, 0.045);
 }
-
-
-/* Paper type label */
 
 .paper-type-label {
     display: inline-flex;
@@ -211,7 +210,6 @@
 
 .paper-authors {
     margin: 0 0 5px;
-
     color: #222222;
     font-size: 1rem;
     line-height: 1.6;
@@ -224,7 +222,6 @@
 
 .paper-affiliation {
     margin: 0;
-
     color: #333333;
     font-size: 0.94rem;
     line-height: 1.6;
@@ -282,9 +279,7 @@
 
 .paper-metadata-text h3 {
     margin: 0 0 5px;
-
     color: var(--publication-navy);
-
     font-size: 0.98rem;
     font-weight: 800;
     line-height: 1.4;
@@ -293,7 +288,6 @@
 .paper-metadata-text p {
     max-width: 380px;
     margin: 0;
-
     color: #222222;
     font-size: 0.91rem;
     line-height: 1.6;
@@ -318,15 +312,8 @@
     margin: 0;
 }
 
-/*
-   A fixed responsive image height gives the adjacent summary
-   a matching height. Contain preserves the full aircraft,
-   including its tail, nose and wings.
-*/
-
 .paper-model-image {
     display: block;
-
     width: 100%;
     height: var(--publication-image-height);
 
@@ -339,15 +326,12 @@
 
 .paper-model-figure figcaption {
     margin: 8px 0 0;
-
     color: #222222;
     font-size: 0.84rem;
     line-height: 1.5;
 }
 
-
-/* Research summary — exactly the same height as the image */
-
+/* Summary panel matches the image height on desktop. */
 
 .paper-summary {
     min-width: 0;
@@ -356,7 +340,7 @@
     align-self: start;
 
     padding: 15px 18px;
-    background: #FFF8E8;
+    background: var(--publication-cream);
     border-radius: 10px;
 
     display: flex;
@@ -364,10 +348,10 @@
 }
 
 .paper-summary h3 {
-    margin: 0 0 10px;
     flex-shrink: 0;
+    margin: 0 0 10px;
 
-    color: #030164;
+    color: var(--publication-navy);
     font-family: Georgia, "Times New Roman", serif;
     font-size: 1.22rem;
     line-height: 1.35;
@@ -385,7 +369,6 @@
 }
 
 
-
 /* =========================================================
    KEYWORDS
    ========================================================= */
@@ -394,16 +377,13 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-
     gap: 9px 11px;
     margin-top: 18px;
 }
 
 .paper-keywords h3 {
     margin: 0 2px 0 0;
-
     color: var(--publication-navy);
-
     font-size: 0.98rem;
     font-weight: 800;
 }
@@ -416,18 +396,14 @@
 
     margin: 0;
     padding: 0;
-
     list-style: none;
 }
 
 .paper-keywords li {
     padding: 8px 12px;
-
     border-radius: 999px;
     background: #EEF2F6;
-
     color: var(--publication-navy);
-
     font-size: 0.78rem;
     line-height: 1.3;
 }
@@ -442,7 +418,6 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 13px;
-
     margin-top: 19px;
 }
 
@@ -455,7 +430,6 @@
     gap: 11px;
 
     padding: 11px 20px;
-
     border: 1px solid transparent;
     border-radius: 999px;
 
@@ -463,7 +437,6 @@
     font-size: 0.91rem;
     font-weight: 800;
     line-height: 1.3;
-
     text-decoration: none;
 
     transition:
@@ -506,6 +479,7 @@
 
 /* =========================================================
    KEY FIGURES
+   Accent line is below the section heading.
    ========================================================= */
 
 .paper-figures-section {
@@ -513,26 +487,33 @@
 }
 
 .publication-section-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     margin-bottom: 17px;
 }
 
-/* Smaller gap between the accent and heading */
-
-.publication-section-heading .publication-accent {
-    margin-bottom: 10px;
-}
-
 .publication-section-heading h2 {
-    margin: 0 0 8px;
+    order: 1;
+    margin: 0;
 
     color: var(--publication-navy);
-
     font-family: Georgia, "Times New Roman", serif;
     font-size: clamp(1.6rem, 2vw, 2rem);
     line-height: 1.3;
 }
 
+.publication-section-heading > .publication-accent {
+    order: 2;
+    width: 49px;
+    height: 4px;
+    flex: 0 0 4px;
+    margin: 12px 0 14px;
+    background: var(--publication-yellow);
+}
+
 .publication-section-heading p {
+    order: 3;
     max-width: 900px;
     margin: 0;
 
@@ -559,18 +540,15 @@
     background: #FFFFFF;
     border: 1px solid #E0E4E9;
     border-radius: 10px;
-
     box-shadow: 0 2px 6px rgba(12, 28, 48, 0.035);
 }
 
 .paper-figure-image {
     display: block;
-
     width: 100%;
     aspect-ratio: 1.32 / 1;
 
     object-fit: contain;
-
     background: #F6F6F6;
     border-radius: 7px;
 }
@@ -581,9 +559,7 @@
 
 .paper-figure-copy h3 {
     margin: 0 0 7px;
-
     color: var(--publication-navy);
-
     font-size: 0.96rem;
     font-weight: 800;
     line-height: 1.4;
@@ -591,7 +567,6 @@
 
 .paper-figure-copy p {
     margin: 0;
-
     color: #222222;
     font-size: 0.85rem;
     line-height: 1.6;
@@ -600,6 +575,7 @@
 
 /* =========================================================
    EXPLORE THE FULL PROJECT
+   Accent line is below the heading.
    ========================================================= */
 
 .publication-project-cta {
@@ -644,31 +620,39 @@
     width: 2px;
     height: 63px;
     flex: 0 0 2px;
-
     background: #D0B35A;
 }
 
 .project-cta-copy {
     flex: 1 1 auto;
     min-width: 0;
-}
 
-.project-cta-copy .publication-accent {
-    width: 40px;
-    margin-bottom: 9px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .project-cta-copy h2 {
-    margin: 0 0 6px;
+    order: 1;
+    margin: 0;
 
     color: var(--publication-navy);
-
     font-family: Georgia, "Times New Roman", serif;
     font-size: 1.35rem;
     line-height: 1.35;
 }
 
+.project-cta-copy > .publication-accent {
+    order: 2;
+    width: 40px;
+    height: 4px;
+    flex: 0 0 4px;
+    margin: 12px 0 12px;
+    background: var(--publication-yellow);
+}
+
 .project-cta-copy p {
+    order: 3;
     max-width: 670px;
     margin: 0;
 
@@ -859,8 +843,8 @@
         padding: 28px 0;
     }
 
-    .publication-hero-content .publication-accent {
-        margin-bottom: 12px;
+    .publication-hero-content > .publication-accent {
+        margin: 12px 0 14px;
     }
 
     .publication-hero-content h1 {
@@ -995,8 +979,8 @@
         margin-bottom: 15px;
     }
 
-    .publication-section-heading .publication-accent {
-        margin-bottom: 9px;
+    .publication-section-heading > .publication-accent {
+        margin: 9px 0 12px;
     }
 
     .publication-section-heading h2 {
@@ -1048,8 +1032,8 @@
         flex-basis: calc(100% - 72px);
     }
 
-    .project-cta-copy .publication-accent {
-        margin-bottom: 8px;
+    .project-cta-copy > .publication-accent {
+        margin: 8px 0 10px;
     }
 
     .project-cta-copy h2 {
