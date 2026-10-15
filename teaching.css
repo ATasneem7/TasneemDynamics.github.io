@@ -684,6 +684,7 @@
 
 /* Yellow timeline nodes */
 
+/* Timeline node */
 .teaching-page .timeline-node {
     position: relative;
     z-index: 1;
@@ -692,19 +693,20 @@
     margin-top: 8px;
     border-radius: 50%;
     background: var(--tp-yellow);
+    flex-shrink: 0;
 }
 
-/* Vertical timeline connector */
-
+/* Continuous vertical connector between the two dots */
 .teaching-page .leadership-post:not(:last-child) .timeline-node::after {
+    content: "";
     position: absolute;
     top: 12px;
+    bottom: -1px;
     left: 5px;
     width: 2px;
-    height: calc(100% + 30px);
-    min-height: 48px;
+    height: auto;
+    min-height: 0;
     background: var(--tp-navy);
-    content: "";
 }
 
 .teaching-page .leadership-post-content {
@@ -939,5 +941,26 @@
     .teaching-page .role-responsibilities {
         padding-left: 4px;
         padding-right: 4px;
+    }
+}
+
+/* Keep leadership role titles on one line on desktop */
+.teaching-page .role-highlight {
+    white-space: nowrap;
+    font-size: 0.82rem;
+    padding: 5px 9px;
+}
+
+/* Adjust title size on smaller screens */
+@media (max-width: 900px) {
+    .teaching-page .role-highlight {
+        font-size: 0.76rem;
+    }
+}
+
+/* Allow wrapping on narrow mobile screens */
+@media (max-width: 600px) {
+    .teaching-page .role-highlight {
+        white-space: normal;
     }
 }
