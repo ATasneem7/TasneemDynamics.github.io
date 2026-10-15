@@ -1,89 +1,546 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Teaching &amp; Service | Tasneem Dynamics</title>
-<link rel="stylesheet" href="style1.css?v=1.0.8">
-<link rel="stylesheet" href="teaching.css?v=1.0.0">
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Teaching &amp; Service | Tasneem Dynamics</title>
+
+    <!-- Shared homepage CSS -->
+    <link rel="stylesheet" href="style1.css?v=1.0.8">
+
+    <!-- Teaching page CSS -->
+    <link rel="stylesheet" href="teaching.css?v=1.0.1">
+
+    <!-- Shared fonts and icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
+
 <body class="teaching-page">
+
 <div class="homepage">
-<aside class="left-panel">
-  <a href="index.html" aria-label="Tasneem Dynamics home"><img src="logo1.png" alt="Tasneem Dynamics Logo" class="logo"></a>
-  <div class="sidebar-visual"><img src="Side%20Bar-Image.png" alt="" class="sidebar-bg"></div>
-  <div class="sidebar-tags"><span>DYNAMICS</span><span>CONTROL</span><span>AUTONOMY</span><span>OPTIMIZATION</span><span>MACHINE LEARNING</span><div class="sidebar-accent"></div></div>
-</aside>
-<div class="right-panel">
-<nav class="navbar" aria-label="Main navigation"><ul>
-<li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="research.html">Research</a></li><li><a href="publications.html">Publications</a></li><li><a href="teaching-and-services.html" class="active" aria-current="page">Teaching &amp; Service</a></li><li><a href="engagement.html">Professional Engagement</a></li><li><a href="contact.html">Contact</a></li>
-</ul></nav>
-<main class="teaching-main">
-<header class="teaching-hero"><div class="teaching-hero-content">
-<h1>Teaching <span>&amp; Service</span></h1><div class="teaching-accent"></div>
-<p class="teaching-hero-tagline">Sharing Knowledge. Supporting Growth.</p>
-<p class="teaching-hero-intro">I am committed to teaching, mentoring, and technical service to make complex engineering concepts accessible, foster collaborative learning, and contribute to academic and student communities.</p>
-</div></header>
 
-<section class="teaching-card teaching-evidence-card" aria-labelledby="teaching-experience-title">
-<div class="experience-column">
-<div class="section-title-row"><span class="section-icon-wrap"><img src="Icons/graduation-cap.png" alt="" class="section-icon"></span><div class="section-heading"><h2 id="teaching-experience-title">Teaching Experience</h2><div class="teaching-accent"></div></div></div>
-<div class="experience-copy">
-<h3 class="position-title">Graduate Teaching Assistant — System Dynamics &amp; Vibrations</h3>
-<p class="institution-line">Georgia Institute of Technology <span class="metadata-separator">|</span> Summer 2026</p>
-<p class="body-copy">I supported a class of 58 undergraduate students in System Dynamics &amp; Vibrations by evaluating homework assignments and course projects, clarifying technical concepts and problem-solving approaches, and communicating students’ needs and concerns to the course instructor. This experience strengthened my ability to provide constructive feedback, support conceptual understanding, and contribute to an effective learning environment.</p>
-</div></div>
-<div class="demonstration-column">
-<div class="section-title-row"><span class="section-icon-wrap"><img src="Icons/teaching-demo.png" alt="" class="section-icon"></span><div class="section-heading"><h2>Teaching Demonstration</h2><div class="teaching-accent"></div></div></div>
-<div class="demonstration-copy"><h3 class="position-title">Video Lecture — Unicycle Kinematic Modeling</h3><p class="institution-line">Recorded for a graduate dynamics course <span class="metadata-separator">|</span> 7–10 minutes</p></div>
-<div class="demonstration-media-layout">
-<div class="video-frame"><iframe src="https://drive.google.com/file/d/1AAhGWLmtkl5PL2XHRpsjffXkZSxlTJZI/preview" title="Teaching demonstration: Unicycle Kinematic Modeling" loading="lazy" allow="autoplay; fullscreen" allowfullscreen></iframe></div>
-<aside class="topics-panel"><h3 class="panel-heading">Key Topics Covered</h3><div class="teaching-accent"></div>
-<p class="topics-intro">A structured introduction to unicycle kinematics, connecting the governing model to robotics and autonomous systems.</p>
-<ul class="topic-list"><li>Unicycle kinematics and configuration</li><li>Derivation of the kinematic model</li><li>Simulation and trajectory examples</li><li>Applications in mobile robotics and autonomous vehicles</li></ul>
-</aside></div></div>
-</section>
+    <!-- SHARED LEFT SIDEBAR -->
+    <aside class="left-panel">
 
-<section class="teaching-card mentoring-card" aria-labelledby="mentoring-title">
-<div class="mentoring-copy">
-<div class="section-title-row"><span class="section-icon-wrap"><img src="Icons/research-mentoring.png" alt="" class="section-icon"></span><div class="section-heading"><h2 id="mentoring-title">Research Mentoring</h2><div class="teaching-accent"></div></div></div>
-<div class="mentoring-text"><h3 class="position-title">Research Mentor — Undergraduate UAV Design Projects</h3><p class="institution-line">Military Institute of Science and Technology (MIST), Dhaka, Bangladesh</p>
-<p class="body-copy">During my undergraduate studies, I mentored freshman and sophomore students working on UAV design projects, guiding them through conceptual design, modeling, and simulation. To support their learning, I developed MATLAB-based statistical aircraft empty-weight estimation tools, compiled a database of 10 fixed-wing small UAVs, and generated plots to help students understand estimation methods and interpret the results.</p></div>
+        <a href="index.html" aria-label="Tasneem Dynamics home">
+            <img src="logo1.png"
+                 alt="Tasneem Dynamics Logo"
+                 class="logo">
+        </a>
+
+        <div class="sidebar-visual">
+            <img src="Side%20Bar-Image.png"
+                 alt=""
+                 class="sidebar-bg">
+        </div>
+
+        <div class="sidebar-tags">
+            <span>DYNAMICS</span>
+            <span>CONTROL</span>
+            <span>AUTONOMY</span>
+            <span>OPTIMIZATION</span>
+            <span>MACHINE LEARNING</span>
+
+            <div class="sidebar-accent"></div>
+        </div>
+
+    </aside>
+
+
+    <!-- SHARED RIGHT PANEL -->
+    <div class="right-panel">
+
+        <!-- SHARED NAVIGATION -->
+        <nav class="navbar" aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="teaching-and-services.html" class="active" aria-current="page">
+                       Teaching &amp; Service</a></li>
+                <li><a href="engagement.html">Professional Engagement</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+
+        <main class="teaching-main">
+
+            <!-- HERO BANNER
+                 Uses the same hero-banner and hero-image classes
+                 as the homepage. -->
+            <section class="hero-banner teaching-hero"
+                     aria-labelledby="teaching-page-title">
+
+                <img src="Banners/teaching-banner.png"
+                     alt="Teaching and Service banner featuring aerospace engineering imagery"
+                     class="hero-image">
+
+                <div class="teaching-hero-overlay" aria-hidden="true"></div>
+
+                <div class="hero-content teaching-hero-content">
+
+                    <h1 id="teaching-page-title">
+                        Teaching <span>&amp; Service</span>
+                    </h1>
+
+                    <div class="teaching-accent"></div>
+
+                    <!--p class="teaching-hero-tagline">
+                        Sharing Knowledge. Supporting Growth.
+                </p-->
+
+                    <p class="teaching-hero-intro">
+                        I believe learning is a life-long pursuit, and nothing
+                        complements learning and intellectual growth better
+                        than teaching. With this commitment, I am dedicated 
+                        to teaching, mentoring, and technical service to foster 
+                        collaborative learning, and contribute to academic and 
+                        student communities.
+                    </p>
+
+                </div>
+            </section>
+
+
+            <!-- TEACHING EXPERIENCE + TEACHING DEMONSTRATION -->
+            <section class="teaching-card teaching-evidence-card"
+                     aria-labelledby="teaching-experience-title">
+
+                <!-- Teaching experience -->
+                <div class="experience-column">
+
+                    <div class="section-title-row">
+
+                        <span class="section-icon-wrap">
+                            <img src="Icons/teaching-icon.png"
+                                 alt=""
+                                 class="section-icon">
+                        </span>
+
+                        <div class="section-heading">
+                            <h2 id="teaching-experience-title">
+                                Teaching Experience
+                            </h2>
+                            <div class="teaching-accent"></div>
+                        </div>
+
+                    </div>
+
+                    <div class="experience-copy">
+
+                        <h3 class="position-title">
+                            Graduate Teaching Assistant — AE 3530: System Dynamics &amp; Vibrations
+                        </h3>
+
+                        <p class="institution-line">
+                            Georgia Institute of Technology
+                            <span class="metadata-separator">|</span>
+                            Summer 2026
+                        </p>
+
+                        <p class="body-copy">
+                            I supported a class of 58 undergraduate students
+                            in System Dynamics &amp; Vibrations by evaluating
+                            homework assignments and course projects, clarifying
+                            technical concepts, and working through homework 
+                            problems during regular office hours. Besides, I 
+                            always made sure to maintain communication with 
+                            the primary course instructor to convey students' 
+                            needs and concerns.
+                        </p>
+
+                    </div>
+                </div>
+
+
+                <!-- Teaching demonstration: evidence of teaching approach -->
+                <div class="demonstration-column">
+
+                    <div class="section-title-row">
+
+                        <span class="section-icon-wrap">
+                            <img src="Icons/screen-icon.png"
+                                 alt=""
+                                 class="section-icon">
+                        </span>
+
+                        <div class="section-heading">
+                            <h2>Teaching Demonstration</h2>
+                            <div class="teaching-accent"></div>
+                        </div>
+
+                    </div>
+
+                    <div class="demonstration-copy">
+
+                        <h3 class="position-title">
+                            Video Lecture — Unicycle Kinematic Modeling
+                        </h3>
+
+                        <p class="institution-line">
+                            Recorded for a graduate dynamics course
+                            <span class="metadata-separator">|</span>
+                            7–10 minutes
+                        </p>
+
+                    </div>
+
+                    <div class="demonstration-media-layout">
+
+                        <!-- Google Drive embedded player -->    
+                      <div class="video-frame teaching-video-frame">
+                        <a class="video-thumbnail"
+                        href="https://drive.google.com/file/d/1AAhGWLmtkl5PL2XHRpsjffXkZSxlTJZI/view"
+                        target="_blank" rel="noopener noreferrer" 
+                        aria-label="Open the Unicycle Kinematic Modeling teaching demonstration">
+                          
+                        <img src="Images/unicycle-thumbnail.png" alt="Unicycle kinematic modeling lecture thumbnail"
+                        class="video-thumbnail-image">
+                        <span class="video-play-button" aria-hidden="true">
+                          <i class="fa-solid fa-play"></i></span>
+                        </a>
+                    </div>
+
+                        <!-- Light-yellow topics panel -->
+                        <aside class="topics-panel"
+                               aria-labelledby="topics-title">
+
+                            <h3 class="panel-heading" id="topics-title">
+                                Key Topics Covered
+                            </h3>
+
+                            <div class="teaching-accent"></div>
+
+                            <p class="topics-intro">
+                                A structured introduction to unicycle
+                                kinematics, connecting the governing model
+                                to robotics and autonomous systems.
+                            </p>
+
+                            <ul class="topic-list">
+                                <li>Unicycle kinematics and configuration</li>
+                                <li>Derivation of the kinematic model</li>
+                                <li>Simulation and trajectory examples</li>
+                                <li>Applications in mobile robotics and autonomous vehicles</li>
+                            </ul>
+
+                        </aside>
+
+                    </div>
+                </div>
+
+            </section>
+
+
+            <!-- RESEARCH MENTORING -->
+            <section class="teaching-card mentoring-card"
+                     aria-labelledby="mentoring-title">
+
+                <div class="mentoring-copy">
+
+                    <div class="section-title-row">
+
+                        <span class="section-icon-wrap">
+                            <img src="Icons/team-icon.png"
+                                 alt=""
+                                 class="section-icon">
+                        </span>
+
+                        <div class="section-heading">
+                            <h2 id="mentoring-title">Research Mentoring</h2>
+                            <div class="teaching-accent"></div>
+                        </div>
+
+                    </div>
+
+                    <div class="mentoring-text">
+
+                        <h3 class="position-title">
+                            Research Mentor — Undergraduate UAV Design Projects
+                        </h3>
+
+                        <p class="institution-line">
+                            Military Institute of Science and Technology (MIST),
+                            Dhaka, Bangladesh
+                        </p>
+
+                        <p class="body-copy">
+                            After my graduation from MIST, I mentored
+                            freshmen and sophomores working on UAV
+                            design projects, guiding them through conceptual
+                            design, modeling, and simulation. To support their
+                            learning, I developed MATLAB-based statistical
+                            aircraft empty-weight estimation tools, compiled
+                            a database of 10 fixed-wing small UAVs, and
+                            generated plots to help students understand
+                            estimation methods and interpret the results.
+                        </p>
+
+                    </div>
+                </div>
+
+
+                <!-- Technical materials -->
+                <aside class="materials-panel"
+                       aria-labelledby="materials-title">
+
+                    <h3 class="panel-heading" id="materials-title">
+                        Technical Materials for Student Mentoring
+                    </h3>
+
+                    <div class="teaching-accent"></div>
+
+                    <div class="materials-content">
+
+                        <img src="Icons/database-icon.png"
+                             alt=""
+                             class="database-icon">
+
+                        <p>
+                            MATLAB scripts, UAV specification database,
+                            and weight-estimation plots developed to
+                            support student learning.
+                        </p>
+                    </div>
+
+                    <a href="technical-materials.html"
+                       class="materials-button">
+
+                        <span>View Technical Materials</span>
+                        <span class="button-arrow" aria-hidden="true">→</span>
+
+                    </a>
+
+                </aside>
+
+            </section>
+
+
+            <!-- LEADERSHIP AND TECHNICAL SERVICE -->
+            <section class="teaching-card leadership-card"
+                     aria-labelledby="leadership-title">
+
+                <div class="leadership-copy">
+
+                    <div class="section-title-row">
+
+                        <span class="section-icon-wrap">
+                            <img src="Icons/network-icon.png"
+                                 alt=""
+                                 class="section-icon">
+                        </span>
+
+                        <div class="section-heading">
+                            <h2 id="leadership-title">
+                                Leadership &amp; Technical Service
+                            </h2>
+                            <div class="teaching-accent"></div>
+                        </div>
+
+                    </div>
+
+                    <h3 class="position-title club-title">
+                        MIST Aeronautics and Astronautics Club (MAAC)
+                    </h3>
+
+                    <p class="institution-line club-institution">
+                        Military Institute of Science and Technology,
+                        Dhaka, Bangladesh
+                    </p>
+
+
+                    <div class="leadership-timeline">
+
+                        <!-- Role 1 -->
+                        <article class="leadership-post">
+
+                            <div class="leadership-date">
+                                <span>Apr 2021 –</span>
+                                <span>Jan 2022</span>
+                            </div>
+
+                            <div class="timeline-node" aria-hidden="true"></div>
+
+                            <div class="leadership-post-content">
+
+                                <h4 class="role-highlight">
+                                    Vice President – Social Media and
+                                    Communications Division
+                                </h4>
+
+                                <div class="role-responsibilities">
+                                    <ul>
+                                        <li>
+                                            Coordinated a team of 14 members
+                                            to plan, organize, and execute
+                                            online and on-site club events.
+                                        </li>
+                                        <li>
+                                            Collaborated with the university’s
+                                            administrative wing.
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </article>
+
+
+                        <!-- Role 2 -->
+                        <article class="leadership-post">
+
+                            <div class="leadership-date">
+                                <span>Apr 2020 –</span>
+                                <span>Apr 2021</span>
+                            </div>
+
+                            <div class="timeline-node" aria-hidden="true"></div>
+
+                            <div class="leadership-post-content">
+
+                                <h4 class="role-highlight">
+                                    Executive Director – Technical Support
+                                </h4>
+
+                                <div class="role-responsibilities">
+                                    <ul>
+                                        <li>
+                                            Assisted club projects and workshops
+                                            involving manned and unmanned aircraft.
+                                        </li>
+                                        <li>
+                                            Worked on quadcopter hardware-software
+                                            integration, including flight-controller
+                                            setup, telemetry connection, and
+                                            real-time visualization.
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+
+
+                <!-- Technical service video -->
+                <aside class="leadership-media"
+                       aria-labelledby="telemetry-title">
+
+                    <h3 class="panel-heading" id="telemetry-title">
+                        Quadcopter Telemetry and Real-Time Model Visualization
+                    </h3>
+
+                    <div class="teaching-accent"></div>
+
+                   
+<!-- Quadcopter telemetry thumbnail -->
+<div class="video-frame telemetry-video-frame">
+
+    <a
+        class="video-thumbnail"
+        href="https://drive.google.com/file/d/1DCH9wjjdNI69IVVTSzWyouvEHX9VDlrz/view"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Open the quadcopter telemetry demonstration">
+
+        <img
+            src="Images/telemetry-thumbnail.jpg"
+            alt="Quadcopter connected to a laptop displaying Betaflight telemetry"
+            class="video-thumbnail-image">
+
+        <span class="video-play-button" aria-hidden="true">
+            <i class="fa-solid fa-play"></i>
+        </span>
+
+    </a>
+
 </div>
-<aside class="materials-panel"><h3 class="panel-heading">Technical Materials for Student Mentoring</h3><div class="teaching-accent"></div>
-<div class="materials-content"><img src="Icons/database-icon.png" alt="" class="database-icon"><p>MATLAB scripts, UAV specification database, and weight-estimation plots developed to support student learning.</p><img src="Images/aircraft-and-chart-illustration.png" alt="" class="materials-illustration"></div>
-<a href="technical-materials.html" class="materials-button"><span>View Technical Materials</span><span class="button-arrow" aria-hidden="true">→</span></a>
-</aside></section>
 
-<section class="teaching-card leadership-card" aria-labelledby="leadership-title">
-<div class="leadership-copy">
-<div class="section-title-row"><span class="section-icon-wrap"><img src="Icons/leadership.png" alt="" class="section-icon"></span><div class="section-heading"><h2 id="leadership-title">Leadership &amp; Technical Service</h2><div class="teaching-accent"></div></div></div>
-<h3 class="position-title club-title">MIST Aeronautics and Astronautics Club (MAAC)</h3><p class="institution-line club-institution">Military Institute of Science and Technology, Dhaka, Bangladesh</p>
-<div class="leadership-timeline">
-<article class="leadership-post"><div class="leadership-date"><span>Apr 2021 –</span><span>Jan 2022</span></div><div class="timeline-node"></div><div class="leadership-post-content"><h4 class="role-highlight">Vice President – Social Media and Communications Division</h4><div class="role-responsibilities"><ul><li>Coordinated a team of 14 members to plan, organize, and execute online and on-site club events.</li><li>Collaborated with the university’s administrative wing.</li></ul></div></div></article>
-<article class="leadership-post"><div class="leadership-date"><span>Apr 2020 –</span><span>Apr 2021</span></div><div class="timeline-node"></div><div class="leadership-post-content"><h4 class="role-highlight">Executive Director – Technical Support</h4><div class="role-responsibilities"><ul><li>Assisted club projects and workshops involving manned and unmanned aircraft.</li><li>Worked on quadcopter hardware-software integration, including flight-controller setup, telemetry connection, and real-time visualization.</li></ul></div></div></article>
-</div></div>
-<aside class="leadership-media"><h3 class="panel-heading">Quadcopter Telemetry and Real-Time Model Visualization</h3><div class="teaching-accent"></div>
-<div class="video-frame"><iframe src="https://drive.google.com/file/d/1DCH9wjjdNI69IVVTSzWyouvEHX9VDlrz/preview" title="Quadcopter telemetry and real-time model visualization" loading="lazy" allow="autoplay; fullscreen" allowfullscreen></iframe></div>
-<p class="video-caption">Quadcopter telemetry and real-time attitude visualization using Betaflight.</p>
-</aside></section>
-</main>
 
-<footer class="site-footer">
-<div class="footer-brand"><a href="index.html" aria-label="Tasneem Dynamics home"><img src="Footer-Logo.png" alt="Tasneem Dynamics" class="footer-logo"></a></div>
-<div class="footer-divider" aria-hidden="true"></div>
-<p class="footer-tagline">"Exploring dynamics. Advancing autonomy. Shaping flight towards sustainability."</p>
-<div class="footer-divider footer-social-divider" aria-hidden="true"></div>
-<div class="footer-socials">
-<a href="https://www.linkedin.com/in/anika-tasneem-a49618443/" class="footer-social-link" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
-<a href="https://github.com/ATasneem7" class="footer-social-link" aria-label="GitHub" title="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
-<a href="https://atasneem7.github.io/TasneemDynamics.github.io/" class="footer-social-link" aria-label="Research profile" title="Research profile"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i></a>
-<a href="mailto:atasneem3@gatech.edu" class="footer-social-link" aria-label="Email" title="Email"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
-</div></footer>
-</div></div>
+                    <p class="video-caption">
+                        Connecting the Quadcopter to BetaFlight for real-time attitude
+                        visualization during my role as Technical Executive Director
+                    </p>
+
+                </aside>
+
+            </section>
+
+        </main>
+
+
+        <!-- SHARED HOMEPAGE FOOTER -->
+        <footer class="site-footer">
+
+            <div class="footer-brand">
+                <a href="index.html" aria-label="Tasneem Dynamics home">
+                    <img src="Footer-Logo.png"
+                         alt="Tasneem Dynamics"
+                         class="footer-logo">
+                </a>
+            </div>
+
+            <div class="footer-divider" aria-hidden="true"></div>
+
+            <p class="footer-tagline">
+                "Exploring dynamics. Advancing autonomy.
+                Shaping flight towards sustainability."
+            </p>
+
+            <div class="footer-divider footer-social-divider"
+                 aria-hidden="true"></div>
+
+            <div class="footer-socials">
+
+                <a href="https://www.linkedin.com/in/anika-tasneem-a49618443/"
+                   class="footer-social-link"
+                   aria-label="LinkedIn"
+                   title="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+                </a>
+
+                <a href="https://github.com/ATasneem7"
+                   class="footer-social-link"
+                   aria-label="GitHub"
+                   title="GitHub">
+                    <i class="fa-brands fa-github" aria-hidden="true"></i>
+                </a>
+
+                <a href="https://atasneem7.github.io/TasneemDynamics.github.io/"
+                   class="footer-social-link"
+                   aria-label="Research profile"
+                   title="Research profile">
+                    <i class="fa-solid fa-graduation-cap"
+                       aria-hidden="true"></i>
+                </a>
+
+                <a href="mailto:atasneem3@gatech.edu"
+                   class="footer-social-link"
+                   aria-label="Email"
+                   title="Email">
+                    <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                </a>
+
+            </div>
+
+        </footer>
+
+    </div>
+</div>
+
 <script src="script.js?v=1.0.3"></script>
+
 </body>
 </html>
+
