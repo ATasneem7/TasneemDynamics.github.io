@@ -609,19 +609,25 @@
 
 /* Timeline layout */
 
-.teaching-page .leadership-timeline {
-    display: grid;
-    gap: 16px;
-    padding-left: 75px;
+
+/* Timeline node and continuous connector */
+.teaching-page .leadership-post {
+    position: relative;
 }
 
-.teaching-page .leadership-post {
-    display: grid;
-    grid-template-columns: 76px 14px minmax(0, 1fr);
-    gap: 8px;
-    align-items: stretch;
-    min-width: 0;
+.teaching-page .timeline-node {
+    position: relative;
+    z-index: 2;
+    width: 12px;
+    height: 12px;
+    margin-top: 8px;
+    border-radius: 50%;
+    background: var(--tp-yellow);
+    flex-shrink: 0;
 }
+
+/* Extend the connector through the full gap to the next node */
+
 
 .teaching-page .leadership-date {
     padding-top: 7px;
@@ -653,11 +659,13 @@
     content: "";
     position: absolute;
     top: 12px;
-    bottom: -17px;
     left: 5px;
     width: 2px;
+    height: calc(100% + 16px);
     background: var(--tp-navy);
+    z-index: -1;
 }
+
 
 /* Only the position title receives a yellow background */
 
