@@ -134,8 +134,17 @@
 }
 
 .teaching-page .teaching-hero h1 span {
+    display: block;    
+}
+
+.teaching-page .teaching-hero h1 .hero-title-yellow {
     display: block;
-    
+    color: var(--tp-yellow);
+}
+
+.teaching-page .teaching-hero h1 .hero-title-white {
+    display: block;
+    color: #FFFFFF;
 }
 
 /* Short yellow accent beneath the main heading */
