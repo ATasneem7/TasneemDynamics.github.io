@@ -612,6 +612,10 @@
 
 /* Timeline node and continuous connector */
 .teaching-page .leadership-post {
+    display: grid;
+    grid-template-columns: 76px 14px minmax(0, 1fr);
+    gap: 8px;
+    align-items: stretch;
     position: relative;
 }
 
@@ -634,6 +638,7 @@
     color: var(--tp-navy);
     font-size: 0.9rem;
     line-height: 1.45;
+    text-align: left;
 }
 
 .teaching-page .leadership-date span {
@@ -644,9 +649,11 @@
    The connector is drawn from the first node to the next row.
    It intentionally uses bottom: -16px to cross the timeline gap. */
 
+/* Keep each yellow dot in the middle timeline column */
 .teaching-page .timeline-node {
     position: relative;
-    z-index: 1;
+    z-index: 2;
+    display: block;
     width: 12px;
     height: 12px;
     margin-top: 8px;
@@ -669,8 +676,12 @@
 
 /* Only the position title receives a yellow background */
 
+/* Keep role titles and responsibilities in the third column */
 .teaching-page .leadership-post-content {
+    grid-column: 3;
     min-width: 0;
+    position: relative;
+    z-index: 2;
 }
 
 .teaching-page .role-highlight {
@@ -957,5 +968,28 @@
     .teaching-page .section-icon {
         width: 33px;
         height: 33px;
+    }
+}
+
+/* Preserve the existing mobile layout */
+@media (max-width: 760px) {
+    .teaching-page .leadership-post {
+        grid-template-columns: 68px 12px minmax(0, 1fr);
+        gap: 6px;
+    }
+}
+
+@media (max-width: 480px) {
+    .teaching-page .leadership-post {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 5px;
+    }
+
+    .teaching-page .timeline-node {
+        display: none;
+    }
+
+    .teaching-page .leadership-post:not(:last-child)::after {
+        display: none;
     }
 }
