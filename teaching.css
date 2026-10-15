@@ -70,29 +70,6 @@
 }
 
 /* =========================================================
-   SIDEBAR BRANDING
-   Restore the larger logo scale used on the Publications page.
-========================================================= */
-
-.teaching-page .left-panel {
-    flex: 0 0 22%;
-    width: 22%;
-    min-width: 0;
-    box-sizing: border-box;
-}
-
-.teaching-page .left-panel .logo {
-    display: block;
-    width: 100%;
-    max-width: none;
-    height: auto;
-    padding: 0;
-    margin: 5px 0 0;
-    object-fit: contain;
-    box-sizing: border-box;
-}
-
-/* =========================================================
    HERO BANNER
    Height and typography follow the Publications page style.
 ========================================================= */
