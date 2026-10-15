@@ -123,18 +123,19 @@
 .teaching-page .teaching-hero h1 {
     max-width: 100%;
     margin: 0;
-    color: #FFFFFF;
+    color: var(--tp-yellow);
     font-family: Georgia, "Times New Roman", serif;
     font-size: clamp(2.5rem, 3.7vw, 4rem);
     font-weight: 700;
     line-height: 1.12;
     overflow-wrap: normal;
     text-align: left;
+    color: #FFFFFF;
 }
 
 .teaching-page .teaching-hero h1 span {
     display: block;
-    color: var(--tp-yellow);
+    
 }
 
 /* Short yellow accent beneath the main heading */
