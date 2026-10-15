@@ -936,3 +936,18 @@
     object-position: center top;
     transform: translateX(-10%);
 }
+
+/* Slightly enlarge section icons inside the existing circles */
+.teaching-page .section-icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+/* Keep icons proportional on mobile */
+@media (max-width: 760px) {
+    .teaching-page .section-icon {
+        width: 33px;
+        height: 33px;
+    }
+}
