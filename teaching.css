@@ -1,0 +1,774 @@
+
+/* TEACHING & SERVICE PAGE*/
+
+:root {
+    --tp-navy: #030164;
+    --tp-yellow: #FFD000;
+    --tp-pale: #FFF4D2;
+    --tp-cream: #FFFCF5;
+    --tp-black: #171717;
+    --tp-rule: #9BCBEA;
+    --tp-border: #DCE5E9;
+}
+
+/* PAGE LAYOUT */
+
+.teaching-page .right-panel {
+    min-width: 0;
+}
+
+.teaching-main {
+    width: 100%;
+    padding-top: 68px;
+    background: var(--tp-cream);
+    color: var(--tp-black);
+    flex: 0 0 auto;
+}
+
+/* Heading color: navy blue.
+   Body paragraph and list text: black. */
+
+.teaching-page h1,
+.teaching-page h2,
+.teaching-page h3,
+.teaching-page h4,
+.teaching-page .panel-heading {
+    color: var(--tp-navy);
+}
+
+.teaching-page p,
+.teaching-page li {
+    color: var(--tp-black);
+}
+
+
+/* =========================================================
+   HERO BANNER
+   HTML uses the shared hero-banner and hero-image classes.
+========================================================= */
+
+.teaching-page .hero-banner.teaching-hero {
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 190px;
+    height: auto;
+    padding: 26px clamp(22px, 3.2vw, 52px);
+    overflow: hidden;
+    background: #001725;
+}
+
+/* Explicit image element, like the homepage */
+
+.teaching-page .teaching-hero .hero-image {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 48%;
+}
+
+/* Dark overlay preserves white-text contrast */
+
+.teaching-hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(
+        90deg,
+        rgba(0, 17, 37, 0.94) 0%,
+        rgba(0, 25, 48, 0.76) 55%,
+        rgba(0, 18, 38, 0.42) 100%
+    );
+    pointer-events: none;
+}
+
+.teaching-hero-content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 700px;
+}
+
+.teaching-page .teaching-hero h1 {
+    margin: 0 0 8px;
+    color: #FFFFFF;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2.1rem, 3.2vw, 3.2rem);
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.teaching-hero h1 span {
+    color: var(--tp-yellow);
+}
+
+.teaching-hero-tagline {
+    margin: 14px 0 10px;
+    color: var(--tp-yellow) !important;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.05rem, 1.35vw, 1.35rem);
+    font-style: italic;
+    font-weight: 700;
+}
+
+.teaching-hero-intro {
+    max-width: 690px;
+    margin: 0;
+    color: #FFFFFF !important;
+    font-size: 0.98rem;
+    line-height: 1.55;
+}
+
+
+/* =========================================================
+   ACCENT LINES AND SECTION CARDS
+========================================================= */
+
+.teaching-page .teaching-accent {
+    width: 43px;
+    height: 4px;
+    margin: 12px 0 16px;
+    flex: none;
+    background: var(--tp-yellow);
+}
+
+.teaching-card {
+    margin: 18px 16px 0;
+    padding: 20px;
+    border: 1px solid var(--tp-border);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: 0 2px 10px rgba(2, 24, 47, 0.035);
+}
+
+.teaching-card:last-child {
+    margin-bottom: 16px;
+}
+
+.section-title-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 8px;
+}
+
+.section-icon-wrap {
+    display: flex;
+    flex: 0 0 60px;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #FFF0B2;
+}
+
+.section-icon {
+    display: block;
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+}
+
+.section-heading {
+    min-width: 0;
+}
+
+.section-heading h2 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.45rem, 1.9vw, 2rem);
+    font-weight: 700;
+    line-height: 1.18;
+    letter-spacing: -0.025em;
+}
+
+/* Extra breathing room below heading and accent line */
+
+.section-heading .teaching-accent {
+    margin-top: 12px;
+    margin-bottom: 18px;
+}
+
+.position-title {
+    margin: 0 0 3px;
+    color: var(--tp-navy);
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.institution-line {
+    margin: 0 0 12px;
+    font-size: 0.91rem;
+    line-height: 1.45;
+}
+
+.metadata-separator {
+    display: inline-block;
+    padding: 0 7px;
+    color: #68727A;
+}
+
+.body-copy {
+    margin: 0;
+    font-size: 0.94rem;
+    line-height: 1.55;
+}
+
+
+/* =========================================================
+   TEACHING EXPERIENCE + TEACHING DEMONSTRATION
+========================================================= */
+
+.teaching-evidence-card {
+    display: grid;
+    grid-template-columns: minmax(0, 0.94fr) minmax(0, 1.06fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.experience-column,
+.demonstration-column {
+    min-width: 0;
+}
+
+.experience-column {
+    padding-right: 20px;
+    border-right: 2px solid var(--tp-rule);
+}
+
+.experience-copy {
+    padding-left: 75px;
+}
+
+.demonstration-copy {
+    margin: 0 0 12px 75px;
+}
+
+.demonstration-copy .institution-line {
+    margin-bottom: 0;
+}
+
+/* Video and topics sit side-by-side */
+
+.demonstration-media-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.55fr) minmax(170px, 0.9fr);
+    gap: 12px;
+    align-items: stretch;
+}
+
+/* Google Drive iframe container */
+
+.video-frame {
+    position: relative;
+    min-width: 0;
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+    border-radius: 10px;
+    background: #07182A;
+}
+
+.video-frame iframe {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+
+/* Clickable thumbnail for Google Drive videos */
+
+.video-thumbnail {
+    position: absolute;
+    inset: 0;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background: #07182A;
+}
+
+.video-thumbnail-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.25s ease;
+}
+
+.video-thumbnail:hover .video-thumbnail-image {
+    transform: scale(1.035);
+}
+
+.video-play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 58px;
+    height: 58px;
+    transform: translate(-50%, -50%);
+    border: 2px solid #FFFFFF;
+    border-radius: 50%;
+    background: rgba(0, 23, 37, 0.82);
+    color: #FFFFFF;
+    font-size: 22px;
+    padding-left: 4px;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.video-thumbnail:hover .video-play-button {
+    background: var(--tp-navy);
+    transform: translate(-50%, -50%) scale(1.08);
+}
+
+
+/* =========================================================
+   KEY TOPICS PANEL
+   Pale yellow background with navy checkbox icons.
+========================================================= */
+
+.topics-panel {
+    min-width: 0;
+    padding: 14px;
+    border-radius: 11px;
+    background: var(--tp-pale);
+}
+
+.panel-heading {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.03rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.topics-panel .teaching-accent,
+.materials-panel .teaching-accent,
+.leadership-media .teaching-accent {
+    margin-top: 9px;
+    margin-bottom: 13px;
+}
+
+.topics-intro {
+    margin: 0 0 12px;
+    font-size: 0.84rem;
+    line-height: 1.45;
+}
+
+.topic-list {
+    display: grid;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.topic-list li {
+    position: relative;
+    padding-left: 25px;
+    font-size: 0.83rem;
+    line-height: 1.36;
+}
+
+/* Checkbox square */
+
+.topic-list li::before {
+    position: absolute;
+    top: 0.1em;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 3px;
+    background: var(--tp-navy);
+    content: "";
+}
+
+/* White check mark */
+
+.topic-list li::after {
+    position: absolute;
+    top: 0.28em;
+    left: 4px;
+    width: 6px;
+    height: 3px;
+    transform: rotate(-45deg);
+    border-bottom: 2px solid #FFFFFF;
+    border-left: 2px solid #FFFFFF;
+    content: "";
+}
+
+
+/* =========================================================
+   RESEARCH MENTORING + TECHNICAL MATERIALS
+========================================================= */
+
+.mentoring-card {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 0.88fr);
+    gap: 22px;
+    align-items: stretch;
+}
+
+.mentoring-copy,
+.materials-panel {
+    min-width: 0;
+}
+
+.mentoring-text {
+    padding-left: 75px;
+}
+
+.materials-panel {
+    align-self: center;
+    padding: 16px;
+    border: 1px solid var(--tp-border);
+    border-radius: 12px;
+    background: #FFFFFF;
+}
+
+.materials-content {
+    position: relative;
+    display: grid;
+    grid-template-columns: 45px minmax(0, 1fr) 105px;
+    gap: 12px;
+    align-items: center;
+    min-height: 112px;
+    padding: 12px;
+    border-radius: 10px;
+    background: var(--tp-pale);
+}
+
+.database-icon {
+    display: block;
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.materials-content p {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    font-size: 0.88rem;
+    line-height: 1.45;
+}
+
+.materials-illustration {
+    display: block;
+    width: 100%;
+    max-height: 100px;
+    object-fit: contain;
+}
+
+/* Yellow technical-materials button */
+
+.materials-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    min-height: 44px;
+    margin: 12px 0 0 12px;
+    padding: 10px 15px;
+    border-radius: 9px;
+    background: var(--tp-yellow);
+    color: #111111 !important;
+    font-weight: 700;
+    line-height: 1.2;
+    text-decoration: none;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.materials-button:hover {
+    transform: translateY(-1px);
+    background: #F0BE00;
+}
+
+/* Plain right arrow; not an external-link icon */
+
+.button-arrow {
+    display: inline-block;
+    flex: 0 0 auto;
+    color: #111111;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 0.7;
+}
+
+
+/* =========================================================
+   LEADERSHIP & TECHNICAL SERVICE
+========================================================= */
+
+.leadership-card {
+    display: grid;
+    grid-template-columns: minmax(0, 1.12fr) minmax(280px, 0.88fr);
+    gap: 22px;
+}
+
+.leadership-copy,
+.leadership-media {
+    min-width: 0;
+}
+
+.club-title,
+.club-institution {
+    margin-left: 75px;
+}
+
+.club-institution {
+    margin-bottom: 12px;
+}
+
+.leadership-timeline {
+    display: grid;
+    gap: 9px;
+    padding-left: 75px;
+}
+
+.leadership-post {
+    display: grid;
+    grid-template-columns: 76px 14px minmax(0, 1fr);
+    gap: 8px;
+    align-items: stretch;
+}
+
+.leadership-date {
+    padding-top: 7px;
+    color: var(--tp-navy);
+    font-size: 0.82rem;
+    line-height: 1.35;
+}
+
+.leadership-date span {
+    display: block;
+}
+
+.timeline-node {
+    position: relative;
+    z-index: 1;
+    width: 12px;
+    height: 12px;
+    margin-top: 8px;
+    border-radius: 50%;
+    background: var(--tp-yellow);
+}
+
+/* Vertical timeline connector */
+
+.leadership-post:not(:last-child) .timeline-node::after {
+    position: absolute;
+    top: 12px;
+    left: 5px;
+    width: 2px;
+    min-height: 48px;
+    height: calc(100% + 30px);
+    background: var(--tp-navy);
+    content: "";
+}
+
+.leadership-post-content {
+    min-width: 0;
+}
+
+/* Only the role title has a yellow background */
+
+.role-highlight {
+    margin: 0;
+    padding: 5px 9px;
+    border-radius: 6px;
+    background: #FFE99A;
+    color: var(--tp-navy);
+    font-size: 0.87rem;
+    line-height: 1.3;
+}
+
+/* Responsibilities keep a normal white background */
+
+.role-responsibilities {
+    padding: 7px 10px 8px;
+    border-radius: 0 0 6px 6px;
+    background: #FFFFFF;
+}
+
+.role-responsibilities ul {
+    margin: 0;
+    padding-left: 17px;
+}
+
+.role-responsibilities li {
+    margin: 2px 0;
+    font-size: 0.8rem;
+    line-height: 1.4;
+}
+
+/* Telemetry video on the right */
+
+.leadership-media {
+    padding-left: 20px;
+    border-left: 2px solid var(--tp-rule);
+}
+
+.leadership-media .panel-heading {
+    font-size: 1.02rem;
+}
+
+.video-caption {
+    margin: 9px 0 0;
+    font-size: 0.82rem;
+    line-height: 1.4;
+}
+
+
+/* Preserve shared footer behavior */
+
+.teaching-page .site-footer {
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1150px) {
+
+    .teaching-evidence-card {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-column {
+        padding-right: 0;
+        padding-bottom: 20px;
+        border-right: 0;
+        border-bottom: 2px solid var(--tp-rule);
+    }
+
+    .mentoring-card,
+    .leadership-card {
+        grid-template-columns: 1fr;
+    }
+
+    .leadership-media {
+        padding: 18px 0 0;
+        border-top: 2px solid var(--tp-rule);
+        border-left: 0;
+    }
+}
+
+
+/* =========================================================
+   MOBILE / SMALL TABLET
+========================================================= */
+
+@media (max-width: 760px) {
+
+    .teaching-page .hero-banner.teaching-hero {
+        min-height: 0;
+        padding: 25px 20px;
+    }
+
+    .teaching-card {
+        margin: 12px 10px 0;
+        padding: 15px;
+    }
+
+    .section-title-row {
+        gap: 11px;
+    }
+
+    .section-icon-wrap {
+        width: 48px;
+        height: 48px;
+        flex-basis: 48px;
+    }
+
+    .section-icon {
+        width: 29px;
+        height: 29px;
+    }
+
+    .experience-copy,
+    .demonstration-copy,
+    .mentoring-text,
+    .club-title,
+    .club-institution,
+    .leadership-timeline {
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    .demonstration-media-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .materials-content {
+        grid-template-columns: 38px minmax(0, 1fr);
+    }
+
+    .materials-illustration {
+        display: none;
+    }
+
+    .leadership-post {
+        grid-template-columns: 68px 12px minmax(0, 1fr);
+        gap: 6px;
+    }
+
+    .leadership-date {
+        font-size: 0.75rem;
+    }
+
+    .role-highlight {
+        font-size: 0.82rem;
+    }
+}
+
+
+/* =========================================================
+   NARROW MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .teaching-page .teaching-hero h1 {
+        font-size: 2rem;
+    }
+
+    .section-heading h2 {
+        font-size: 1.35rem;
+    }
+
+    .materials-button {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .leadership-post {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline-node {
+        display: none;
+    }
+
+    .leadership-date {
+        padding: 0;
+        font-weight: 700;
+    }
+}
