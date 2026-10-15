@@ -133,6 +133,7 @@
 }
 
 .teaching-page .teaching-hero h1 span {
+    display: block;
     color: var(--tp-yellow);
 }
 
@@ -168,9 +169,7 @@
     line-height: 1.6;
 }
 
-/* =========================================================
-   SECTION CARDS
-========================================================= */
+/*SECTION CARDS*/
 
 .teaching-page .teaching-card {
     min-width: 0;
@@ -268,10 +267,7 @@
     line-height: 1.6;
 }
 
-/* =========================================================
-   TEACHING EXPERIENCE + DEMONSTRATION
-   Give the demonstration column more space for its thumbnail.
-========================================================= */
+/*TEACHING EXPERIENCE + DEMONSTRATION*/
 
 .teaching-page .teaching-evidence-card {
     display: grid;
@@ -490,14 +486,25 @@
 .teaching-page .materials-content {
     position: relative;
     display: grid;
-    grid-template-columns: 45px minmax(0, 1fr) 105px;
+    grid-template-columns: 45px minmax(0, 1fr);
     gap: 12px;
     align-items: center;
     min-height: 112px;
-    padding: 12px;
+    padding: 16px;
     border-radius: 10px;
     background: var(--tp-pale);
     box-sizing: border-box;
+}
+
+.teaching-page .materials-content p {
+    min-width: 0;
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    text-align: left;
+    text-justify: auto;
+    overflow-wrap: anywhere;
+    hyphens: none;
 }
 
 .teaching-page .database-icon {
@@ -505,15 +512,6 @@
     width: 40px;
     height: 40px;
     object-fit: contain;
-}
-
-.teaching-page .materials-content p {
-    position: relative;
-    z-index: 1;
-    min-width: 0;
-    margin: 0;
-    font-size: 0.9rem;
-    line-height: 1.5;
 }
 
 .teaching-page .materials-illustration {
@@ -528,11 +526,11 @@
 .teaching-page .materials-button {
     display: inline-flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 22px;
+    justify-content: center;
+    gap: 12px;
     min-height: 44px;
     margin: 12px 0 0 12px;
-    padding: 10px 16px;
+    padding: 10px 18px;
     border: 0;
     border-radius: 9px;
     background: var(--tp-yellow);
@@ -545,25 +543,14 @@
     transition: background 0.2s ease, transform 0.2s ease;
 }
 
+.teaching-page .materials-button i {
+    flex: 0 0 auto;
+    font-size: 0.95rem;
+}
+
 .teaching-page .materials-button:hover {
     transform: translateY(-1px);
     background: #F0BE00;
-}
-
-/* Strong right arrow */
-
-.teaching-page .button-arrow {
-    display: inline-flex;
-    flex: 0 0 24px;
-    align-items: center;
-    justify-content: center;
-    width: 24px;
-    height: 24px;
-    color: #111111;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 27px;
-    font-weight: 700;
-    line-height: 1;
 }
 
 /* =========================================================
@@ -602,21 +589,43 @@
     line-height: 1.5;
 }
 
-/* Timeline layout */
-
-
-/* Timeline node and continuous connector */
-.teaching-page .leadership-post {
-    display: grid;
-    grid-template-columns: 76px 14px minmax(0, 1fr);
-    gap: 8px;
-    align-items: stretch;
-    position: relative;
+/* Leadership timeline */
+.teaching-page .leadership-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 0;
 }
 
-.teaching-page .timeline-node {
+.teaching-page .leadership-post {
     position: relative;
-    z-index: 2;
+    display: grid;
+    grid-template-columns: 76px 14px minmax(0, 1fr);
+    column-gap: 8px;
+    align-items: stretch;
+    min-width: 0;
+}
+
+/* Draw the connector independently of the yellow nodes */
+.teaching-page .leadership-post:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    bottom: -26px;
+    left: 89px;
+    width: 2px;
+    background: var(--tp-navy);
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Yellow timeline nodes remain above the connector */
+.teaching-page .timeline-node {
+    grid-column: 2;
+    grid-row: 1;
+    position: relative;
+    z-index: 1;
+    display: block;
     width: 12px;
     height: 12px;
     margin-top: 8px;
@@ -625,10 +634,12 @@
     flex-shrink: 0;
 }
 
-/* Extend the connector through the full gap to the next node */
-
-
+/* Keep the date in the first column */
 .teaching-page .leadership-date {
+    grid-column: 1;
+    grid-row: 1;
+    position: relative;
+    z-index: 1;
     padding-top: 7px;
     color: var(--tp-navy);
     font-size: 0.9rem;
@@ -640,44 +651,16 @@
     display: block;
 }
 
-/* Timeline node and continuous connector.
-   The connector is drawn from the first node to the next row.
-   It intentionally uses bottom: -16px to cross the timeline gap. */
-
-/* Keep each yellow dot in the middle timeline column */
-.teaching-page .timeline-node {
-    position: relative;
-    z-index: 2;
-    display: block;
-    width: 12px;
-    height: 12px;
-    margin-top: 8px;
-    border-radius: 50%;
-    background: var(--tp-yellow);
-    flex-shrink: 0;
-}
-
-.teaching-page .leadership-post:not(:last-child) .timeline-node::after {
-    content: "";
-    position: absolute;
-    top: 12px;
-    left: 5px;
-    width: 2px;
-    height: calc(100% + 16px);
-    background: var(--tp-navy);
-    z-index: -1;
-}
-
-
-/* Only the position title receives a yellow background */
-
-/* Keep role titles and responsibilities in the third column */
+/* Keep the role title and responsibilities above the connector */
 .teaching-page .leadership-post-content {
     grid-column: 3;
-    min-width: 0;
+    grid-row: 1;
     position: relative;
-    z-index: 2;
+    z-index: 1;
+    min-width: 0;
 }
+
+
 
 .teaching-page .role-highlight {
     margin: 0;
@@ -738,6 +721,11 @@
 
 .teaching-page .site-footer {
     flex-shrink: 0;
+}
+
+/* Preserve the shared footer tagline color */
+.teaching-page .site-footer .footer-tagline {
+    color: #E5EAF0 !important;
 }
 
 /* =========================================================
@@ -802,6 +790,10 @@
 @media (max-width: 760px) {
     .teaching-page .teaching-main {
         padding-top: 68px;
+    }
+
+    .teaching-page .leadership-post:not(:last-child)::after {
+    left: 78px;
     }
 
     .teaching-page .hero-banner.teaching-hero {
