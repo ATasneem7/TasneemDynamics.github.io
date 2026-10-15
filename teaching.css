@@ -1,5 +1,15 @@
 
-/* TEACHING & SERVICE PAGE*/
+/* =========================================================
+   TASNEEM DYNAMICS — TEACHING & SERVICE PAGE
+   Page-specific styling only.
+   Shared layout, navigation, sidebar, and footer are
+   inherited from style1.css.
+========================================================= */
+
+
+/* =========================================================
+   THEME VARIABLES
+========================================================= */
 
 :root {
     --tp-navy: #030164;
@@ -11,7 +21,10 @@
     --tp-border: #DCE5E9;
 }
 
-/* PAGE LAYOUT */
+
+/* =========================================================
+   PAGE LAYOUT AND GLOBAL TYPOGRAPHY
+========================================================= */
 
 .teaching-page .right-panel {
     min-width: 0;
@@ -19,14 +32,14 @@
 
 .teaching-main {
     width: 100%;
+    min-width: 0;
     padding-top: 68px;
+    flex: 0 0 auto;
     background: var(--tp-cream);
     color: var(--tp-black);
-    flex: 0 0 auto;
 }
 
-/* Heading color: navy blue.
-   Body paragraph and list text: black. */
+/* Navy headings */
 
 .teaching-page h1,
 .teaching-page h2,
@@ -36,9 +49,59 @@
     color: var(--tp-navy);
 }
 
+/* Black body text */
+
 .teaching-page p,
 .teaching-page li {
     color: var(--tp-black);
+}
+
+/* Justify descriptive paragraphs while keeping headings natural */
+
+.teaching-page .body-copy,
+.teaching-page .teaching-hero-intro,
+.teaching-page .topics-intro,
+.teaching-page .materials-content p,
+.teaching-page .video-caption,
+.teaching-page .role-responsibilities li {
+    text-align: justify;
+    text-justify: inter-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+/* Do not stretch short labels or headings */
+
+.teaching-page h1,
+.teaching-page h2,
+.teaching-page h3,
+.teaching-page h4,
+.teaching-page .position-title,
+.teaching-page .institution-line,
+.teaching-page .panel-heading,
+.teaching-page .role-highlight,
+.teaching-page .leadership-date {
+    text-align: left;
+}
+
+
+/* =========================================================
+   SHARED SIDEBAR — PREVENT BRAND CROPPING
+========================================================= */
+
+.teaching-page .left-panel {
+    flex: 0 0 22%;
+    min-width: 0;
+}
+
+.teaching-page .left-panel .logo {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    padding: 0 8px;
+    margin-top: 5px;
+    object-fit: contain;
 }
 
 
@@ -53,14 +116,15 @@
     display: flex;
     align-items: center;
     width: 100%;
-    min-height: 190px;
+    min-width: 0;
+    min-height: clamp(300px, 31vw, 440px);
     height: auto;
-    padding: 26px clamp(22px, 3.2vw, 52px);
+    padding: clamp(34px, 4vw, 60px);
     overflow: hidden;
     background: #001725;
 }
 
-/* Explicit image element, like the homepage */
+/* Banner image */
 
 .teaching-page .teaching-hero .hero-image {
     position: absolute;
@@ -70,95 +134,117 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 48%;
+    object-position: center;
 }
 
-/* Dark overlay preserves white-text contrast */
+/* Moderate dark overlay: retain visible background artwork */
 
-.teaching-hero-overlay {
+.teaching-page .teaching-hero .teaching-hero-overlay {
     position: absolute;
     inset: 0;
     z-index: -1;
     background: linear-gradient(
         90deg,
-        rgba(0, 17, 37, 0.94) 0%,
-        rgba(0, 25, 48, 0.76) 55%,
-        rgba(0, 18, 38, 0.42) 100%
+        rgba(0, 17, 37, 0.84) 0%,
+        rgba(0, 25, 48, 0.62) 42%,
+        rgba(0, 18, 38, 0.22) 100%
     );
     pointer-events: none;
 }
 
-.teaching-hero-content {
+/* Keep banner text within the left portion of the image */
+
+.teaching-page .teaching-hero-content {
     position: relative;
     z-index: 1;
     width: 100%;
-    max-width: 700px;
+    max-width: 740px;
+    min-width: 0;
+    margin-right: auto;
 }
+
+/* Main banner heading */
 
 .teaching-page .teaching-hero h1 {
-    margin: 0 0 8px;
+    max-width: 100%;
+    margin: 0 0 14px;
     color: #FFFFFF;
     font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(2.1rem, 3.2vw, 3.2rem);
+    font-size: clamp(2.5rem, 3.7vw, 4rem);
     font-weight: 700;
-    line-height: 1.1;
+    line-height: 1.12;
+    overflow-wrap: break-word;
 }
 
-.teaching-hero h1 span {
+.teaching-page .teaching-hero h1 span {
     color: var(--tp-yellow);
 }
 
-.teaching-hero-tagline {
-    margin: 14px 0 10px;
-    color: var(--tp-yellow) !important;
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(1.05rem, 1.35vw, 1.35rem);
-    font-style: italic;
-    font-weight: 700;
+/* Optional yellow accent beneath the banner heading */
+
+.teaching-page .teaching-hero .yellow-line {
+    width: 52px;
+    height: 5px;
+    margin: 14px 0 18px;
+    background: var(--tp-yellow);
 }
 
-.teaching-hero-intro {
-    max-width: 690px;
+/* Banner tagline */
+
+.teaching-page .teaching-hero-tagline {
+    max-width: 100%;
+    margin: 0 0 14px;
+    color: var(--tp-yellow) !important;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.1rem, 1.5vw, 1.4rem);
+    font-style: italic;
+    font-weight: 700;
+    line-height: 1.45;
+}
+
+/* Banner introduction */
+
+.teaching-page .teaching-hero-intro {
+    width: 100%;
+    max-width: 650px;
     margin: 0;
     color: #FFFFFF !important;
-    font-size: 0.98rem;
-    line-height: 1.55;
+    font-size: 1rem;
+    line-height: 1.65;
 }
 
 
 /* =========================================================
-   ACCENT LINES AND SECTION CARDS
+   SECTION CARDS AND ACCENT LINES
 ========================================================= */
 
-.teaching-page .teaching-accent {
-    width: 43px;
-    height: 4px;
-    margin: 12px 0 16px;
-    flex: none;
-    background: var(--tp-yellow);
-}
-
-.teaching-card {
-    margin: 18px 16px 0;
-    padding: 20px;
+.teaching-page .teaching-card {
+    min-width: 0;
+    margin: 22px 16px 0;
+    padding: 22px;
     border: 1px solid var(--tp-border);
     border-radius: 15px;
-    background: rgba(255, 255, 255, 0.96);
+    background: rgba(255, 255, 255, 0.97);
     box-shadow: 0 2px 10px rgba(2, 24, 47, 0.035);
 }
 
-.teaching-card:last-child {
-    margin-bottom: 16px;
+.teaching-page .teaching-card:last-child {
+    margin-bottom: 20px;
 }
 
-.section-title-row {
+/* Icon and heading row */
+
+.teaching-page .section-title-row {
     display: flex;
     align-items: flex-start;
-    gap: 15px;
-    margin-bottom: 8px;
+    gap: 18px;
+    min-width: 0;
+    margin-bottom: 0;
 }
 
-.section-icon-wrap {
+/* Pale yellow circle behind each separate icon image */
+
+.teaching-page .section-icon-wrap {
     display: flex;
     flex: 0 0 60px;
     align-items: center;
@@ -169,57 +255,69 @@
     background: #FFF0B2;
 }
 
-.section-icon {
+.teaching-page .section-icon {
     display: block;
     width: 35px;
     height: 35px;
     object-fit: contain;
 }
 
-.section-heading {
+.teaching-page .section-heading {
     min-width: 0;
 }
 
-.section-heading h2 {
+.teaching-page .section-heading h2 {
     margin: 0;
+    color: var(--tp-navy);
     font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(1.45rem, 1.9vw, 2rem);
+    font-size: clamp(1.55rem, 2vw, 2.1rem);
     font-weight: 700;
-    line-height: 1.18;
-    letter-spacing: -0.025em;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
 }
 
-/* Extra breathing room below heading and accent line */
+/* Accent line: controlled, consistent spacing */
 
-.section-heading .teaching-accent {
-    margin-top: 12px;
-    margin-bottom: 18px;
+.teaching-page .teaching-accent {
+    flex: none;
+    width: 43px;
+    height: 4px;
+    margin: 10px 0 14px;
+    background: var(--tp-yellow);
 }
 
-.position-title {
-    margin: 0 0 3px;
+/* Avoid excessive spacing after headings */
+
+.teaching-page .section-heading .teaching-accent {
+    margin-top: 10px;
+    margin-bottom: 14px;
+}
+
+.teaching-page .position-title {
+    margin: 0 0 4px;
     color: var(--tp-navy);
     font-size: 1rem;
     font-weight: 700;
     line-height: 1.4;
 }
 
-.institution-line {
-    margin: 0 0 12px;
-    font-size: 0.91rem;
-    line-height: 1.45;
+.teaching-page .institution-line {
+    margin: 0 0 14px;
+    font-size: 0.94rem;
+    line-height: 1.5;
 }
 
-.metadata-separator {
+.teaching-page .metadata-separator {
     display: inline-block;
     padding: 0 7px;
     color: #68727A;
 }
 
-.body-copy {
+.teaching-page .body-copy {
     margin: 0;
-    font-size: 0.94rem;
-    line-height: 1.55;
+    color: var(--tp-black);
+    font-size: 0.96rem;
+    line-height: 1.6;
 }
 
 
@@ -227,56 +325,63 @@
    TEACHING EXPERIENCE + TEACHING DEMONSTRATION
 ========================================================= */
 
-.teaching-evidence-card {
+.teaching-page .teaching-evidence-card {
     display: grid;
     grid-template-columns: minmax(0, 0.94fr) minmax(0, 1.06fr);
-    gap: 20px;
-    padding: 20px;
-}
-
-.experience-column,
-.demonstration-column {
-    min-width: 0;
-}
-
-.experience-column {
-    padding-right: 20px;
-    border-right: 2px solid var(--tp-rule);
-}
-
-.experience-copy {
-    padding-left: 75px;
-}
-
-.demonstration-copy {
-    margin: 0 0 12px 75px;
-}
-
-.demonstration-copy .institution-line {
-    margin-bottom: 0;
-}
-
-/* Video and topics sit side-by-side */
-
-.demonstration-media-layout {
-    display: grid;
-    grid-template-columns: minmax(0, 1.55fr) minmax(170px, 0.9fr);
-    gap: 12px;
+    gap: 22px;
     align-items: stretch;
 }
 
-/* Google Drive iframe container */
-
-.video-frame {
-    position: relative;
+.teaching-page .experience-column,
+.teaching-page .demonstration-column {
     min-width: 0;
-    overflow: hidden;
+}
+
+.teaching-page .experience-column {
+    padding-right: 22px;
+    border-right: 2px solid var(--tp-rule);
+}
+
+.teaching-page .experience-copy {
+    padding-left: 75px;
+}
+
+.teaching-page .demonstration-copy {
+    min-width: 0;
+    margin: 0 0 14px 75px;
+}
+
+.teaching-page .demonstration-copy .institution-line {
+    margin-bottom: 0;
+}
+
+/* Keep video and Key Topics in distinct columns */
+
+.teaching-page .demonstration-media-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.6fr) minmax(200px, 0.9fr);
+    gap: 14px;
+    align-items: stretch;
+    width: 100%;
+}
+
+.teaching-page .video-frame,
+.teaching-page .topics-panel {
+    min-width: 0;
+}
+
+/* Video container */
+
+.teaching-page .video-frame {
+    position: relative;
+    width: 100%;
     aspect-ratio: 16 / 9;
+    overflow: hidden;
     border-radius: 10px;
     background: #07182A;
 }
 
-.video-frame iframe {
+.teaching-page .video-frame iframe {
     position: absolute;
     inset: 0;
     display: block;
@@ -285,20 +390,19 @@
     border: 0;
 }
 
+/* Video thumbnail */
 
-/* Clickable thumbnail for Google Drive videos */
-
-.video-thumbnail {
+.teaching-page .video-thumbnail {
     position: absolute;
     inset: 0;
     display: block;
-    overflow: hidden;
     width: 100%;
     height: 100%;
+    overflow: hidden;
     background: #07182A;
 }
 
-.video-thumbnail-image {
+.teaching-page .video-thumbnail-image {
     display: block;
     width: 100%;
     height: 100%;
@@ -307,11 +411,13 @@
     transition: transform 0.25s ease;
 }
 
-.video-thumbnail:hover .video-thumbnail-image {
+.teaching-page .video-thumbnail:hover .video-thumbnail-image {
     transform: scale(1.035);
 }
 
-.video-play-button {
+/* Play button */
+
+.teaching-page .video-play-button {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -320,75 +426,74 @@
     justify-content: center;
     width: 58px;
     height: 58px;
+    padding-left: 4px;
     transform: translate(-50%, -50%);
     border: 2px solid #FFFFFF;
     border-radius: 50%;
-    background: rgba(0, 23, 37, 0.82);
+    background: rgba(0, 23, 37, 0.84);
     color: #FFFFFF;
     font-size: 22px;
-    padding-left: 4px;
     transition: background 0.2s ease, transform 0.2s ease;
 }
 
-.video-thumbnail:hover .video-play-button {
-    background: var(--tp-navy);
+.teaching-page .video-thumbnail:hover .video-play-button {
     transform: translate(-50%, -50%) scale(1.08);
+    background: var(--tp-navy);
 }
 
 
 /* =========================================================
    KEY TOPICS PANEL
-   Pale yellow background with navy checkbox icons.
 ========================================================= */
 
-.topics-panel {
-    min-width: 0;
+.teaching-page .topics-panel {
     padding: 14px;
     border-radius: 11px;
     background: var(--tp-pale);
 }
 
-.panel-heading {
+.teaching-page .panel-heading {
     margin: 0;
+    color: var(--tp-navy);
     font-family: Georgia, "Times New Roman", serif;
-    font-size: 1.03rem;
+    font-size: 1rem;
     font-weight: 700;
-    line-height: 1.3;
+    line-height: 1.35;
 }
 
-.topics-panel .teaching-accent,
-.materials-panel .teaching-accent,
-.leadership-media .teaching-accent {
-    margin-top: 9px;
-    margin-bottom: 13px;
+.teaching-page .topics-panel .teaching-accent,
+.teaching-page .materials-panel .teaching-accent,
+.teaching-page .leadership-media .teaching-accent {
+    margin-top: 8px;
+    margin-bottom: 12px;
 }
 
-.topics-intro {
+.teaching-page .topics-intro {
     margin: 0 0 12px;
-    font-size: 0.84rem;
-    line-height: 1.45;
+    font-size: 0.87rem;
+    line-height: 1.5;
 }
 
-.topic-list {
+.teaching-page .topic-list {
     display: grid;
-    gap: 8px;
+    gap: 9px;
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
-.topic-list li {
+.teaching-page .topic-list li {
     position: relative;
-    padding-left: 25px;
-    font-size: 0.83rem;
-    line-height: 1.36;
+    padding-left: 24px;
+    font-size: 0.86rem;
+    line-height: 1.4;
 }
 
-/* Checkbox square */
+/* Navy checkbox */
 
-.topic-list li::before {
+.teaching-page .topic-list li::before {
     position: absolute;
-    top: 0.1em;
+    top: 0.15em;
     left: 0;
     width: 15px;
     height: 15px;
@@ -399,9 +504,9 @@
 
 /* White check mark */
 
-.topic-list li::after {
+.teaching-page .topic-list li::after {
     position: absolute;
-    top: 0.28em;
+    top: 0.31em;
     left: 4px;
     width: 6px;
     height: 3px;
@@ -416,23 +521,23 @@
    RESEARCH MENTORING + TECHNICAL MATERIALS
 ========================================================= */
 
-.mentoring-card {
+.teaching-page .mentoring-card {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(280px, 0.88fr);
+    grid-template-columns: minmax(0, 1fr) minmax(300px, 0.88fr);
     gap: 22px;
     align-items: stretch;
 }
 
-.mentoring-copy,
-.materials-panel {
+.teaching-page .mentoring-copy,
+.teaching-page .materials-panel {
     min-width: 0;
 }
 
-.mentoring-text {
+.teaching-page .mentoring-text {
     padding-left: 75px;
 }
 
-.materials-panel {
+.teaching-page .materials-panel {
     align-self: center;
     padding: 16px;
     border: 1px solid var(--tp-border);
@@ -440,7 +545,7 @@
     background: #FFFFFF;
 }
 
-.materials-content {
+.teaching-page .materials-content {
     position: relative;
     display: grid;
     grid-template-columns: 45px minmax(0, 1fr) 105px;
@@ -452,62 +557,68 @@
     background: var(--tp-pale);
 }
 
-.database-icon {
+.teaching-page .database-icon {
     display: block;
     width: 40px;
     height: 40px;
     object-fit: contain;
 }
 
-.materials-content p {
+.teaching-page .materials-content p {
     position: relative;
     z-index: 1;
     margin: 0;
-    font-size: 0.88rem;
-    line-height: 1.45;
+    font-size: 0.9rem;
+    line-height: 1.5;
 }
 
-.materials-illustration {
+.teaching-page .materials-illustration {
     display: block;
     width: 100%;
     max-height: 100px;
     object-fit: contain;
 }
 
-/* Yellow technical-materials button */
+/* Technical materials button */
 
-.materials-button {
+.teaching-page .materials-button {
     display: inline-flex;
     align-items: center;
     justify-content: space-between;
-    gap: 18px;
+    gap: 22px;
     min-height: 44px;
     margin: 12px 0 0 12px;
-    padding: 10px 15px;
+    padding: 10px 16px;
+    border: 0;
     border-radius: 9px;
     background: var(--tp-yellow);
     color: #111111 !important;
+    font-size: 0.98rem;
     font-weight: 700;
     line-height: 1.2;
     text-decoration: none;
     transition: background 0.2s ease, transform 0.2s ease;
 }
 
-.materials-button:hover {
+.teaching-page .materials-button:hover {
     transform: translateY(-1px);
     background: #F0BE00;
 }
 
-/* Plain right arrow; not an external-link icon */
+/* Strong, simple horizontal arrow */
 
-.button-arrow {
-    display: inline-block;
-    flex: 0 0 auto;
+.teaching-page .button-arrow {
+    display: inline-flex;
+    flex: 0 0 24px;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
     color: #111111;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.8rem;
-    font-weight: 400;
-    line-height: 0.7;
+    font-size: 27px;
+    font-weight: 700;
+    line-height: 1;
 }
 
 
@@ -515,51 +626,65 @@
    LEADERSHIP & TECHNICAL SERVICE
 ========================================================= */
 
-.leadership-card {
+.teaching-page .leadership-card {
     display: grid;
-    grid-template-columns: minmax(0, 1.12fr) minmax(280px, 0.88fr);
+    grid-template-columns: minmax(0, 1.12fr) minmax(300px, 0.88fr);
     gap: 22px;
+    align-items: start;
 }
 
-.leadership-copy,
-.leadership-media {
+.teaching-page .leadership-copy,
+.teaching-page .leadership-media {
     min-width: 0;
 }
 
-.club-title,
-.club-institution {
+.teaching-page .club-title,
+.teaching-page .club-institution {
     margin-left: 75px;
 }
 
-.club-institution {
-    margin-bottom: 12px;
+.teaching-page .club-title {
+    color: var(--tp-navy);
+    font-size: 1.02rem;
+    font-weight: 700;
+    line-height: 1.4;
 }
 
-.leadership-timeline {
+.teaching-page .club-institution {
+    margin-bottom: 16px;
+    font-size: 0.94rem;
+    line-height: 1.5;
+}
+
+/* Timeline */
+
+.teaching-page .leadership-timeline {
     display: grid;
-    gap: 9px;
+    gap: 16px;
     padding-left: 75px;
 }
 
-.leadership-post {
+.teaching-page .leadership-post {
     display: grid;
     grid-template-columns: 76px 14px minmax(0, 1fr);
     gap: 8px;
     align-items: stretch;
 }
 
-.leadership-date {
+.teaching-page .leadership-date {
     padding-top: 7px;
     color: var(--tp-navy);
-    font-size: 0.82rem;
-    line-height: 1.35;
+    font-size: 0.9rem;
+    line-height: 1.45;
 }
 
-.leadership-date span {
+.teaching-page .leadership-date span {
     display: block;
 }
 
-.timeline-node {
+/* Yellow timeline nodes */
+
+.teaching-page .timeline-node {
     position: relative;
     z-index: 1;
     width: 12px;
@@ -571,71 +696,75 @@
 
 /* Vertical timeline connector */
 
-.leadership-post:not(:last-child) .timeline-node::after {
+.teaching-page .leadership-post:not(:last-child) .timeline-node::after {
     position: absolute;
     top: 12px;
     left: 5px;
     width: 2px;
-    min-height: 48px;
     height: calc(100% + 30px);
+    min-height: 48px;
     background: var(--tp-navy);
     content: "";
 }
 
-.leadership-post-content {
+.teaching-page .leadership-post-content {
     min-width: 0;
 }
 
-/* Only the role title has a yellow background */
+/* Yellow background applies to the role title only */
 
-.role-highlight {
+.teaching-page .role-highlight {
     margin: 0;
-    padding: 5px 9px;
+    padding: 5px 10px;
     border-radius: 6px;
     background: #FFE99A;
     color: var(--tp-navy);
-    font-size: 0.87rem;
-    line-height: 1.3;
+    font-size: 0.96rem;
+    font-weight: 700;
+    line-height: 1.4;
 }
 
-/* Responsibilities keep a normal white background */
+/* Responsibilities remain on a white background */
 
-.role-responsibilities {
-    padding: 7px 10px 8px;
+.teaching-page .role-responsibilities {
+    padding: 7px 10px 9px;
     border-radius: 0 0 6px 6px;
     background: #FFFFFF;
 }
 
-.role-responsibilities ul {
+.teaching-page .role-responsibilities ul {
     margin: 0;
-    padding-left: 17px;
+    padding-left: 19px;
 }
 
-.role-responsibilities li {
-    margin: 2px 0;
-    font-size: 0.8rem;
-    line-height: 1.4;
+.teaching-page .role-responsibilities li {
+    margin: 3px 0;
+    font-size: 0.91rem;
+    line-height: 1.45;
 }
 
 /* Telemetry video on the right */
 
-.leadership-media {
+.teaching-page .leadership-media {
     padding-left: 20px;
     border-left: 2px solid var(--tp-rule);
 }
 
-.leadership-media .panel-heading {
+.teaching-page .leadership-media .panel-heading {
     font-size: 1.02rem;
-}
-
-.video-caption {
-    margin: 9px 0 0;
-    font-size: 0.82rem;
     line-height: 1.4;
 }
 
+.teaching-page .video-caption {
+    margin: 10px 0 0;
+    font-size: 0.87rem;
+    line-height: 1.5;
+}
 
-/* Preserve shared footer behavior */
+
+/* =========================================================
+   SHARED FOOTER
+========================================================= */
 
 .teaching-page .site-footer {
     flex-shrink: 0;
@@ -643,31 +772,35 @@
 
 
 /* =========================================================
-   TABLET
+   TABLET LAYOUT
 ========================================================= */
 
 @media (max-width: 1150px) {
 
-    .teaching-evidence-card {
-        grid-template-columns: 1fr;
+    .teaching-page .teaching-evidence-card {
+        grid-template-columns: minmax(0, 1fr);
     }
 
-    .experience-column {
+    .teaching-page .experience-column {
         padding-right: 0;
-        padding-bottom: 20px;
+        padding-bottom: 22px;
         border-right: 0;
         border-bottom: 2px solid var(--tp-rule);
     }
 
-    .mentoring-card,
-    .leadership-card {
-        grid-template-columns: 1fr;
+    .teaching-page .mentoring-card,
+    .teaching-page .leadership-card {
+        grid-template-columns: minmax(0, 1fr);
     }
 
-    .leadership-media {
-        padding: 18px 0 0;
+    .teaching-page .leadership-media {
+        padding: 20px 0 0;
         border-top: 2px solid var(--tp-rule);
         border-left: 0;
+    }
+
+    .teaching-page .teaching-hero-content {
+        max-width: 68%;
     }
 }
 
@@ -678,64 +811,89 @@
 
 @media (max-width: 760px) {
 
+    .teaching-main {
+        padding-top: 68px;
+    }
+
     .teaching-page .hero-banner.teaching-hero {
-        min-height: 0;
-        padding: 25px 20px;
+        min-height: 280px;
+        padding: 28px 20px;
     }
 
-    .teaching-card {
-        margin: 12px 10px 0;
-        padding: 15px;
+    .teaching-page .teaching-hero-content {
+        max-width: 100%;
     }
 
-    .section-title-row {
+    .teaching-page .teaching-hero h1 {
+        font-size: clamp(2rem, 7vw, 2.8rem);
+    }
+
+    .teaching-page .teaching-hero-intro {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .teaching-page .teaching-card {
+        margin: 14px 10px 0;
+        padding: 16px;
+    }
+
+    .teaching-page .section-title-row {
         gap: 11px;
     }
 
-    .section-icon-wrap {
+    .teaching-page .section-icon-wrap {
+        flex: 0 0 48px;
         width: 48px;
         height: 48px;
-        flex-basis: 48px;
     }
 
-    .section-icon {
+    .teaching-page .section-icon {
         width: 29px;
         height: 29px;
     }
 
-    .experience-copy,
-    .demonstration-copy,
-    .mentoring-text,
-    .club-title,
-    .club-institution,
-    .leadership-timeline {
+    .teaching-page .section-heading h2 {
+        font-size: clamp(1.35rem, 5vw, 1.75rem);
+    }
+
+    .teaching-page .experience-copy,
+    .teaching-page .demonstration-copy,
+    .teaching-page .mentoring-text,
+    .teaching-page .club-title,
+    .teaching-page .club-institution,
+    .teaching-page .leadership-timeline {
         padding-left: 0;
         margin-left: 0;
     }
 
-    .demonstration-media-layout {
-        grid-template-columns: 1fr;
+    .teaching-page .demonstration-media-layout {
+        grid-template-columns: minmax(0, 1fr);
     }
 
-    .materials-content {
-        grid-template-columns: 38px minmax(0, 1fr);
+    .teaching-page .materials-content {
+        grid-template-columns: 40px minmax(0, 1fr);
     }
 
-    .materials-illustration {
+    .teaching-page .materials-illustration {
         display: none;
     }
 
-    .leadership-post {
+    .teaching-page .leadership-post {
         grid-template-columns: 68px 12px minmax(0, 1fr);
         gap: 6px;
     }
 
-    .leadership-date {
-        font-size: 0.75rem;
+    .teaching-page .leadership-date {
+        font-size: 0.85rem;
     }
 
-    .role-highlight {
-        font-size: 0.82rem;
+    .teaching-page .role-highlight {
+        font-size: 0.92rem;
+    }
+
+    .teaching-page .role-responsibilities li {
+        font-size: 0.88rem;
     }
 }
 
@@ -750,25 +908,36 @@
         font-size: 2rem;
     }
 
-    .section-heading h2 {
+    .teaching-page .teaching-hero-tagline {
+        font-size: 1.05rem;
+    }
+
+    .teaching-page .section-heading h2 {
         font-size: 1.35rem;
     }
 
-    .materials-button {
+    .teaching-page .materials-button {
         width: 100%;
         margin-left: 0;
+        gap: 12px;
     }
 
-    .leadership-post {
-        grid-template-columns: 1fr;
+    .teaching-page .leadership-post {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 5px;
     }
 
-    .timeline-node {
+    .teaching-page .timeline-node {
         display: none;
     }
 
-    .leadership-date {
+    .teaching-page .leadership-date {
         padding: 0;
         font-weight: 700;
+    }
+
+    .teaching-page .role-responsibilities {
+        padding-left: 4px;
+        padding-right: 4px;
     }
 }
