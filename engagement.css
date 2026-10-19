@@ -937,7 +937,7 @@
 .engagement-page .conference-entry .conference-figure img {
     display: block;
     width: 100%;
-    height: 220px;
+    height: 200px;
     object-fit: contain;
     object-position: center;
 }
@@ -946,7 +946,7 @@
 .engagement-page .conference-entry .conference-description {
     display: block;
     width: 100%;
-    margin-top: 14px;
+    margin-top: 12px;
 }
 
 /* Keep the two images side by side on narrow screens too */
@@ -957,13 +957,13 @@
     }
 
     .engagement-page .conference-entry .conference-figure img {
-        height: 170px;
+        height: 150px;
     }
 }
 
 @media (max-width: 430px) {
     .engagement-page .conference-entry .conference-figure img {
-        height: 135px;
+        height: 120px;
     }
 }
 
