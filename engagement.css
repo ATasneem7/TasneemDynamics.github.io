@@ -21,7 +21,6 @@
 
 /* =========================================================
    HERO BANNER
-   Preserve the wide banner proportions.
    ========================================================= */
 
 .engagement-page .engagement-hero {
@@ -211,49 +210,63 @@
 
 /* =========================================================
    INDUSTRY EXPOSURE
+   Wide hangar image above two equal-width photographs.
+   The gallery and text column remain side by side on desktop.
    ========================================================= */
-
 
 .engagement-page .industry-layout {
     display: grid;
-    grid-template-columns: minmax(0, 1.5fr) minmax(300px, 0.7fr);
+    grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.85fr);
     align-items: start;
     gap: 22px;
 }
 
-
 .engagement-page .industry-gallery {
     min-width: 0;
     display: grid;
+    grid-template-columns: minmax(0, 1fr);
     align-content: start;
     gap: 12px;
 }
 
-/* Hangar photo: retain its full gallery width and increase height. */
+/* Large hangar image: preserve its wide appearance. */
 
-/* Hangar image: same width, greater height */
 .engagement-page .industry-photo-wide {
     display: block;
     width: 100%;
     height: 330px;
+    min-width: 0;
     object-fit: cover;
     object-position: center;
     border-radius: 5px;
 }
 
+/* IMPORTANT: explicitly place the two lower photos side by side. */
 
-/* Shared lower-photo sizing. */
+.engagement-page .industry-photo-pair {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 12px;
+    width: 100%;
+    min-width: 0;
+}
 
-/* Keep the existing two-column layout for the lower images */
+/* Both lower photographs have exactly the same height and width
+   within their respective grid columns. */
+
 .engagement-page .industry-photo-pair .industry-photo {
+    display: block;
     width: 100%;
     height: 300px;
     min-width: 0;
+    margin: 0;
     object-fit: cover;
     object-position: center;
+    border-radius: 5px;
 }
 
-/* Right-hand column */
+/* Right-hand information column */
 
 .engagement-page .industry-details {
     min-width: 0;
@@ -265,8 +278,7 @@
     gap: 14px;
 }
 
-/* Key Areas card: its width follows the narrower right column.
-   Its height remains content-driven, not fixed. */
+/* Key Areas of Exposure card */
 
 .engagement-page .exposure-highlights {
     display: block;
@@ -450,21 +462,23 @@
 
 /* =========================================================
    RESPONSIVE LAYOUT
-   These changes apply only at narrower viewport widths.
    ========================================================= */
+
+/* Medium screens: stack the information column below the gallery.
+   The two lower photos remain side by side and equal in height. */
 
 @media (max-width: 1150px) {
     .engagement-page .industry-layout {
         grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
     }
 
     .engagement-page .industry-photo-wide {
         height: 330px;
     }
 
-    .engagement-page .industry-photo,
     .engagement-page .industry-photo-pair .industry-photo {
-        height: 236px;
+        height: 260px;
     }
 
     .engagement-page .industry-details {
@@ -476,6 +490,8 @@
         border-top: 1px solid var(--eng-border);
     }
 }
+
+/* Tablet screens */
 
 @media (max-width: 900px) {
     .engagement-page .engagement-hero-content {
@@ -503,6 +519,8 @@
         height: 200px;
     }
 }
+
+/* Mobile screens */
 
 @media (max-width: 700px) {
     .engagement-page .engagement-hero {
@@ -552,9 +570,16 @@
         aspect-ratio: 16 / 7;
     }
 
+    /* Keep the lower photos side by side with matching heights. */
+
+    .engagement-page .industry-photo-pair {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
     .engagement-page .industry-photo-pair .industry-photo {
-        height: auto;
-        aspect-ratio: 4 / 3;
+        height: 180px;
+        aspect-ratio: auto;
     }
 
     .engagement-page .industry-details {
@@ -584,6 +609,8 @@
         aspect-ratio: 4 / 3;
     }
 }
+
+/* Very narrow screens: stack the lower photos only when necessary. */
 
 @media (max-width: 430px) {
     .engagement-page .industry-photo-pair,
