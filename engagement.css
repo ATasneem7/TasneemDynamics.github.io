@@ -942,7 +942,7 @@
 
 /* Conference images: preserve the full slide and certificate */
 .engagement-page .conference-entry .conference-figure {
-    height: 220px;
+    height: 210px;
     min-width: 0;
     overflow: hidden;
     padding: 0;
@@ -973,13 +973,13 @@
 /* Responsive sizing */
 @media (max-width: 700px) {
     .engagement-page .conference-entry .conference-figure {
-        height: 170px;
+        height: 150px;
     }
 }
 
 @media (max-width: 430px) {
     .engagement-page .conference-entry .conference-figure {
-        height: 130px;
+        height: 120px;
     }
 }
 
