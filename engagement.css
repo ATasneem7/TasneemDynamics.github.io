@@ -1,4 +1,3 @@
-/* ENGAGEMENT PAGE */
 
 /* =========================================================
    PROFESSIONAL ENGAGEMENT PAGE
@@ -11,7 +10,7 @@
     --eng-border: #E1E8F0;
 }
 
-/* Main content starts below the shared absolute navbar */
+/* Main content */
 
 .engagement-page .engagement-main {
     width: 100%;
@@ -20,9 +19,9 @@
     background: #ffffff;
 }
 
-
 /* =========================================================
    HERO BANNER
+   Preserve the wide banner proportions.
    ========================================================= */
 
 .engagement-page .engagement-hero {
@@ -45,6 +44,7 @@
     object-fit: cover;
     object-position: center;
 }
+
 .engagement-page .engagement-hero-overlay {
     position: absolute;
     inset: 0;
@@ -97,7 +97,6 @@
 .engagement-page .engagement-accent-line-bottom {
     margin: 13px 0 0;
 }
-
 
 /* =========================================================
    MAIN CONTENT SECTIONS
@@ -158,7 +157,6 @@
     background: var(--eng-yellow);
 }
 
-
 /* =========================================================
    ACTIVITY HEADINGS, METADATA, AND PARAGRAPHS
    ========================================================= */
@@ -211,20 +209,21 @@
     overflow-wrap: break-word;
 }
 
-
 /* =========================================================
    INDUSTRY EXPOSURE
-   One wide image above two equally sized image boxes.
-   ========================================================= */
 
+   Desktop:
+   - Wide hangar photo above the two lower photos.
+   - Lower photos have matching heights.
+   - Right-hand details column is deliberately narrower.
+   ========================================================= */
 
 .engagement-page .industry-layout {
     display: grid;
-    grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
+    grid-template-columns: minmax(0, 1.65fr) minmax(260px, 0.55fr);
     align-items: start;
     gap: 18px;
 }
-
 
 .engagement-page .industry-gallery {
     min-width: 0;
@@ -233,24 +232,29 @@
     gap: 12px;
 }
 
+/* Hangar photo: retain its full gallery width and increase height. */
 
-.engagement-page .industry-photo {
+.engagement-page .industry-photo-wide {
     display: block;
     width: 100%;
-    height: 210px;
+    height: 330px;
+    min-width: 0;
     object-fit: cover;
     object-position: center;
     border-radius: 5px;
 }
 
-.engagement-page .industry-photo-wide {
+/* Shared lower-photo sizing. */
+
+.engagement-page .industry-photo {
+    display: block;
     width: 100%;
-    height: 300px;
+    height: 236px;
+    min-width: 0;
     object-fit: cover;
     object-position: center;
+    border-radius: 5px;
 }
-
-
 
 .engagement-page .industry-photo-pair {
     display: grid;
@@ -261,27 +265,35 @@
 }
 
 .engagement-page .industry-photo-pair .industry-photo {
-    display: block;
     width: 100%;
-    height: 210px;
+    height: 236px;
     min-width: 0;
     object-fit: cover;
     object-position: center;
-    border-radius: 5px;
 }
 
-
+/* Right-hand column */
 
 .engagement-page .industry-details {
     min-width: 0;
     width: 100%;
     display: grid;
+    grid-template-columns: minmax(0, 1fr);
     align-content: start;
+    justify-items: stretch;
     gap: 14px;
 }
 
+/* Key Areas card: its width follows the narrower right column.
+   Its height remains content-driven, not fixed. */
+
 .engagement-page .exposure-highlights {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
     align-self: start;
+    justify-self: stretch;
     padding: 10px 12px;
     margin: 0;
     border-radius: 9px;
@@ -307,6 +319,7 @@
 }
 
 .engagement-page .exposure-highlights h3 {
+    min-width: 0;
     margin: 0;
     color: var(--eng-navy);
     font-size: 1rem;
@@ -328,6 +341,7 @@
     font-size: 0.89rem;
     line-height: 1.4;
     text-align: left;
+    overflow-wrap: break-word;
 }
 
 .engagement-page .exposure-highlights li::before {
@@ -342,10 +356,10 @@
 }
 
 .engagement-page .industry-entry {
+    min-width: 0;
     padding-top: 12px;
     border-top: 1px solid var(--eng-border);
 }
-
 
 /* =========================================================
    TECHNICAL ACTIVITIES
@@ -365,7 +379,6 @@
     padding-left: 18px;
     border-left: 1px solid #c8d1de;
 }
-
 
 /* DBF aircraft photograph and ranking screenshot */
 
@@ -392,7 +405,6 @@
     border: 1px solid #d6dde7;
 }
 
-
 /* CAN-SAT photograph */
 
 .engagement-page .cansat-photo {
@@ -404,7 +416,6 @@
     background: #f7f8fa;
     border-radius: 5px;
 }
-
 
 /* =========================================================
    RESEARCH COMMUNITY ENGAGEMENT
@@ -431,7 +442,6 @@
     margin-top: 0;
 }
 
-
 /* Certificate and presentation slide */
 
 .engagement-page .conference-evidence {
@@ -457,10 +467,9 @@
     margin-top: 12px;
 }
 
-
 /* =========================================================
    RESPONSIVE LAYOUT
-   Page-specific rules only. global.css remains unchanged.
+   These changes apply only at narrower viewport widths.
    ========================================================= */
 
 @media (max-width: 1150px) {
@@ -469,28 +478,23 @@
     }
 
     .engagement-page .industry-photo-wide {
-        height: 220px;
+        height: 330px;
     }
 
-    .engagement-page .industry-photo {
-        height: 190px;
-    }
-
+    .engagement-page .industry-photo,
     .engagement-page .industry-photo-pair .industry-photo {
-        height: 190px;
+        height: 236px;
     }
 
     .engagement-page .industry-details {
-        grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-        align-items: start;
+        grid-template-columns: minmax(0, 1fr);
     }
 
     .engagement-page .industry-entry {
-        padding-top: 0;
-        border-top: 0;
+        padding-top: 12px;
+        border-top: 1px solid var(--eng-border);
     }
 }
-
 
 @media (max-width: 900px) {
     .engagement-page .engagement-hero-content {
@@ -519,10 +523,15 @@
     }
 }
 
-
 @media (max-width: 700px) {
+    .engagement-page .engagement-hero {
+        height: auto;
+        min-height: 300px;
+    }
+
     .engagement-page .engagement-hero-content {
         width: 100%;
+        box-sizing: border-box;
         padding: 24px 18px;
     }
 
@@ -559,7 +568,7 @@
 
     .engagement-page .industry-photo-wide {
         height: auto;
-        aspect-ratio: 16 / 9;
+        aspect-ratio: 16 / 7;
     }
 
     .engagement-page .industry-photo-pair .industry-photo {
@@ -569,17 +578,6 @@
 
     .engagement-page .industry-details {
         grid-template-columns: minmax(0, 1fr);
-    }
-
-    .engagement-page .industry-entry {
-        padding-top: 12px;
-        border-top: 1px solid var(--eng-border);
-    }
-
-    .engagement-page .dbf-evidence img,
-    .engagement-page .cansat-photo {
-        height: auto;
-        aspect-ratio: 4 / 3;
     }
 
     .engagement-page .activity-entry h3 {
@@ -606,12 +604,15 @@
     }
 }
 
-
 @media (max-width: 430px) {
     .engagement-page .industry-photo-pair,
     .engagement-page .dbf-evidence,
     .engagement-page .community-evidence-row {
         grid-template-columns: minmax(0, 1fr);
+    }
+
+    .engagement-page .industry-photo-wide {
+        aspect-ratio: 4 / 3;
     }
 
     .engagement-page .industry-photo-pair .industry-photo {
@@ -633,3 +634,4 @@
         gap: 6px;
     }
 }
+
