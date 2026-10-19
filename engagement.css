@@ -218,12 +218,14 @@
    - Right-hand details column is deliberately narrower.
    ========================================================= */
 
+
 .engagement-page .industry-layout {
     display: grid;
-    grid-template-columns: minmax(0, 1.65fr) minmax(260px, 0.55fr);
+    grid-template-columns: minmax(0, 1.5fr) minmax(300px, 0.7fr);
     align-items: start;
     gap: 18px;
 }
+
 
 .engagement-page .industry-gallery {
     min-width: 0;
