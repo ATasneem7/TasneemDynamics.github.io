@@ -210,13 +210,13 @@
 
 /* =========================================================
    INDUSTRY EXPOSURE
-   Wide hangar image above two equal-width photographs.
-   The gallery and text column remain side by side on desktop.
+   Wide hangar photo above two equally sized lower photos.
+   Keep the details column narrower on desktop.
    ========================================================= */
 
 .engagement-page .industry-layout {
     display: grid;
-    grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.85fr);
+    grid-template-columns: minmax(0, 1.45fr) minmax(285px, 0.75fr);
     align-items: start;
     gap: 22px;
 }
@@ -229,19 +229,19 @@
     gap: 12px;
 }
 
-/* Large hangar image: preserve its wide appearance. */
+/* Hangar photo: wide and tall. */
 
 .engagement-page .industry-photo-wide {
     display: block;
     width: 100%;
-    height: 320px;
+    height: 330px;
     min-width: 0;
     object-fit: cover;
     object-position: center;
     border-radius: 5px;
 }
 
-/* IMPORTANT: explicitly place the two lower photos side by side. */
+/* Lower photos: two equal columns with matching heights. */
 
 .engagement-page .industry-photo-pair {
     display: grid;
@@ -252,11 +252,10 @@
     min-width: 0;
 }
 
-
 .engagement-page .industry-photo-pair .industry-photo {
     display: block;
     width: 100%;
-    height: 300px;
+    height: 290px;
     min-width: 0;
     margin: 0;
     object-fit: cover;
@@ -264,23 +263,26 @@
     border-radius: 5px;
 }
 
-/* Shift the group photo's crop toward the left
-   so the boy's face near the edge remains visible. */
-
+/*
+   Group photo: shift the visible area toward the left.
+   This can help reveal people near the left side of the source image.
+*/
 .engagement-page .industry-photo-pair .industry-photo:first-child {
-    object-position: 35% center;
+    object-position: left center;
 }
 
 /* Right-hand information column */
 
 .engagement-page .industry-details {
-    min-width: 0;
-    width: 100%;
     display: grid;
     grid-template-columns: minmax(0, 1fr);
     align-content: start;
     justify-items: stretch;
     gap: 14px;
+    width: 100%;
+    min-width: 0;
+    max-width: 360px;
+    justify-self: end;
 }
 
 /* Key Areas of Exposure card */
@@ -289,6 +291,7 @@
     display: block;
     width: 100%;
     min-width: 0;
+    max-width: 100%;
     box-sizing: border-box;
     align-self: start;
     justify-self: stretch;
@@ -337,9 +340,9 @@
     padding-left: 18px;
     color: #111111;
     font-size: 0.89rem;
-    line-height: 1.65;
+    line-height: 1.5;
     text-align: left;
-    overflow-wrap: break-word;
+    overflow-wrap: anywhere;
 }
 
 .engagement-page .exposure-highlights li::before {
@@ -469,8 +472,7 @@
    RESPONSIVE LAYOUT
    ========================================================= */
 
-/* Medium screens: stack the information column below the gallery.
-   The two lower photos remain side by side and equal in height. */
+/* Medium screens: place details below the gallery. */
 
 @media (max-width: 1150px) {
     .engagement-page .industry-layout {
@@ -487,7 +489,8 @@
     }
 
     .engagement-page .industry-details {
-        grid-template-columns: minmax(0, 1fr);
+        max-width: none;
+        justify-self: stretch;
     }
 
     .engagement-page .industry-entry {
@@ -575,8 +578,6 @@
         aspect-ratio: 16 / 7;
     }
 
-    /* Keep the lower photos side by side with matching heights. */
-
     .engagement-page .industry-photo-pair {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 10px;
@@ -584,11 +585,11 @@
 
     .engagement-page .industry-photo-pair .industry-photo {
         height: 180px;
-        aspect-ratio: auto;
     }
 
     .engagement-page .industry-details {
         grid-template-columns: minmax(0, 1fr);
+        max-width: none;
     }
 
     .engagement-page .activity-entry h3 {
@@ -615,7 +616,7 @@
     }
 }
 
-/* Very narrow screens: stack the lower photos only when necessary. */
+/* Very narrow screens */
 
 @media (max-width: 430px) {
     .engagement-page .industry-photo-pair,
