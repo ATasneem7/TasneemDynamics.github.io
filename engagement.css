@@ -468,10 +468,9 @@
 
 /* =========================================================
    RESEARCH COMMUNITY ENGAGEMENT
+   Research workshop layout is intentionally preserved:
+   illustration on the left, description on the right.
    ========================================================= */
-
-/* Research methodology: smaller illustration on the left,
-   description on the right. */
 
 .engagement-page .community-evidence-row {
     display: grid;
@@ -496,10 +495,10 @@
     background: #F1F4F8;
 }
 
-/* Both research-community descriptions are justified */
+/* Research workshop description only.
+   Does not alter the workshop's image/text arrangement. */
 
-.engagement-page .community-evidence-row .activity-description,
-.engagement-page .conference-entry .activity-description {
+.engagement-page .community-evidence-row .activity-description {
     min-width: 0;
     margin-top: 0;
     line-height: 1.6;
@@ -507,112 +506,70 @@
     text-justify: inter-word;
 }
 
-/* ---------------------------------------------------------
-   VIRTUAL CONFERENCE
-   Requires .conference-layout and .conference-copy
-   wrappers in the conference HTML.
-   --------------------------------------------------------- */
+/* =========================================================
+   AIAA VIRTUAL CONFERENCE
+   Two images side by side at equal height.
+   Description below both images. No button.
+   ========================================================= */
 
-.engagement-page .conference-entry .conference-layout {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    align-items: start;
-    gap: 22px;
+.engagement-page .conference-entry {
     min-width: 0;
 }
 
-/* Larger certificate and slide, stacked vertically */
-
-.engagement-page .conference-evidence {
+.engagement-page .conference-entry .conference-evidence {
     display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    align-content: start;
-    align-items: start;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
     gap: 12px;
     width: 100%;
     min-width: 0;
+    margin-top: 14px;
 }
 
-.engagement-page .conference-evidence img {
-    display: block;
-    width: 100%;
-    height: auto;
+.engagement-page .conference-entry .conference-figure {
+    display: flex;
+    flex-direction: column;
     min-width: 0;
-    max-height: none;
-    object-fit: contain;
-    object-position: center;
+    margin: 0;
+    padding: 6px;
+    box-sizing: border-box;
     border: 1px solid #D7DEE8;
-    border-radius: 6px;
+    border-radius: 7px;
     background: #FFFFFF;
 }
 
-/* Keep the text and button together on the right */
-
-.engagement-page .conference-entry .conference-copy {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+.engagement-page .conference-entry .conference-figure img {
+    display: block;
+    width: 100%;
+    height: 220px;
     min-width: 0;
+    object-fit: contain;
+    object-position: center;
+    background: #FFFFFF;
+    border-radius: 4px;
 }
 
-.engagement-page .conference-entry .conference-copy .activity-description {
-    margin: 0;
-    text-align: justify;
-}
-
-/* =========================================================
-   CONFERENCE BUTTON
-   Yellow pill shape to match the Publications page.
-   No paper/document icon.
-   ========================================================= */
-
-.engagement-page .conference-learn-more {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    min-height: 44px;
-    max-width: 100%;
-    margin-top: 18px;
-    padding: 11px 23px;
-    box-sizing: border-box;
-    border: 1px solid #FFD000;
-    border-radius: 999px;
-    background: #FFD000;
-    color: #030164;
+.engagement-page .conference-entry .conference-figure figcaption {
+    margin-top: 7px;
+    color: #4A5260;
     font-family: "Roboto", Arial, sans-serif;
-    font-size: 0.91rem;
-    font-weight: 800;
-    line-height: 1.25;
+    font-size: 0.78rem;
+    line-height: 1.4;
     text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-    transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease,
-        background-color 0.2s ease;
 }
 
-.engagement-page .conference-learn-more:visited {
-    color: #030164;
-}
+/* Conference description sits beneath the two images */
 
-.engagement-page .conference-learn-more:hover {
-    transform: translateY(-2px);
-    background: #F2C500;
-    border-color: #F2C500;
-    color: #030164;
-    box-shadow: 0 5px 12px rgba(17, 35, 56, 0.15);
-}
-
-.engagement-page .conference-learn-more:focus-visible {
-    outline: 3px solid #142D55;
-    outline-offset: 3px;
-}
-
-.engagement-page .conference-learn-more i {
-    flex: 0 0 auto;
-    font-size: 1rem;
+.engagement-page .conference-entry .conference-description {
+    width: 100%;
+    min-width: 0;
+    margin: 14px 0 0;
+    color: #171717;
+    font-size: 0.92rem;
+    line-height: 1.6;
+    text-align: justify;
+    text-justify: inter-word;
+    overflow-wrap: break-word;
 }
 
 /* =========================================================
@@ -711,8 +668,10 @@
         object-fit: contain;
     }
 
+    /* Preserve research workshop image-left/text-right layout */
+
     .engagement-page .community-evidence-row {
-        grid-template-columns: minmax(140px, 0.7fr) minmax(0, 1.3fr);
+        grid-template-columns: minmax(135px, 0.72fr) minmax(0, 1.28fr);
         gap: 16px;
     }
 
@@ -720,14 +679,15 @@
         height: 170px;
     }
 
-    .engagement-page .conference-entry .conference-layout {
-        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-        gap: 16px;
+    /* Conference images remain side by side and equally tall */
+
+    .engagement-page .conference-entry .conference-evidence {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
     }
 
-    .engagement-page .conference-evidence img {
-        height: auto;
-        max-height: none;
+    .engagement-page .conference-entry .conference-figure img {
+        height: 200px;
     }
 }
 
@@ -842,18 +802,19 @@
         object-fit: contain;
     }
 
-    /* Research workshop: illustration above description */
+    /* Research workshop layout remains image-left/text-right.
+       Deliberately do not stack the workshop image above its text. */
 
     .engagement-page .community-evidence-row {
-        grid-template-columns: minmax(0, 1fr);
+        grid-template-columns: minmax(120px, 0.72fr) minmax(0, 1.28fr);
         gap: 12px;
     }
 
     .engagement-page .workshop-placeholder {
         width: 100%;
         max-width: 230px;
-        height: 170px;
-        justify-self: center;
+        height: 160px;
+        justify-self: start;
     }
 
     .engagement-page .community-evidence-row .activity-description {
@@ -861,41 +822,29 @@
         text-align: justify;
     }
 
-    /* Conference: stacked images, followed by text and button */
+    /* Conference images side by side on mobile too */
 
-    .engagement-page .conference-entry .conference-layout {
-        grid-template-columns: minmax(0, 1fr);
-        gap: 16px;
-    }
-
-    .engagement-page .conference-evidence {
+    .engagement-page .conference-entry .conference-evidence {
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 10px;
+        gap: 8px;
     }
 
-    .engagement-page .conference-evidence img {
-        width: 100%;
-        height: auto;
-        max-height: none;
-        aspect-ratio: 4 / 3;
-        object-fit: contain;
+    .engagement-page .conference-entry .conference-figure {
+        padding: 4px;
     }
 
-    .engagement-page .conference-entry .conference-copy {
-        width: 100%;
+    .engagement-page .conference-entry .conference-figure img {
+        height: 170px;
     }
 
-    .engagement-page .conference-entry .conference-copy .activity-description {
+    .engagement-page .conference-entry .conference-figure figcaption {
+        font-size: 0.72rem;
+    }
+
+    .engagement-page .conference-entry .conference-description {
+        margin-top: 12px;
         font-size: 0.9rem;
         line-height: 1.58;
-        text-align: justify;
-    }
-
-    .engagement-page .conference-learn-more {
-        min-height: 44px;
-        margin-top: 14px;
-        padding: 10px 20px;
-        font-size: 0.88rem;
     }
 }
 
@@ -937,25 +886,32 @@
     }
 
     .engagement-page .workshop-placeholder {
-        height: 160px;
+        height: 145px;
     }
 
-    .engagement-page .conference-evidence {
-        grid-template-columns: minmax(0, 1fr);
+    /* Keep the two conference images side by side.
+       The image height is reduced to fit narrow screens. */
+
+    .engagement-page .conference-entry .conference-evidence {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 6px;
     }
 
-    .engagement-page .conference-evidence img {
-        height: auto;
-        max-height: none;
-        aspect-ratio: auto;
+    .engagement-page .conference-entry .conference-figure {
+        padding: 3px;
+    }
+
+    .engagement-page .conference-entry .conference-figure img {
+        height: 135px;
+    }
+
+    .engagement-page .conference-entry .conference-figure figcaption {
+        font-size: 0.68rem;
     }
 
     .engagement-page .activity-meta {
         display: grid;
         gap: 6px;
     }
-
-    .engagement-page .conference-learn-more {
-        width: 100%;
-    }
 }
+
