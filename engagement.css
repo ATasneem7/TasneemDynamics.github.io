@@ -1,23 +1,17 @@
 
 /* =========================================================
    TASNEEM DYNAMICS — PROFESSIONAL ENGAGEMENT PAGE
-   Page-specific styling only. Keep global.css unchanged.
    ========================================================= */
 
 .engagement-page {
     --eng-navy: #030164;
     --eng-yellow: #FFD000;
-    --eng-border: #E1E8F0;
+    --eng-border: #DCE5ED;
     --eng-cream: #FFFCF5;
-    --eng-pale-yellow: #FFF5D8;
-    --eng-card: #FFFFFF;
+    --eng-pale-yellow: #FFF3CF;
 
     background: var(--eng-cream);
 }
-
-/* =========================================================
-   MAIN CONTENT AND PAGE BACKGROUND
-   ========================================================= */
 
 .engagement-page .right-panel {
     background: var(--eng-cream);
@@ -30,26 +24,14 @@
     background: var(--eng-cream);
 }
 
-.engagement-page .engagement-content {
-    display: grid;
-    gap: 14px;
-    padding: 18px clamp(12px, 1.4vw, 22px) 26px;
-    background: linear-gradient(
-        180deg,
-        #FFFCF5 0%,
-        #FFF9E9 48%,
-        #FFFCF5 100%
-    );
-}
-
 /* =========================================================
    HERO BANNER
    ========================================================= */
 
 .engagement-page .engagement-hero {
     position: relative;
-    min-height: 0;
     height: 440px;
+    min-height: 0;
     display: flex;
     align-items: center;
     overflow: hidden;
@@ -121,20 +103,28 @@
 }
 
 /* =========================================================
-   CONTENT CARDS
+   PAGE BACKGROUND AND WHITE CONTENT CARDS
+   Cream background outside, white cards inside
    ========================================================= */
+
+.engagement-page .engagement-content {
+    display: grid;
+    gap: 14px;
+    padding: 18px clamp(12px, 1.4vw, 22px) 26px;
+    background: linear-gradient(
+        180deg,
+        #FFFCF5 0%,
+        #FFF8E7 50%,
+        #FFFCF5 100%
+    );
+}
 
 .engagement-page .engagement-section {
     min-width: 0;
     padding: 18px;
-    border: 1px solid #EAE3D2;
-    border-radius: 13px;
-    background: linear-gradient(
-        135deg,
-        #FFFFFF 0%,
-        #FFFCF5 65%,
-        #FFF8E7 100%
-    );
+    border: 1px solid #DCE5ED;
+    border-radius: 14px;
+    background: #FFFFFF;
     box-shadow: 0 3px 12px rgba(3, 1, 100, 0.035);
 }
 
@@ -278,8 +268,6 @@
     object-position: 35% center;
 }
 
-/* Industry information column */
-
 .engagement-page .industry-details {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
@@ -298,8 +286,6 @@
     min-width: 0;
     max-width: 100%;
     box-sizing: border-box;
-    align-self: start;
-    justify-self: stretch;
     padding: 12px;
     margin: 0;
     border-radius: 10px;
@@ -369,8 +355,6 @@
 
 /* =========================================================
    TECHNICAL ACTIVITIES
-   DBF: images left, description right.
-   CAN-SAT: complete photograph above description.
    ========================================================= */
 
 .engagement-page .technical-grid,
@@ -430,8 +414,6 @@
     border-radius: 5px;
 }
 
-/* Aircraft photograph: retain the controller in frame */
-
 .engagement-page .dbf-evidence img:first-child {
     width: 100%;
     height: auto;
@@ -439,8 +421,6 @@
     object-fit: cover;
     object-position: center bottom;
 }
-
-/* Ranking screenshot: preserve the complete table */
 
 .engagement-page .dbf-evidence img:nth-child(2) {
     height: auto;
@@ -450,8 +430,6 @@
     background: #FFFFFF;
     border: 1px solid #D6DDE7;
 }
-
-/* DBF description occupies the right column */
 
 .engagement-page .technical-grid > .technical-entry:first-child > .activity-description {
     grid-column: 2;
@@ -463,8 +441,7 @@
 }
 
 /* ---------------------------------------------------------
-   CAN-SAT WORKSHOP
-   Never crop the original group photograph.
+   CAN-SAT WORKSHOP — DO NOT CROP THE IMAGE
    --------------------------------------------------------- */
 
 .engagement-page .technical-grid > .technical-entry:nth-child(2) {
@@ -493,7 +470,7 @@
    RESEARCH COMMUNITY ENGAGEMENT
    ========================================================= */
 
-/* Research methodology: smaller image on the left,
+/* Research methodology: smaller illustration on the left,
    description on the right. */
 
 .engagement-page .community-evidence-row {
@@ -519,27 +496,41 @@
     background: #F1F4F8;
 }
 
-.engagement-page .community-evidence-row .activity-description {
+/* Both research-community descriptions are justified */
+
+.engagement-page .community-evidence-row .activity-description,
+.engagement-page .conference-entry .activity-description {
     min-width: 0;
-    margin: 0;
+    margin-top: 0;
     line-height: 1.6;
-    text-align: left;
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 /* ---------------------------------------------------------
    VIRTUAL CONFERENCE
-   Certificate and presentation slide stacked vertically
-   on the left; descriptive text and button on the right.
+   Requires .conference-layout and .conference-copy
+   wrappers in the conference HTML.
    --------------------------------------------------------- */
+
+.engagement-page .conference-entry .conference-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: start;
+    gap: 22px;
+    min-width: 0;
+}
+
+/* Larger certificate and slide, stacked vertically */
 
 .engagement-page .conference-evidence {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
     align-content: start;
     align-items: start;
-    gap: 10px;
-    min-width: 0;
+    gap: 12px;
     width: 100%;
+    min-width: 0;
 }
 
 .engagement-page .conference-evidence img {
@@ -547,7 +538,7 @@
     width: 100%;
     height: auto;
     min-width: 0;
-    max-height: 220px;
+    max-height: none;
     object-fit: contain;
     object-position: center;
     border: 1px solid #D7DEE8;
@@ -555,34 +546,25 @@
     background: #FFFFFF;
 }
 
-/* Two-column layout for conference evidence and text */
-
-.engagement-page .conference-entry .conference-layout {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    align-items: start;
-    gap: 18px;
-    min-width: 0;
-}
-
-/* The description belongs in the right-hand column */
+/* Keep the text and button together on the right */
 
 .engagement-page .conference-entry .conference-copy {
-    min-width: 0;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    min-width: 0;
 }
 
-.engagement-page .conference-entry .activity-description {
+.engagement-page .conference-entry .conference-copy .activity-description {
     margin: 0;
-    line-height: 1.6;
-    text-align: left;
+    text-align: justify;
 }
 
-/* Read More / Learn More button
-   Styled to match the Publications page primary button.
-   No paper/document icon is used. */
+/* =========================================================
+   CONFERENCE BUTTON
+   Yellow pill shape to match the Publications page.
+   No paper/document icon.
+   ========================================================= */
 
 .engagement-page .conference-learn-more {
     display: inline-flex;
@@ -590,8 +572,9 @@
     justify-content: center;
     gap: 12px;
     min-height: 44px;
+    max-width: 100%;
     margin-top: 18px;
-    padding: 10px 23px;
+    padding: 11px 23px;
     box-sizing: border-box;
     border: 1px solid #FFD000;
     border-radius: 999px;
@@ -603,10 +586,11 @@
     line-height: 1.25;
     text-align: center;
     text-decoration: none;
+    cursor: pointer;
     transition:
         transform 0.2s ease,
         box-shadow 0.2s ease,
-        background 0.2s ease;
+        background-color 0.2s ease;
 }
 
 .engagement-page .conference-learn-more:visited {
@@ -618,11 +602,7 @@
     background: #F2C500;
     border-color: #F2C500;
     color: #030164;
-    box-shadow: 0 5px 12px rgba(17, 35, 56, 0.12);
-}
-
-.engagement-page .conference-learn-more i {
-    font-size: 1rem;
+    box-shadow: 0 5px 12px rgba(17, 35, 56, 0.15);
 }
 
 .engagement-page .conference-learn-more:focus-visible {
@@ -630,8 +610,13 @@
     outline-offset: 3px;
 }
 
+.engagement-page .conference-learn-more i {
+    flex: 0 0 auto;
+    font-size: 1rem;
+}
+
 /* =========================================================
-   RESPONSIVE LAYOUT — MEDIUM SCREENS
+   MEDIUM SCREENS
    ========================================================= */
 
 @media (max-width: 1150px) {
@@ -660,7 +645,7 @@
 }
 
 /* =========================================================
-   RESPONSIVE LAYOUT — TABLETS
+   TABLETS
    ========================================================= */
 
 @media (max-width: 900px) {
@@ -681,7 +666,7 @@
         border-top: 1px solid #C8D1DE;
     }
 
-    /* DBF returns to a single-column layout */
+    /* DBF becomes single-column on tablets */
 
     .engagement-page .technical-grid > .technical-entry:first-child {
         display: grid;
@@ -717,7 +702,7 @@
         margin-top: 12px;
     }
 
-    /* Keep CAN-SAT photograph uncropped */
+    /* CAN-SAT image retains its complete natural proportions */
 
     .engagement-page .cansat-photo {
         height: auto;
@@ -725,8 +710,6 @@
         aspect-ratio: auto;
         object-fit: contain;
     }
-
-    /* Community cards remain side-by-side internally where possible */
 
     .engagement-page .community-evidence-row {
         grid-template-columns: minmax(140px, 0.7fr) minmax(0, 1.3fr);
@@ -738,17 +721,18 @@
     }
 
     .engagement-page .conference-entry .conference-layout {
-        grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
         gap: 16px;
     }
 
     .engagement-page .conference-evidence img {
-        max-height: 210px;
+        height: auto;
+        max-height: none;
     }
 }
 
 /* =========================================================
-   RESPONSIVE LAYOUT — MOBILE
+   MOBILE
    ========================================================= */
 
 @media (max-width: 700px) {
@@ -827,7 +811,7 @@
         line-height: 1.58;
     }
 
-    /* DBF images stacked on mobile */
+    /* DBF images stack vertically */
 
     .engagement-page .dbf-evidence {
         grid-template-columns: minmax(0, 1fr);
@@ -848,7 +832,7 @@
         object-fit: contain;
     }
 
-    /* CAN-SAT: original aspect ratio, no cropping */
+    /* CAN-SAT: never crop */
 
     .engagement-page .cansat-photo {
         width: 100%;
@@ -858,7 +842,7 @@
         object-fit: contain;
     }
 
-    /* Research methodology: image above description on narrow screens */
+    /* Research workshop: illustration above description */
 
     .engagement-page .community-evidence-row {
         grid-template-columns: minmax(0, 1fr);
@@ -874,18 +858,19 @@
 
     .engagement-page .community-evidence-row .activity-description {
         margin-top: 0;
+        text-align: justify;
     }
 
-    /* Conference: stacked evidence followed by the description */
+    /* Conference: stacked images, followed by text and button */
 
     .engagement-page .conference-entry .conference-layout {
         grid-template-columns: minmax(0, 1fr);
-        gap: 14px;
+        gap: 16px;
     }
 
     .engagement-page .conference-evidence {
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 8px;
+        gap: 10px;
     }
 
     .engagement-page .conference-evidence img {
@@ -896,9 +881,14 @@
         object-fit: contain;
     }
 
-    .engagement-page .conference-entry .activity-description {
+    .engagement-page .conference-entry .conference-copy {
+        width: 100%;
+    }
+
+    .engagement-page .conference-entry .conference-copy .activity-description {
         font-size: 0.9rem;
         line-height: 1.58;
+        text-align: justify;
     }
 
     .engagement-page .conference-learn-more {
@@ -910,7 +900,7 @@
 }
 
 /* =========================================================
-   RESPONSIVE LAYOUT — VERY NARROW SCREENS
+   VERY NARROW SCREENS
    ========================================================= */
 
 @media (max-width: 430px) {
@@ -969,5 +959,3 @@
         width: 100%;
     }
 }
-
-
