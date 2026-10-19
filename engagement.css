@@ -429,9 +429,11 @@
    stretching the image. */
 
 .engagement-page .dbf-evidence img:first-child {
+    width: 100%;
+    height: auto;
     aspect-ratio: 16 / 9;
     object-fit: cover;
-    object-position: center;
+    object-position: center bottom;
 }
 
 /* Ranking screenshot: preserve all text and table headings. */
