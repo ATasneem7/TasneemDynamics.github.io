@@ -152,7 +152,6 @@
 }
 
 /* ACTIVITY HEADINGS, METADATA, AND DESCRIPTIONS */
-
 .engagement-page .activity-entry {
     min-width: 0;
     color: #111111;
@@ -201,9 +200,7 @@
     overflow-wrap: break-word;
 }
 
-/* =========================================================
-   INDUSTRY EXPOSURE
-   ========================================================= */
+/*INDUSTRY EXPOSURE*/
 
 .engagement-page .industry-layout {
     display: grid;
@@ -339,9 +336,7 @@
     border-top: 1px solid var(--eng-border);
 }
 
-/* =========================================================
-   TECHNICAL ACTIVITIES
-   ========================================================= */
+/*TECHNICAL ACTIVITIES*/
 
 .engagement-page .technical-grid,
 .engagement-page .community-grid {
