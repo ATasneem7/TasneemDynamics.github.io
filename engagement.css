@@ -946,25 +946,46 @@
 
 
 
-/* Fill the entire conference slide container */
-.engagement-page .conference-entry .conference-figure:nth-child(2) img {
+/* Conference images: preserve the full slide and certificate */
+.engagement-page .conference-entry .conference-figure {
+    height: 220px;
+    min-width: 0;
+    overflow: hidden;
+    padding: 0;
+    border: 1px solid #D7DEE8;
+    border-radius: 7px;
+    background: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.engagement-page .conference-entry .conference-figure img {
+    display: block;
     width: 100%;
     height: 100%;
-    min-height: 170px;
-    display: block;
-    object-fit: cover;
+    object-fit: contain;
     object-position: center;
 }
 
-/* Ensure the slide's container has no internal white gap */
-.engagement-page .conference-entry .conference-figure:nth-child(2) {
-    overflow: hidden;
-    padding: 0;
-    background: #FFFFFF;
+/* Slide: fill the container's width without cropping content */
+.engagement-page .conference-entry .conference-figure:nth-child(2) img {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    object-fit: contain;
 }
 
+/* Responsive sizing */
 @media (max-width: 700px) {
-    .engagement-page .conference-entry .conference-figure:nth-child(2) img {
-        min-height: 135px;
+    .engagement-page .conference-entry .conference-figure {
+        height: 170px;
     }
 }
+
+@media (max-width: 430px) {
+    .engagement-page .conference-entry .conference-figure {
+        height: 130px;
+    }
+}
+
