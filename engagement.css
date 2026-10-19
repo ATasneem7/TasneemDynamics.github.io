@@ -231,53 +231,57 @@
     gap: 12px;
 }
 
+
 .engagement-page .industry-photo {
     display: block;
     width: 100%;
-    height: 168px;
-    object-fit: contain;
+    height: 210px;
+    object-fit: cover;
     object-position: center;
-    background: #f7f8fa;
     border-radius: 5px;
 }
 
 .engagement-page .industry-photo-wide {
     width: 100%;
-    height: 180px;
-    object-fit: contain;
+    height: 260px;
+    object-fit: cover;
     object-position: center;
 }
+
+
 
 .engagement-page .industry-photo-pair {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    align-items: start;
+    align-items: stretch;
     gap: 12px;
     min-width: 0;
 }
 
 .engagement-page .industry-photo-pair .industry-photo {
+    display: block;
     width: 100%;
-    height: 168px;
+    height: 210px;
     min-width: 0;
-    object-fit: contain;
+    object-fit: cover;
     object-position: center;
-    background: #f7f8fa;
+    border-radius: 5px;
 }
+
+
 
 .engagement-page .industry-details {
     min-width: 0;
     display: grid;
     align-content: start;
-    gap: 14px;
+    align-items: start;
+    gap: 10px;
 }
 
-
-/* Key Areas of Exposure card */
-
 .engagement-page .exposure-highlights {
-    min-width: 0;
-    padding: 12px;
+    align-self: start;
+    padding: 10px 12px;
+    margin: 0;
     border-radius: 9px;
     background: #fff8e5;
 }
@@ -286,7 +290,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-bottom: 10px;
+    margin: 0 0 8px;
 }
 
 .engagement-page .highlights-icon {
@@ -309,7 +313,7 @@
 
 .engagement-page .exposure-highlights ul {
     display: grid;
-    gap: 7px;
+    gap: 5px;
     margin: 0;
     padding: 0 0 0 5px;
     list-style: none;
