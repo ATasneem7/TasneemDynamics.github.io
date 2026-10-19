@@ -229,7 +229,7 @@
     gap: 12px;
 }
 
-/* Hangar photo: wide and tall. */
+/* Hangar photo */
 
 .engagement-page .industry-photo-wide {
     display: block;
@@ -241,7 +241,7 @@
     border-radius: 5px;
 }
 
-/* Lower photos: two equal columns with matching heights. */
+/* Lower photos: equal columns and equal heights */
 
 .engagement-page .industry-photo-pair {
     display: grid;
@@ -255,7 +255,7 @@
 .engagement-page .industry-photo-pair .industry-photo {
     display: block;
     width: 100%;
-    height:310px;
+    height: 310px;
     min-width: 0;
     margin: 0;
     object-fit: cover;
@@ -263,10 +263,9 @@
     border-radius: 5px;
 }
 
-/*
-   Group photo: shift the visible area toward the left.
-   This can help reveal people near the left side of the source image.
-*/
+/* Keep the group photo focused toward the left.
+   Adjust the percentage if the faces still need more room. */
+
 .engagement-page .industry-photo-pair .industry-photo:first-child {
     object-position: 35% center;
 }
@@ -381,19 +380,23 @@
     border-left: 1px solid #c8d1de;
 }
 
-/* DBF aircraft photograph and ranking screenshot */
+/* DBF aircraft photograph and ranking screenshot.
+   Both are taller; ranking gets almost equal column width. */
 
 .engagement-page .dbf-evidence {
     display: grid;
-    grid-template-columns: minmax(0, 1.15fr) minmax(120px, 0.85fr);
-    align-items: start;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    align-items: stretch;
     gap: 10px;
+    width: 100%;
+    min-width: 0;
 }
 
 .engagement-page .dbf-evidence img {
     display: block;
     width: 100%;
-    height: 166px;
+    height: 240px;
+    min-width: 0;
     object-fit: contain;
     object-position: center;
     background: #f7f8fa;
@@ -420,21 +423,28 @@
 
 /* =========================================================
    RESEARCH COMMUNITY ENGAGEMENT
+   Workshop image spans the full width of its entry.
+   Description appears beneath the image.
    ========================================================= */
 
 .engagement-page .community-evidence-row {
     display: grid;
-    grid-template-columns: minmax(105px, 0.42fr) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr);
     align-items: start;
-    gap: 14px;
+    gap: 12px;
+    width: 100%;
+    min-width: 0;
 }
 
 .engagement-page .workshop-placeholder {
     display: block;
     width: 100%;
-    max-height: 160px;
-    aspect-ratio: 1 / 1;
+    max-width: none;
+    max-height: none;
+    height: 240px;
+    aspect-ratio: auto;
     object-fit: contain;
+    object-position: center;
     border-radius: 5px;
     background: #f0f4f8;
 }
@@ -523,6 +533,10 @@
         height: 220px;
     }
 
+    .engagement-page .workshop-placeholder {
+        height: 220px;
+    }
+
     .engagement-page .conference-evidence img {
         height: 200px;
     }
@@ -606,8 +620,12 @@
     }
 
     .engagement-page .community-evidence-row {
-        grid-template-columns: minmax(90px, 0.38fr) minmax(0, 1fr);
+        grid-template-columns: minmax(0, 1fr);
         gap: 10px;
+    }
+
+    .engagement-page .workshop-placeholder {
+        height: 200px;
     }
 
     .engagement-page .conference-evidence img {
@@ -635,12 +653,11 @@
     }
 
     .engagement-page .dbf-evidence img {
-        height: auto;
-        aspect-ratio: 16 / 10;
+        height: 220px;
     }
 
     .engagement-page .workshop-placeholder {
-        max-height: 190px;
+        height: 190px;
     }
 
     .engagement-page .activity-meta {
@@ -648,4 +665,5 @@
         gap: 6px;
     }
 }
+
 
