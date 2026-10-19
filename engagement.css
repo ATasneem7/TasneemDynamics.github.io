@@ -215,17 +215,7 @@
     gap: 12px;
 }
 
-.engagement-page .industry-photo,
-.engagement-page .industry-photo-wide {
-    display: block;
-    width: 100%;
-    height: auto;
-    aspect-ratio: auto;
-    object-fit: contain;
-    object-position: center;
-    background: #f7f8fa;
-    border-radius: 5px;
-}
+
 
 .engagement-page .industry-photo-pair {
     display: grid;
@@ -233,6 +223,18 @@
     align-items: start;
     gap: 12px;
 }
+
+.engagement-page .industry-photo-pair .industry-photo {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: contain;
+    object-position: center;
+    background: #f7f8fa;
+    border-radius: 5px;
+}
+
 
 .engagement-page .industry-details {
     display: grid;
