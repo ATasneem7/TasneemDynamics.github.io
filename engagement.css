@@ -216,7 +216,7 @@
 
 .engagement-page .industry-layout {
     display: grid;
-    grid-template-columns: minmax(0, 1.45fr) minmax(285px, 0.75fr);
+    grid-template-columns: minmax(0, 1.6fr) minmax(260px, 0.6fr);
     align-items: start;
     gap: 22px;
 }
@@ -268,7 +268,7 @@
    This can help reveal people near the left side of the source image.
 */
 .engagement-page .industry-photo-pair .industry-photo:first-child {
-    object-position: left center;
+    object-position: 35% center;
 }
 
 /* Right-hand information column */
@@ -281,7 +281,7 @@
     gap: 14px;
     width: 100%;
     min-width: 0;
-    max-width: 360px;
+    max-width: 320px;
     justify-self: end;
 }
 
