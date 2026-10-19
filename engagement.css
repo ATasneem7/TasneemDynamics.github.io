@@ -137,7 +137,7 @@
     padding: 6px;
     box-sizing: border-box;
     object-fit: contain;
-    background: #FFF1C2;
+    background: #FFD16A;
     border-radius: 7px;
 }
 
@@ -151,7 +151,7 @@
 }
 
 .engagement-page .engagement-heading-rule {
-    width: 55px;
+    width: 50px;
     height: 4px;
     margin-top: 7px;
     background: var(--eng-yellow);
