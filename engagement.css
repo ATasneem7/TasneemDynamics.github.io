@@ -950,3 +950,26 @@
 }
 
 
+
+/* Fill the entire conference slide container */
+.engagement-page .conference-entry .conference-figure:nth-child(2) img {
+    width: 100%;
+    height: 100%;
+    min-height: 170px;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Ensure the slide's container has no internal white gap */
+.engagement-page .conference-entry .conference-figure:nth-child(2) {
+    overflow: hidden;
+    padding: 0;
+    background: #FFFFFF;
+}
+
+@media (max-width: 700px) {
+    .engagement-page .conference-entry .conference-figure:nth-child(2) img {
+        min-height: 135px;
+    }
+}
