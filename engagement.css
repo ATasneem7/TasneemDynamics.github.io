@@ -95,7 +95,6 @@
 }
 
 /* PAGE BACKGROUND AND WHITE CONTENT CARDS */
-
 .engagement-page .engagement-content {
     display: grid;
     gap: 14px;
@@ -152,9 +151,7 @@
     background: var(--eng-yellow);
 }
 
-/* =========================================================
-   ACTIVITY HEADINGS, METADATA, AND DESCRIPTIONS
-   ========================================================= */
+/* ACTIVITY HEADINGS, METADATA, AND DESCRIPTIONS */
 
 .engagement-page .activity-entry {
     min-width: 0;
