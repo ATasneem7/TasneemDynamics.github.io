@@ -201,7 +201,6 @@
 }
 
 /*INDUSTRY EXPOSURE*/
-
 .engagement-page .industry-layout {
     display: grid;
     grid-template-columns: minmax(0, 1.6fr) minmax(260px, 0.6fr);
@@ -337,7 +336,6 @@
 }
 
 /*TECHNICAL ACTIVITIES*/
-
 .engagement-page .technical-grid,
 .engagement-page .community-grid {
     display: grid;
@@ -354,9 +352,7 @@
     align-self: stretch;
 }
 
-/* ---------------------------------------------------------
-   DESIGN / BUILD / FLY
-   --------------------------------------------------------- */
+/*DESIGN / BUILD / FLY*/
 
 .engagement-page .technical-grid > .technical-entry:first-child {
     display: grid;
@@ -421,9 +417,7 @@
     text-align: justify;
 }
 
-/* ---------------------------------------------------------
-   CAN-SAT WORKSHOP — DO NOT CROP THE IMAGE
-   --------------------------------------------------------- */
+/*CAN-SAT WORKSHOP — DO NOT CROP THE IMAGE*/
 
 .engagement-page .technical-grid > .technical-entry:nth-child(2) {
     display: block;
