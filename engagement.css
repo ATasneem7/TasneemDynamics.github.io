@@ -211,11 +211,6 @@
 
 /* =========================================================
    INDUSTRY EXPOSURE
-
-   Desktop:
-   - Wide hangar photo above the two lower photos.
-   - Lower photos have matching heights.
-   - Right-hand details column is deliberately narrower.
    ========================================================= */
 
 
@@ -320,7 +315,7 @@
     padding: 5px;
     box-sizing: border-box;
     object-fit: contain;
-    background: #FFF1C2;
+    background: #FFD16A;
     border-radius: 7px;
 }
 
