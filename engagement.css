@@ -234,7 +234,7 @@
 .engagement-page .industry-photo-wide {
     display: block;
     width: 100%;
-    height: 330px;
+    height: 320px;
     min-width: 0;
     object-fit: cover;
     object-position: center;
@@ -252,8 +252,6 @@
     min-width: 0;
 }
 
-/* Both lower photographs have exactly the same height and width
-   within their respective grid columns. */
 
 .engagement-page .industry-photo-pair .industry-photo {
     display: block;
@@ -264,6 +262,13 @@
     object-fit: cover;
     object-position: center;
     border-radius: 5px;
+}
+
+/* Shift the group photo's crop toward the left
+   so the boy's face near the edge remains visible. */
+
+.engagement-page .industry-photo-pair .industry-photo:first-child {
+    object-position: 35% center;
 }
 
 /* Right-hand information column */
