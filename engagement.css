@@ -353,7 +353,6 @@
 }
 
 /*DESIGN / BUILD / FLY*/
-
 .engagement-page .technical-grid > .technical-entry:first-child {
     display: grid;
     grid-template-columns: minmax(0, 1.05fr) minmax(190px, 0.65fr);
@@ -418,7 +417,6 @@
 }
 
 /*CAN-SAT WORKSHOP — DO NOT CROP THE IMAGE*/
-
 .engagement-page .technical-grid > .technical-entry:nth-child(2) {
     display: block;
     min-width: 0;
@@ -441,11 +439,7 @@
     line-height: 1.55;
 }
 
-/* =========================================================
-   RESEARCH COMMUNITY ENGAGEMENT
-   Research workshop layout is intentionally preserved:
-   illustration on the left, description on the right.
-   ========================================================= */
+/*RESEARCH COMMUNITY ENGAGEMENT*/
 
 .engagement-page .community-evidence-row {
     display: grid;
@@ -470,9 +464,7 @@
     background: #F1F4F8;
 }
 
-/* Research workshop description only.
-   Does not alter the workshop's image/text arrangement. */
-
+/* Research workshop description only.*/
 .engagement-page .community-evidence-row .activity-description {
     min-width: 0;
     margin-top: 25px;
