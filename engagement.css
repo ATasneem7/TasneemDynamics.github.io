@@ -474,7 +474,7 @@
     display: block;
     width: 100%;
     max-width: 230px;
-    height: 175px;
+    height: 185px;
     max-height: none;
     justify-self: start;
     aspect-ratio: auto;
@@ -489,8 +489,8 @@
 
 .engagement-page .community-evidence-row .activity-description {
     min-width: 0;
-    margin-top: 0;
-    line-height: 1.6;
+    margin-top: 25px;
+    line-height: 1.75;
     text-align: justify;
     text-justify: inter-word;
 }
@@ -536,15 +536,6 @@
     object-position: center;
     background: #FFFFFF;
     border-radius: 4px;
-}
-
-.engagement-page .conference-entry .conference-figure figcaption {
-    margin-top: 7px;
-    color: #4A5260;
-    font-family: "Roboto", Arial, sans-serif;
-    font-size: 0.78rem;
-    line-height: 1.4;
-    text-align: center;
 }
 
 /* Conference description sits beneath the two images */
