@@ -354,14 +354,17 @@
 /* =========================================================
    TECHNICAL ACTIVITIES
    DBF: two images stacked on the left, description on right.
-   CAN-SAT: photograph at the top, description underneath.
+   CAN-SAT: full photo at the top, description underneath.
    ========================================================= */
+
+/* Stretch both entries to the height of the taller entry,
+   allowing the vertical divider to reach the DBF description. */
 
 .engagement-page .technical-grid,
 .engagement-page .community-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    align-items: start;
+    align-items: stretch;
     gap: 18px;
 }
 
@@ -370,22 +373,20 @@
     min-width: 0;
     padding-left: 18px;
     border-left: 1px solid #c8d1de;
+    align-self: stretch;
 }
 
 /* ---------------------------------------------------------
    DBF ENTRY
    --------------------------------------------------------- */
 
-/* The DBF entry uses two internal columns:
-   left = aircraft and ranking images;
-   right = description.
-   Heading and metadata span the full entry width. */
-
 .engagement-page .technical-grid > .technical-entry:first-child {
     display: grid;
     grid-template-columns: minmax(0, 1.05fr) minmax(190px, 0.65fr);
     column-gap: 18px;
+    align-content: start;
     align-items: start;
+    min-width: 0;
 }
 
 .engagement-page .technical-grid > .technical-entry:first-child > h3,
@@ -393,7 +394,7 @@
     grid-column: 1 / -1;
 }
 
-/* Stack the aircraft image and ranking image vertically. */
+/* Aircraft and ranking images stacked vertically */
 
 .engagement-page .dbf-evidence {
     grid-column: 1;
@@ -405,10 +406,6 @@
     min-width: 0;
     margin: 0;
 }
-
-/* Both images use the full width of the left column.
-   The ranking image retains its own aspect ratio so the
-   table text does not get cropped. */
 
 .engagement-page .dbf-evidence img {
     display: block;
@@ -422,8 +419,7 @@
     border-radius: 5px;
 }
 
-/* Aircraft photograph: keep the aircraft visible without
-   stretching the image. */
+/* Aircraft image: preserve proportions and show the controller */
 
 .engagement-page .dbf-evidence img:first-child {
     width: 100%;
@@ -433,7 +429,7 @@
     object-position: center bottom;
 }
 
-/* Ranking screenshot: preserve all text and table headings. */
+/* Ranking image: preserve the complete table and its headings */
 
 .engagement-page .dbf-evidence img:nth-child(2) {
     height: auto;
@@ -444,8 +440,7 @@
     border: 1px solid #d6dde7;
 }
 
-/* Description occupies the right-hand column and aligns
-   with the image gallery rather than appearing underneath. */
+/* DBF description in the right-hand column */
 
 .engagement-page .technical-grid > .technical-entry:first-child > .activity-description {
     grid-column: 2;
@@ -458,7 +453,8 @@
 
 /* ---------------------------------------------------------
    CAN-SAT ENTRY
-   Keep the existing photo-on-top, description-below layout.
+   Full photograph at the top; description below.
+   Do not crop the original image.
    --------------------------------------------------------- */
 
 .engagement-page .technical-grid > .technical-entry:nth-child(2) {
@@ -470,8 +466,9 @@
     display: block;
     width: 100%;
     height: auto;
-    aspect-ratio: 16 / 7;
-    object-fit: cover;
+    max-height: none;
+    aspect-ratio: auto;
+    object-fit: contain;
     object-position: center;
     background: #f7f8fa;
     border-radius: 5px;
@@ -580,6 +577,7 @@
     .engagement-page .technical-grid,
     .engagement-page .community-grid {
         grid-template-columns: minmax(0, 1fr);
+        align-items: stretch;
     }
 
     .engagement-page .technical-entry + .technical-entry,
@@ -589,8 +587,7 @@
         border-top: 1px solid #c8d1de;
     }
 
-    /* Return the DBF entry to a single-column layout on tablets.
-       The two DBF images remain stacked, followed by the text. */
+    /* DBF becomes a single-column layout on tablets */
 
     .engagement-page .technical-grid > .technical-entry:first-child {
         display: grid;
@@ -617,7 +614,8 @@
     }
 
     .engagement-page .dbf-evidence img:nth-child(2) {
-        height: 220px;
+        height: auto;
+        aspect-ratio: auto;
         object-fit: contain;
     }
 
@@ -625,8 +623,13 @@
         margin-top: 12px;
     }
 
+    /* Preserve the CAN-SAT image's natural aspect ratio on tablets */
+
     .engagement-page .cansat-photo {
-        aspect-ratio: 16 / 7;
+        height: auto;
+        max-height: none;
+        aspect-ratio: auto;
+        object-fit: contain;
     }
 
     .engagement-page .workshop-placeholder {
@@ -715,7 +718,7 @@
         line-height: 1.58;
     }
 
-    /* DBF images remain stacked on narrow mobile screens. */
+    /* DBF images remain stacked on narrow mobile screens */
 
     .engagement-page .dbf-evidence {
         grid-template-columns: minmax(0, 1fr);
@@ -726,6 +729,7 @@
         height: auto;
         aspect-ratio: 16 / 9;
         object-fit: cover;
+        object-position: center bottom;
     }
 
     .engagement-page .dbf-evidence img:nth-child(2) {
@@ -735,8 +739,14 @@
         object-fit: contain;
     }
 
+    /* Never force a crop on the CAN-SAT photograph */
+
     .engagement-page .cansat-photo {
-        aspect-ratio: 16 / 9;
+        width: 100%;
+        height: auto;
+        max-height: none;
+        aspect-ratio: auto;
+        object-fit: contain;
     }
 
     .engagement-page .community-evidence-row {
@@ -781,6 +791,13 @@
 
     .engagement-page .dbf-evidence img:nth-child(2) {
         height: auto;
+    }
+
+    .engagement-page .cansat-photo {
+        height: auto;
+        max-height: none;
+        aspect-ratio: auto;
+        object-fit: contain;
     }
 
     .engagement-page .workshop-placeholder {
