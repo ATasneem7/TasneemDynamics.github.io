@@ -515,7 +515,7 @@
     margin: 0;
     font-size: 0.92rem;
     line-height: 1.55;
-    text-align: left;
+    text-align: justify;
     overflow-wrap: anywhere;
 }
 
@@ -566,7 +566,7 @@
     color: #111111;
     font-size: 0.92rem;
     line-height: 1.55;
-    text-align: left;
+    text-align: justify;
     overflow-wrap: anywhere;
 }
 
