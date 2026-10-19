@@ -1,8 +1,5 @@
 
-/* =========================================================
-   PROFESSIONAL ENGAGEMENT PAGE
-   Shared sidebar, navbar, and footer remain in global.css.
-   ========================================================= */
+/* PROFESSIONAL ENGAGEMENT PAGE */
 
 .engagement-page {
     --eng-navy: #030164;
@@ -455,8 +452,8 @@
     grid-row: 3;
     min-width: 0;
     margin: 0;
-    line-height: 1.55;
-    text-align: left;
+    line-height: 1.65;
+    text-align: justify;
 }
 
 /* ---------------------------------------------------------
