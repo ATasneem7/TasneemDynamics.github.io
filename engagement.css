@@ -1,4 +1,8 @@
-/* PROFESSIONAL ENGAGEMENT PAGE */
+
+/* =========================================================
+   PROFESSIONAL ENGAGEMENT PAGE
+   Shared sidebar, navbar, and footer remain in global.css.
+   ========================================================= */
 
 .engagement-page {
     --eng-navy: #030164;
@@ -6,7 +10,9 @@
     --eng-border: #E1E8F0;
 }
 
-/* Main content */
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
 
 .engagement-page .engagement-main {
     width: 100%;
@@ -206,8 +212,6 @@
 
 /* =========================================================
    INDUSTRY EXPOSURE
-   Wide hangar photo above two equally sized lower photos.
-   Keep the details column narrower on desktop.
    ========================================================= */
 
 .engagement-page .industry-layout {
@@ -225,8 +229,6 @@
     gap: 12px;
 }
 
-/* Hangar photo */
-
 .engagement-page .industry-photo-wide {
     display: block;
     width: 100%;
@@ -236,8 +238,6 @@
     object-position: center;
     border-radius: 5px;
 }
-
-/* Lower photos: equal columns and equal heights */
 
 .engagement-page .industry-photo-pair {
     display: grid;
@@ -258,9 +258,6 @@
     object-position: center;
     border-radius: 5px;
 }
-
-/* Keep the group photo focused toward the left.
-   Adjust the percentage if the faces still need more room. */
 
 .engagement-page .industry-photo-pair .industry-photo:first-child {
     object-position: 35% center;
@@ -359,6 +356,8 @@
 
 /* =========================================================
    TECHNICAL ACTIVITIES
+   DBF: two images stacked on the left, description on right.
+   CAN-SAT: photograph at the top, description underneath.
    ========================================================= */
 
 .engagement-page .technical-grid,
@@ -376,45 +375,112 @@
     border-left: 1px solid #c8d1de;
 }
 
-/* DBF aircraft photograph and ranking screenshot.
-   Both are taller; ranking gets almost equal column width. */
+/* ---------------------------------------------------------
+   DBF ENTRY
+   --------------------------------------------------------- */
+
+/* The DBF entry uses two internal columns:
+   left = aircraft and ranking images;
+   right = description.
+   Heading and metadata span the full entry width. */
+
+.engagement-page .technical-grid > .technical-entry:first-child {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(190px, 0.65fr);
+    column-gap: 18px;
+    align-items: start;
+}
+
+.engagement-page .technical-grid > .technical-entry:first-child > h3,
+.engagement-page .technical-grid > .technical-entry:first-child > .activity-meta {
+    grid-column: 1 / -1;
+}
+
+/* Stack the aircraft image and ranking image vertically. */
 
 .engagement-page .dbf-evidence {
+    grid-column: 1;
     display: grid;
-    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
-    align-items: stretch;
+    grid-template-columns: minmax(0, 1fr);
+    align-content: start;
     gap: 10px;
     width: 100%;
     min-width: 0;
+    margin: 0;
 }
+
+/* Both images use the full width of the left column.
+   The ranking image retains its own aspect ratio so the
+   table text does not get cropped. */
 
 .engagement-page .dbf-evidence img {
     display: block;
     width: 100%;
-    height: 240px;
+    height: auto;
     min-width: 0;
+    max-width: 100%;
     object-fit: contain;
     object-position: center;
     background: #f7f8fa;
     border-radius: 5px;
 }
 
+/* Aircraft photograph: keep the aircraft visible without
+   stretching the image. */
+
+.engagement-page .dbf-evidence img:first-child {
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Ranking screenshot: preserve all text and table headings. */
+
 .engagement-page .dbf-evidence img:nth-child(2) {
+    height: auto;
+    aspect-ratio: auto;
     object-fit: contain;
+    object-position: top center;
     background: #ffffff;
     border: 1px solid #d6dde7;
 }
 
-/* CAN-SAT photograph */
+/* Description occupies the right-hand column and aligns
+   with the image gallery rather than appearing underneath. */
+
+.engagement-page .technical-grid > .technical-entry:first-child > .activity-description {
+    grid-column: 2;
+    grid-row: 3;
+    min-width: 0;
+    margin: 0;
+    line-height: 1.55;
+    text-align: left;
+}
+
+/* ---------------------------------------------------------
+   CAN-SAT ENTRY
+   Keep the existing photo-on-top, description-below layout.
+   --------------------------------------------------------- */
+
+.engagement-page .technical-grid > .technical-entry:nth-child(2) {
+    display: block;
+    min-width: 0;
+}
 
 .engagement-page .cansat-photo {
     display: block;
     width: 100%;
-    height: 166px;
-    object-fit: contain;
+    height: auto;
+    aspect-ratio: 16 / 7;
+    object-fit: cover;
     object-position: center;
     background: #f7f8fa;
     border-radius: 5px;
+}
+
+.engagement-page .technical-grid > .technical-entry:nth-child(2) > .activity-description {
+    margin-top: 12px;
+    line-height: 1.55;
 }
 
 /* =========================================================
@@ -478,7 +544,7 @@
    RESPONSIVE LAYOUT
    ========================================================= */
 
-/* Medium screens: place details below the gallery. */
+/* Medium screens */
 
 @media (max-width: 1150px) {
     .engagement-page .industry-layout {
@@ -524,9 +590,44 @@
         border-top: 1px solid #c8d1de;
     }
 
-    .engagement-page .dbf-evidence img,
-    .engagement-page .cansat-photo {
+    /* Return the DBF entry to a single-column layout on tablets.
+       The two DBF images remain stacked, followed by the text. */
+
+    .engagement-page .technical-grid > .technical-entry:first-child {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .engagement-page .technical-grid > .technical-entry:first-child > h3,
+    .engagement-page .technical-grid > .technical-entry:first-child > .activity-meta,
+    .engagement-page .technical-grid > .technical-entry:first-child > .dbf-evidence,
+    .engagement-page .technical-grid > .technical-entry:first-child > .activity-description {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    .engagement-page .dbf-evidence {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        align-items: start;
+    }
+
+    .engagement-page .dbf-evidence img:first-child {
         height: 220px;
+        aspect-ratio: auto;
+        object-fit: contain;
+    }
+
+    .engagement-page .dbf-evidence img:nth-child(2) {
+        height: 220px;
+        object-fit: contain;
+    }
+
+    .engagement-page .technical-grid > .technical-entry:first-child > .activity-description {
+        margin-top: 12px;
+    }
+
+    .engagement-page .cansat-photo {
+        aspect-ratio: 16 / 7;
     }
 
     .engagement-page .workshop-placeholder {
@@ -615,6 +716,30 @@
         line-height: 1.58;
     }
 
+    /* DBF images remain stacked on narrow mobile screens. */
+
+    .engagement-page .dbf-evidence {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 10px;
+    }
+
+    .engagement-page .dbf-evidence img:first-child {
+        height: auto;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+    }
+
+    .engagement-page .dbf-evidence img:nth-child(2) {
+        width: 100%;
+        height: auto;
+        aspect-ratio: auto;
+        object-fit: contain;
+    }
+
+    .engagement-page .cansat-photo {
+        aspect-ratio: 16 / 9;
+    }
+
     .engagement-page .community-evidence-row {
         grid-template-columns: minmax(0, 1fr);
         gap: 10px;
@@ -634,7 +759,6 @@
 
 @media (max-width: 430px) {
     .engagement-page .industry-photo-pair,
-    .engagement-page .dbf-evidence,
     .engagement-page .community-evidence-row {
         grid-template-columns: minmax(0, 1fr);
     }
@@ -648,8 +772,16 @@
         aspect-ratio: 4 / 3;
     }
 
-    .engagement-page .dbf-evidence img {
-        height: 220px;
+    .engagement-page .dbf-evidence {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .engagement-page .dbf-evidence img:first-child {
+        aspect-ratio: 16 / 9;
+    }
+
+    .engagement-page .dbf-evidence img:nth-child(2) {
+        height: auto;
     }
 
     .engagement-page .workshop-placeholder {
@@ -661,5 +793,6 @@
         gap: 6px;
     }
 }
+
 
 
