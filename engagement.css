@@ -473,7 +473,6 @@
 }
 
 /*AIAA VIRTUAL CONFERENCE*/
-
 .engagement-page .conference-entry {
     min-width: 0;
 }
@@ -512,7 +511,6 @@
 }
 
 /*Conference description sits beneath the two images*/
-
 .engagement-page .conference-entry .conference-description {
     width: 100%;
     min-width: 0;
@@ -526,7 +524,6 @@
 }
 
 /*MEDIUM SCREENS*/
-
 @media (max-width: 1150px) {
     .engagement-page .industry-layout {
         grid-template-columns: minmax(0, 1fr);
