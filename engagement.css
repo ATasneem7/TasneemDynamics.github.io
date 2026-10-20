@@ -440,7 +440,6 @@
 }
 
 /*RESEARCH COMMUNITY ENGAGEMENT*/
-
 .engagement-page .community-evidence-row {
     display: grid;
     grid-template-columns: minmax(135px, 0.72fr) minmax(0, 1.28fr);
@@ -473,11 +472,7 @@
     text-justify: inter-word;
 }
 
-/* =========================================================
-   AIAA VIRTUAL CONFERENCE
-   Two images side by side at equal height.
-   Description below both images. No button.
-   ========================================================= */
+/*AIAA VIRTUAL CONFERENCE*/
 
 .engagement-page .conference-entry {
     min-width: 0;
@@ -516,7 +511,7 @@
     border-radius: 4px;
 }
 
-/* Conference description sits beneath the two images */
+/*Conference description sits beneath the two images*/
 
 .engagement-page .conference-entry .conference-description {
     width: 100%;
@@ -530,9 +525,7 @@
     overflow-wrap: break-word;
 }
 
-/* =========================================================
-   MEDIUM SCREENS
-   ========================================================= */
+/*MEDIUM SCREENS*/
 
 @media (max-width: 1150px) {
     .engagement-page .industry-layout {
